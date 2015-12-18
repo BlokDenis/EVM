@@ -5,7 +5,7 @@ const Account = require('ethereumjs-account')
 const testUtil = require('./util')
 const Trie = require('merkle-patricia-tree/secure')
 
-module.exports = function runStateTest (options, testData, t, cb) {
+module.exports = function runVmTest (options, testData, t, cb) {
   var sstream = false
   var state = new Trie()
   var results
