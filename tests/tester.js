@@ -7,6 +7,8 @@ const testing = require('ethereumjs-testing')
 const {
   getRequiredForkConfigAlias
 } = require('./util')
+let FORK_CONFIG = argv.fork || 'Byzantium'
+FORK_CONFIG = FORK_CONFIG.toLowerCase().replace(/^\w/, function (l) { return l.toUpperCase()})
 // tests which should be fixed
 const skipBroken = [
   'ExtCodeCopyTargetRangeLongerThanCodeTests', // temporary till fixed (2018-11-14)
