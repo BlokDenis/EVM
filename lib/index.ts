@@ -21,7 +21,7 @@ export interface VMOpts {
    */
   chain?: string
   /**
-   * Hardfork rules to be used
+   * Hardfork rules to be used [supported: 'byzantium', 'constantinople', 'petersburg' (will throw on unsupported)]
    */
   hardfork?: string
   /**
@@ -60,27 +60,20 @@ export default class VM extends AsyncEventEmitter {
 
   /**
    * Instantiates a new [[VM]] Object.
-   * @param opts - Default values for the options are:
-   *  - `chain`: 'mainnet'
-   *  - `hardfork`: 'petersburg' [supported: 'byzantium', 'constantinople', 'petersburg' (will throw on unsupported)]
-   *  - `activatePrecompiles`: false
-   *  - `allowUnlimitedContractSize`: false [ONLY set to `true` during debugging]
    */
-  constructor(opts: VMOpts = {}) {
+  constructor({ chain = 'mainnet', hardfork = 'petersburg', stateManager, state, blockchain, activatePrecompiles = false, allowUnlimitedContractSize = false }: VMOpts = {}) {
     super()
 
-    this.opts = opts
+    this.opts = { chain, hardfork, stateManager, state, blockchain, activatePrecompiles, allowUnlimitedContractSize }
 
-    const chain = opts.chain ? opts.chain : 'mainnet'
-    const hardfork = opts.hardfork ? opts.hardfork : 'petersburg'
     const supportedHardforks = ['byzantium', 'constantinople', 'petersburg']
     this._common = new Common(chain, hardfork, supportedHardforks)
 
-    if (opts.stateManager) {
-      this.stateManager = opts.stateManager
+    if (stateManager) {
+      this.stateManager = stateManager
     } else {
-      const trie = opts.state || new Trie()
-      if (opts.activatePrecompiles) {
+      const trie = state || new Trie()
+      if (activatePrecompiles) {
         for (let i = 1; i <= 8; i++) {
           trie.put(new BN(i).toArrayLike(Buffer, 'be', 20), new Account().serialize())
         }
@@ -88,10 +81,9 @@ export default class VM extends AsyncEventEmitter {
       this.stateManager = new StateManager({ trie, common: this._common })
     }
 
-    this.blockchain = opts.blockchain || new Blockchain({ common: this._common })
+    this.blockchain = blockchain || new Blockchain({ common: this._common })
 
-    this.allowUnlimitedContractSize =
-      opts.allowUnlimitedContractSize === undefined ? false : opts.allowUnlimitedContractSize
+    this.allowUnlimitedContractSize = allowUnlimitedContractSize
   }
 
   /**
@@ -105,12 +97,9 @@ export default class VM extends AsyncEventEmitter {
 
   /**
    * Processes the `block` running all of the transactions it contains and updating the miner's account
-   * @param opts - Default values for options:
-   *  - `generate`: false
-   *  @param cb - Callback function
    */
-  runBlock(opts: RunBlockOpts, cb: RunBlockCb): void {
-    runBlock.bind(this)(opts, cb)
+  runBlock({ block, root, generate = false, skipBlockValidation = false }: RunBlockOpts, cb: RunBlockCb): void {
+    runBlock.bind(this)({ block, root, generate, skipBlockValidation }, cb)
   }
 
   /**
