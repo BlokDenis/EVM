@@ -73,17 +73,17 @@ function runTestCase (options, testData, t, cb) {
       if (tx.validate()) {
         if (options.jsontrace) {
           vm.on('step', function (e) {
-            let hexStack = []
-            hexStack = e.stack.map(item => {
-              return '0x' + new BN(item).toString(16, 0)
-            })
+            // let hexStack = []
+            // hexStack = e.stack.map(item => {
+            //   return '0x' + new BN(item).toString(16, 0)
+            // })
 
             var opTrace = {
               'pc': e.pc,
               'op': e.opcode.opcode,
               'gas': '0x' + e.gasLeft.toString('hex'),
               'gasCost': '0x' + e.opcode.fee.toString(16),
-              'stack': hexStack,
+              // 'stack': hexStack,
               'depth': e.depth,
               'opName': e.opcode.name
             }
