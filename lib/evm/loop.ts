@@ -112,11 +112,11 @@ export default class Loop {
 
     // Execute opcode handler
     const opFn = this.getOpHandler(opInfo)
-    if (opInfo.isAsync) {
+    // if (opInfo.isAsync) {
       await opFn.apply(null, [this._runState])
-    } else {
-      opFn.apply(null, [this._runState])
-    }
+    // } else {
+    //   opFn.apply(null, [this._runState])
+    // }
   }
 
   getOpHandler(opInfo: OpInfo): OpHandler {

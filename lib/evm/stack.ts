@@ -6,7 +6,7 @@ const { ERROR, VmError } = require('../exceptions')
  * Implementation of the stack used in evm.
  */
 export default class Stack {
-  _store: BN[]
+  _store: Promise<BN>[]
 
   constructor() {
     this._store = []
@@ -16,14 +16,14 @@ export default class Stack {
     return this._store.length
   }
 
-  push(value: BN) {
-    if (!BN.isBN(value)) {
-      throw new VmError(ERROR.INTERNAL_ERROR)
-    }
+  push(value: Promise<BN>) {
+    // if (!BN.isBN(value)) {
+    //   throw new VmError(ERROR.INTERNAL_ERROR)
+    // }
 
-    if (value.gt(MAX_INTEGER)) {
-      throw new VmError(ERROR.OUT_OF_RANGE)
-    }
+    // if (value.gt(MAX_INTEGER)) {
+    //   throw new VmError(ERROR.OUT_OF_RANGE)
+    // }
 
     if (this._store.length > 1023) {
       throw new VmError(ERROR.STACK_OVERFLOW)
@@ -32,7 +32,7 @@ export default class Stack {
     this._store.push(value)
   }
 
-  pop(): BN {
+  pop(): Promise<BN> {
     if (this._store.length < 1) {
       throw new VmError(ERROR.STACK_UNDERFLOW)
     }
@@ -47,7 +47,7 @@ export default class Stack {
    * @param {Number} num - Number of items to pop
    * @returns {Array}
    */
-  popN(num: number = 1): BN[] {
+  popN(num: number = 1): Promise<BN>[] {
     if (this._store.length < num) {
       throw new VmError(ERROR.STACK_UNDERFLOW)
     }

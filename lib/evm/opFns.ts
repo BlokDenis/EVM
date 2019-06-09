@@ -1,3 +1,4 @@
+
 import BN = require('bn.js')
 import * as utils from 'ethereumjs-util'
 import { ERROR, VmError } from '../exceptions'
@@ -33,36 +34,43 @@ export type OpHandler = SyncOpHandler | AsyncOpHandler
 
 // the opcode functions
 export const handlers: { [k: string]: OpHandler } = {
-  STOP: function(runState: RunState) {
+  STOP: async function(runState: RunState) {
     trap(ERROR.STOP)
   },
-  ADD: function(runState: RunState) {
-    const [a, b] = runState.stack.popN(2)
+  ADD: async function(runState: RunState) {
+    const [a, b] = await Promise.all(runState.stack.popN(2))
     const r = a.add(b).mod(utils.TWO_POW256)
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
+
+    // const p = (async () => {
+    //   const [a, b] = await Promise.all(runState.stack.popN(2))
+    //   return a.add(b).mod(utils.TWO_POW256)
+    // })()
+    
+    // runState.stack.push(p)
   },
-  MUL: function(runState: RunState) {
-    const [a, b] = runState.stack.popN(2)
+  MUL: async function(runState: RunState) {
+    const [a, b] = await Promise.all(runState.stack.popN(2))
     const r = a.mul(b).mod(utils.TWO_POW256)
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
   },
-  SUB: function(runState: RunState) {
-    const [a, b] = runState.stack.popN(2)
+  SUB: async function(runState: RunState) {
+    const [a, b] = await Promise.all(runState.stack.popN(2))
     const r = a.sub(b).toTwos(256)
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
   },
-  DIV: function(runState: RunState) {
-    const [a, b] = runState.stack.popN(2)
+  DIV: async function(runState: RunState) {
+    const [a, b] = await Promise.all(runState.stack.popN(2))
     let r
     if (b.isZero()) {
       r = new BN(b)
     } else {
       r = a.div(b)
     }
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
   },
-  SDIV: function(runState: RunState) {
-    let [a, b] = runState.stack.popN(2)
+  SDIV: async function(runState: RunState) {
+    let [a, b] = await Promise.all(runState.stack.popN(2))
     let r
     if (b.isZero()) {
       r = new BN(b)
@@ -71,20 +79,20 @@ export const handlers: { [k: string]: OpHandler } = {
       b = b.fromTwos(256)
       r = a.div(b).toTwos(256)
     }
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
   },
-  MOD: function(runState: RunState) {
-    const [a, b] = runState.stack.popN(2)
+  MOD: async function(runState: RunState) {
+    const [a, b] = await Promise.all(runState.stack.popN(2))
     let r
     if (b.isZero()) {
       r = new BN(b)
     } else {
       r = a.mod(b)
     }
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
   },
-  SMOD: function(runState: RunState) {
-    let [a, b] = runState.stack.popN(2)
+  SMOD: async function(runState: RunState) {
+    let [a, b] = await Promise.all(runState.stack.popN(2))
     let r
     if (b.isZero()) {
       r = new BN(b)
@@ -97,32 +105,32 @@ export const handlers: { [k: string]: OpHandler } = {
       }
       r = r.toTwos(256)
     }
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
   },
-  ADDMOD: function(runState: RunState) {
-    const [a, b, c] = runState.stack.popN(3)
+  ADDMOD: async function(runState: RunState) {
+    const [a, b, c] = await Promise.all(runState.stack.popN(3))
     let r
     if (c.isZero()) {
       r = new BN(c)
     } else {
       r = a.add(b).mod(c)
     }
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
   },
-  MULMOD: function(runState: RunState) {
-    const [a, b, c] = runState.stack.popN(3)
+  MULMOD: async function(runState: RunState) {
+    const [a, b, c] = await Promise.all(runState.stack.popN(3))
     let r
     if (c.isZero()) {
       r = new BN(c)
     } else {
       r = a.mul(b).mod(c)
     }
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
   },
-  EXP: function(runState: RunState) {
-    let [base, exponent] = runState.stack.popN(2)
+  EXP: async function(runState: RunState) {
+    let [base, exponent] = await Promise.all(runState.stack.popN(2))
     if (exponent.isZero()) {
-      runState.stack.push(new BN(1))
+      runState.stack.push(Promise.resolve(new BN(1)))
       return
     }
     const byteLength = exponent.byteLength()
@@ -134,16 +142,16 @@ export const handlers: { [k: string]: OpHandler } = {
     runState.eei.useGas(amount)
 
     if (base.isZero()) {
-      runState.stack.push(new BN(0))
+      runState.stack.push(Promise.resolve(new BN(0)))
       return
     }
     const m = BN.red(utils.TWO_POW256)
     const redBase = base.toRed(m)
     const r = redBase.redPow(exponent)
-    runState.stack.push(r.fromRed())
+    runState.stack.push(Promise.resolve(r.fromRed()))
   },
-  SIGNEXTEND: function(runState: RunState) {
-    let [k, val] = runState.stack.popN(2)
+  SIGNEXTEND: async function(runState: RunState) {
+    let [k, val] = await Promise.all(runState.stack.popN(2))
     if (k.ltn(31)) {
       const signBit = k
         .muln(8)
@@ -159,97 +167,97 @@ export const handlers: { [k: string]: OpHandler } = {
       // return the same value
       val = new BN(val)
     }
-    runState.stack.push(val)
+    runState.stack.push(Promise.resolve(val))
   },
   // 0x10 range - bit ops
-  LT: function(runState: RunState) {
-    const [a, b] = runState.stack.popN(2)
+  LT: async function(runState: RunState) {
+    const [a, b] = await Promise.all(runState.stack.popN(2))
     const r = new BN(a.lt(b) ? 1 : 0)
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
   },
-  GT: function(runState: RunState) {
-    const [a, b] = runState.stack.popN(2)
+  GT: async function(runState: RunState) {
+    const [a, b] = await Promise.all(runState.stack.popN(2))
     const r = new BN(a.gt(b) ? 1 : 0)
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
   },
-  SLT: function(runState: RunState) {
-    const [a, b] = runState.stack.popN(2)
+  SLT: async function(runState: RunState) {
+    const [a, b] = await Promise.all(runState.stack.popN(2))
     const r = new BN(a.fromTwos(256).lt(b.fromTwos(256)) ? 1 : 0)
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
   },
-  SGT: function(runState: RunState) {
-    const [a, b] = runState.stack.popN(2)
+  SGT: async function(runState: RunState) {
+    const [a, b] = await Promise.all(runState.stack.popN(2))
     const r = new BN(a.fromTwos(256).gt(b.fromTwos(256)) ? 1 : 0)
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
   },
-  EQ: function(runState: RunState) {
-    const [a, b] = runState.stack.popN(2)
+  EQ: async function(runState: RunState) {
+    const [a, b] = await Promise.all(runState.stack.popN(2))
     const r = new BN(a.eq(b) ? 1 : 0)
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
   },
-  ISZERO: function(runState: RunState) {
-    const a = runState.stack.pop()
+  ISZERO: async function(runState: RunState) {
+    const a = await runState.stack.pop()
     const r = new BN(a.isZero() ? 1 : 0)
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
   },
-  AND: function(runState: RunState) {
-    const [a, b] = runState.stack.popN(2)
+  AND: async function(runState: RunState) {
+    const [a, b] = await Promise.all(runState.stack.popN(2))
     const r = a.and(b)
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
   },
-  OR: function(runState: RunState) {
-    const [a, b] = runState.stack.popN(2)
+  OR: async function(runState: RunState) {
+    const [a, b] = await Promise.all(runState.stack.popN(2))
     const r = a.or(b)
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
   },
-  XOR: function(runState: RunState) {
-    const [a, b] = runState.stack.popN(2)
+  XOR: async function(runState: RunState) {
+    const [a, b] = await Promise.all(runState.stack.popN(2))
     const r = a.xor(b)
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
   },
-  NOT: function(runState: RunState) {
-    const a = runState.stack.pop()
+  NOT: async function(runState: RunState) {
+    const a = await runState.stack.pop()
     const r = a.notn(256)
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
   },
-  BYTE: function(runState: RunState) {
-    const [pos, word] = runState.stack.popN(2)
+  BYTE: async function(runState: RunState) {
+    const [pos, word] = await Promise.all(runState.stack.popN(2))
     if (pos.gten(32)) {
-      runState.stack.push(new BN(0))
+      runState.stack.push(Promise.resolve(new BN(0)))
       return
     }
 
     const r = new BN(word.shrn((31 - pos.toNumber()) * 8).andln(0xff))
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
   },
-  SHL: function(runState: RunState) {
-    const [a, b] = runState.stack.popN(2)
+  SHL: async function(runState: RunState) {
+    const [a, b] = await Promise.all(runState.stack.popN(2))
     if (!runState._common.gteHardfork('constantinople')) {
       trap(ERROR.INVALID_OPCODE)
     }
     if (a.gten(256)) {
-      runState.stack.push(new BN(0))
+      runState.stack.push(Promise.resolve(new BN(0)))
       return
     }
 
     const r = b.shln(a.toNumber()).iand(utils.MAX_INTEGER)
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
   },
-  SHR: function(runState: RunState) {
-    const [a, b] = runState.stack.popN(2)
+  SHR: async function(runState: RunState) {
+    const [a, b] = await Promise.all(runState.stack.popN(2))
     if (!runState._common.gteHardfork('constantinople')) {
       trap(ERROR.INVALID_OPCODE)
     }
     if (a.gten(256)) {
-      runState.stack.push(new BN(0))
+      runState.stack.push(Promise.resolve(new BN(0)))
       return
     }
 
     const r = b.shrn(a.toNumber())
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
   },
-  SAR: function(runState: RunState) {
-    const [a, b] = runState.stack.popN(2)
+  SAR: async function(runState: RunState) {
+    const [a, b] = await Promise.all(runState.stack.popN(2))
     if (!runState._common.gteHardfork('constantinople')) {
       trap(ERROR.INVALID_OPCODE)
     }
@@ -262,7 +270,7 @@ export const handlers: { [k: string]: OpHandler } = {
       } else {
         r = new BN(0)
       }
-      runState.stack.push(r)
+      runState.stack.push(Promise.resolve(r))
       return
     }
 
@@ -274,11 +282,11 @@ export const handlers: { [k: string]: OpHandler } = {
     } else {
       r = c
     }
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
   },
   // 0x20 range - crypto
-  SHA3: function(runState: RunState) {
-    const [offset, length] = runState.stack.popN(2)
+  SHA3: async function(runState: RunState) {
+    const [offset, length] = await Promise.all(runState.stack.popN(2))
     subMemUsage(runState, offset, length)
     let data = Buffer.alloc(0)
     if (!length.isZero()) {
@@ -289,31 +297,31 @@ export const handlers: { [k: string]: OpHandler } = {
       new BN(runState._common.param('gasPrices', 'sha3Word')).imul(divCeil(length, new BN(32))),
     )
     const r = new BN(utils.keccak256(data))
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
   },
   // 0x30 range - closure state
-  ADDRESS: function(runState: RunState) {
-    runState.stack.push(new BN(runState.eei.getAddress()))
+  ADDRESS: async function(runState: RunState) {
+    runState.stack.push(Promise.resolve(new BN(runState.eei.getAddress())))
   },
   BALANCE: async function(runState: RunState) {
-    const address = runState.stack.pop()
+    const address = await runState.stack.pop()
     const addressBuf = addressToBuffer(address)
     const balance = await runState.eei.getExternalBalance(addressBuf)
-    runState.stack.push(balance)
+    runState.stack.push(Promise.resolve(balance))
   },
-  ORIGIN: function(runState: RunState) {
-    runState.stack.push(runState.eei.getTxOrigin())
+  ORIGIN: async function(runState: RunState) {
+    runState.stack.push(Promise.resolve(runState.eei.getTxOrigin()))
   },
-  CALLER: function(runState: RunState) {
-    runState.stack.push(runState.eei.getCaller())
+  CALLER: async function(runState: RunState) {
+    runState.stack.push(Promise.resolve(runState.eei.getCaller()))
   },
-  CALLVALUE: function(runState: RunState) {
-    runState.stack.push(runState.eei.getCallValue())
+  CALLVALUE: async function(runState: RunState) {
+    runState.stack.push(Promise.resolve(runState.eei.getCallValue()))
   },
-  CALLDATALOAD: function(runState: RunState) {
-    let pos = runState.stack.pop()
+  CALLDATALOAD: async function(runState: RunState) {
+    let pos = await runState.stack.pop()
     if (pos.gt(runState.eei.getCallDataSize())) {
-      runState.stack.push(new BN(0))
+      runState.stack.push(Promise.resolve(new BN(0)))
       return
     }
 
@@ -322,14 +330,14 @@ export const handlers: { [k: string]: OpHandler } = {
     loaded = loaded.length ? loaded : Buffer.from([0])
     const r = new BN(utils.setLengthRight(loaded, 32))
 
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
   },
-  CALLDATASIZE: function(runState: RunState) {
+  CALLDATASIZE: async function(runState: RunState) {
     const r = runState.eei.getCallDataSize()
-    runState.stack.push(r)
+    runState.stack.push(Promise.resolve(r))
   },
-  CALLDATACOPY: function(runState: RunState) {
-    let [memOffset, dataOffset, dataLength] = runState.stack.popN(3)
+  CALLDATACOPY: async function(runState: RunState) {
+    let [memOffset, dataOffset, dataLength] = await Promise.all(runState.stack.popN(3))
 
     subMemUsage(runState, memOffset, dataLength)
     runState.eei.useGas(
@@ -342,11 +350,11 @@ export const handlers: { [k: string]: OpHandler } = {
     runState.memory.extend(memOffsetNum, dataLengthNum)
     runState.memory.write(memOffsetNum, dataLengthNum, data)
   },
-  CODESIZE: function(runState: RunState) {
-    runState.stack.push(runState.eei.getCodeSize())
+  CODESIZE: async function(runState: RunState) {
+    runState.stack.push(Promise.resolve(runState.eei.getCodeSize()))
   },
-  CODECOPY: function(runState: RunState) {
-    let [memOffset, codeOffset, length] = runState.stack.popN(3)
+  CODECOPY: async function(runState: RunState) {
+    let [memOffset, codeOffset, length] = await Promise.all(runState.stack.popN(3))
 
     subMemUsage(runState, memOffset, length)
     runState.eei.useGas(
@@ -360,12 +368,12 @@ export const handlers: { [k: string]: OpHandler } = {
     runState.memory.write(memOffsetNum, lengthNum, data)
   },
   EXTCODESIZE: async function(runState: RunState) {
-    const address = runState.stack.pop()
+    const address = await runState.stack.pop()
     const size = await runState.eei.getExternalCodeSize(address)
-    runState.stack.push(size)
+    runState.stack.push(Promise.resolve(size))
   },
   EXTCODECOPY: async function(runState: RunState) {
-    let [address, memOffset, codeOffset, length] = runState.stack.popN(4)
+    let [address, memOffset, codeOffset, length] = await Promise.all(runState.stack.popN(4))
 
     // FIXME: for some reason this must come before subGas
     subMemUsage(runState, memOffset, length)
@@ -383,7 +391,7 @@ export const handlers: { [k: string]: OpHandler } = {
     runState.memory.write(memOffsetNum, lengthNum, data)
   },
   EXTCODEHASH: async function(runState: RunState) {
-    let address = runState.stack.pop()
+    let address = await runState.stack.pop()
     if (!runState._common.gteHardfork('constantinople')) {
       trap(ERROR.INVALID_OPCODE)
     }
@@ -391,23 +399,23 @@ export const handlers: { [k: string]: OpHandler } = {
     const addressBuf = addressToBuffer(address)
     const empty = await runState.eei.isAccountEmpty(addressBuf)
     if (empty) {
-      runState.stack.push(new BN(0))
+      runState.stack.push(Promise.resolve(new BN(0)))
       return
     }
 
     const code = await runState.eei.getExternalCode(address)
     if (code.length === 0) {
-      runState.stack.push(new BN(utils.KECCAK256_NULL))
+      runState.stack.push(Promise.resolve(new BN(utils.KECCAK256_NULL)))
       return
     }
 
-    runState.stack.push(new BN(utils.keccak256(code)))
+    runState.stack.push(Promise.resolve(new BN(utils.keccak256(code))))
   },
-  RETURNDATASIZE: function(runState: RunState) {
-    runState.stack.push(runState.eei.getReturnDataSize())
+  RETURNDATASIZE: async function(runState: RunState) {
+    runState.stack.push(Promise.resolve(runState.eei.getReturnDataSize()))
   },
-  RETURNDATACOPY: function(runState: RunState) {
-    let [memOffset, returnDataOffset, length] = runState.stack.popN(3)
+  RETURNDATACOPY: async function(runState: RunState) {
+    let [memOffset, returnDataOffset, length] = await Promise.all(runState.stack.popN(3))
 
     if (returnDataOffset.add(length).gt(runState.eei.getReturnDataSize())) {
       trap(ERROR.OUT_OF_GAS)
@@ -424,58 +432,58 @@ export const handlers: { [k: string]: OpHandler } = {
     runState.memory.extend(memOffsetNum, lengthNum)
     runState.memory.write(memOffsetNum, lengthNum, data)
   },
-  GASPRICE: function(runState: RunState) {
-    runState.stack.push(runState.eei.getTxGasPrice())
+  GASPRICE: async function(runState: RunState) {
+    runState.stack.push(Promise.resolve(runState.eei.getTxGasPrice()))
   },
   // '0x40' range - block operations
   BLOCKHASH: async function(runState: RunState) {
-    const number = runState.stack.pop()
+    const number = await runState.stack.pop()
 
     const diff = runState.eei.getBlockNumber().sub(number)
     // block lookups must be within the past 256 blocks
     if (diff.gtn(256) || diff.lten(0)) {
-      runState.stack.push(new BN(0))
+      runState.stack.push(Promise.resolve(new BN(0)))
       return
     }
 
     const hash = await runState.eei.getBlockHash(number)
-    runState.stack.push(hash)
+    runState.stack.push(Promise.resolve(hash))
   },
-  COINBASE: function(runState: RunState) {
-    runState.stack.push(runState.eei.getBlockCoinbase())
+  COINBASE: async function(runState: RunState) {
+    runState.stack.push(Promise.resolve(runState.eei.getBlockCoinbase()))
   },
-  TIMESTAMP: function(runState: RunState) {
-    runState.stack.push(runState.eei.getBlockTimestamp())
+  TIMESTAMP: async function(runState: RunState) {
+    runState.stack.push(Promise.resolve(runState.eei.getBlockTimestamp()))
   },
-  NUMBER: function(runState: RunState) {
-    runState.stack.push(runState.eei.getBlockNumber())
+  NUMBER: async function(runState: RunState) {
+    runState.stack.push(Promise.resolve(runState.eei.getBlockNumber()))
   },
-  DIFFICULTY: function(runState: RunState) {
-    runState.stack.push(runState.eei.getBlockDifficulty())
+  DIFFICULTY: async function(runState: RunState) {
+    runState.stack.push(Promise.resolve(runState.eei.getBlockDifficulty()))
   },
-  GASLIMIT: function(runState: RunState) {
-    runState.stack.push(runState.eei.getBlockGasLimit())
+  GASLIMIT: async function(runState: RunState) {
+    runState.stack.push(Promise.resolve(runState.eei.getBlockGasLimit()))
   },
   // 0x50 range - 'storage' and execution
-  POP: function(runState: RunState) {
-    runState.stack.pop()
+  POP: async function(runState: RunState) {
+    await runState.stack.pop()
   },
-  MLOAD: function(runState: RunState) {
-    const pos = runState.stack.pop()
+  MLOAD: async function(runState: RunState) {
+    const pos = await runState.stack.pop()
     subMemUsage(runState, pos, new BN(32))
     const word = runState.memory.read(pos.toNumber(), 32)
-    runState.stack.push(new BN(word))
+    runState.stack.push(Promise.resolve(new BN(word)))
   },
-  MSTORE: function(runState: RunState) {
-    let [offset, word] = runState.stack.popN(2)
+  MSTORE: async function(runState: RunState) {
+    let [offset, word] = await Promise.all(runState.stack.popN(2))
     const buf = word.toArrayLike(Buffer, 'be', 32)
     subMemUsage(runState, offset, new BN(32))
     const offsetNum = offset.toNumber()
     runState.memory.extend(offsetNum, 32)
     runState.memory.write(offsetNum, 32, buf)
   },
-  MSTORE8: function(runState: RunState) {
-    let [offset, byte] = runState.stack.popN(2)
+  MSTORE8: async function(runState: RunState) {
+    let [offset, byte] = await Promise.all(runState.stack.popN(2))
 
     // NOTE: we're using a 'trick' here to get the least significant byte
     // NOTE: force cast necessary because `BN.andln` returns number but
@@ -487,19 +495,31 @@ export const handlers: { [k: string]: OpHandler } = {
     runState.memory.write(offsetNum, 1, buf)
   },
   SLOAD: async function(runState: RunState) {
-    let key = runState.stack.pop()
+    console.log('SLOAD')
+    // const p = (async () => {
+    //   let key = await runState.stack.pop()
+    //   const keyBuf = key.toArrayLike(Buffer, 'be', 32)
+  
+    //   const value = await runState.eei.storageLoad(keyBuf)
+    //   const valueBN = value.length ? new BN(value) : new BN(0)
+    //   return valueBN
+    // })()
+    
+    // runState.stack.push(p)
+
+    let key = await runState.stack.pop()
     const keyBuf = key.toArrayLike(Buffer, 'be', 32)
 
     const value = await runState.eei.storageLoad(keyBuf)
     const valueBN = value.length ? new BN(value) : new BN(0)
-    runState.stack.push(valueBN)
+    runState.stack.push(Promise.resolve(valueBN))
   },
   SSTORE: async function(runState: RunState) {
     if (runState.eei.isStatic()) {
       trap(ERROR.STATIC_STATE_CHANGE)
     }
 
-    let [key, val] = runState.stack.popN(2)
+    let [key, val] = await Promise.all(runState.stack.popN(2))
 
     const keyBuf = key.toArrayLike(Buffer, 'be', 32)
     // NOTE: this should be the shortest representation
@@ -515,8 +535,8 @@ export const handlers: { [k: string]: OpHandler } = {
     updateSstoreGas(runState, found, value)
     await runState.eei.storageStore(keyBuf, value)
   },
-  JUMP: function(runState: RunState) {
-    const dest = runState.stack.pop()
+  JUMP: async function(runState: RunState) {
+    const dest = await runState.stack.pop()
     if (dest.gt(runState.eei.getCodeSize())) {
       trap(ERROR.INVALID_JUMP + ' at ' + describeLocation(runState))
     }
@@ -529,8 +549,8 @@ export const handlers: { [k: string]: OpHandler } = {
 
     runState.programCounter = destNum
   },
-  JUMPI: function(runState: RunState) {
-    let [dest, cond] = runState.stack.popN(2)
+  JUMPI: async function(runState: RunState) {
+    let [dest, cond] = await Promise.all(runState.stack.popN(2))
     if (!cond.isZero()) {
       if (dest.gt(runState.eei.getCodeSize())) {
         trap(ERROR.INVALID_JUMP + ' at ' + describeLocation(runState))
@@ -545,17 +565,17 @@ export const handlers: { [k: string]: OpHandler } = {
       runState.programCounter = destNum
     }
   },
-  PC: function(runState: RunState) {
-    runState.stack.push(new BN(runState.programCounter - 1))
+  PC: async function(runState: RunState) {
+    runState.stack.push(Promise.resolve(new BN(runState.programCounter - 1)))
   },
-  MSIZE: function(runState: RunState) {
-    runState.stack.push(runState.memoryWordCount.muln(32))
+  MSIZE: async function(runState: RunState) {
+    runState.stack.push(Promise.resolve(runState.memoryWordCount.muln(32)))
   },
-  GAS: function(runState: RunState) {
-    runState.stack.push(new BN(runState.eei.getGasLeft()))
+  GAS: async function(runState: RunState) {
+    runState.stack.push(Promise.resolve(new BN(runState.eei.getGasLeft())))
   },
-  JUMPDEST: function(runState: RunState) {},
-  PUSH: function(runState: RunState) {
+  JUMPDEST: async function(runState: RunState) {},
+  PUSH: async function(runState: RunState) {
     const numToPush = runState.opCode - 0x5f
     const loaded = new BN(
       runState.eei
@@ -565,29 +585,29 @@ export const handlers: { [k: string]: OpHandler } = {
       16,
     )
     runState.programCounter += numToPush
-    runState.stack.push(loaded)
+    runState.stack.push(Promise.resolve(loaded))
   },
-  DUP: function(runState: RunState) {
+  DUP: async function(runState: RunState) {
     const stackPos = runState.opCode - 0x7f
     runState.stack.dup(stackPos)
   },
-  SWAP: function(runState: RunState) {
+  SWAP: async function(runState: RunState) {
     const stackPos = runState.opCode - 0x8f
     runState.stack.swap(stackPos)
   },
-  LOG: function(runState: RunState) {
+  LOG: async function(runState: RunState) {
     if (runState.eei.isStatic()) {
       trap(ERROR.STATIC_STATE_CHANGE)
     }
 
-    let [memOffset, memLength] = runState.stack.popN(2)
+    let [memOffset, memLength] = await Promise.all(runState.stack.popN(2))
 
     const topicsCount = runState.opCode - 0xa0
     if (topicsCount < 0 || topicsCount > 4) {
       trap(ERROR.OUT_OF_RANGE)
     }
 
-    let topics = runState.stack.popN(topicsCount)
+    let topics = await Promise.all(runState.stack.popN(topicsCount))
     const topicsBuf = topics.map(function(a) {
       return a.toArrayLike(Buffer, 'be', 32)
     })
@@ -612,7 +632,7 @@ export const handlers: { [k: string]: OpHandler } = {
       trap(ERROR.STATIC_STATE_CHANGE)
     }
 
-    const [value, offset, length] = runState.stack.popN(3)
+    const [value, offset, length] = await Promise.all(runState.stack.popN(3))
 
     subMemUsage(runState, offset, length)
     let gasLimit = new BN(runState.eei.getGasLeft())
@@ -624,7 +644,7 @@ export const handlers: { [k: string]: OpHandler } = {
     }
 
     const ret = await runState.eei.create(gasLimit, value, data)
-    runState.stack.push(ret)
+    runState.stack.push(Promise.resolve(ret))
   },
   CREATE2: async function(runState: RunState) {
     if (!runState._common.gteHardfork('constantinople')) {
@@ -635,7 +655,7 @@ export const handlers: { [k: string]: OpHandler } = {
       trap(ERROR.STATIC_STATE_CHANGE)
     }
 
-    const [value, offset, length, salt] = runState.stack.popN(4)
+    const [value, offset, length, salt] = await Promise.all(runState.stack.popN(4))
 
     subMemUsage(runState, offset, length)
     // Deduct gas costs for hashing
@@ -656,7 +676,7 @@ export const handlers: { [k: string]: OpHandler } = {
       data,
       salt.toArrayLike(Buffer, 'be', 32),
     )
-    runState.stack.push(ret)
+    runState.stack.push(Promise.resolve(ret))
   },
   CALL: async function(runState: RunState) {
     let [
@@ -667,7 +687,7 @@ export const handlers: { [k: string]: OpHandler } = {
       inLength,
       outOffset,
       outLength,
-    ] = runState.stack.popN(7)
+    ] = await Promise.all(runState.stack.popN(7))
     const toAddressBuf = addressToBuffer(toAddress)
 
     if (runState.eei.isStatic() && !value.isZero()) {
@@ -702,7 +722,7 @@ export const handlers: { [k: string]: OpHandler } = {
     const ret = await runState.eei.call(gasLimit, toAddressBuf, value, data)
     // Write return data to memory
     writeCallOutput(runState, outOffset, outLength)
-    runState.stack.push(ret)
+    runState.stack.push(Promise.resolve(ret))
   },
   CALLCODE: async function(runState: RunState) {
     let [
@@ -713,7 +733,7 @@ export const handlers: { [k: string]: OpHandler } = {
       inLength,
       outOffset,
       outLength,
-    ] = runState.stack.popN(7)
+    ] = await Promise.all(runState.stack.popN(7))
     const toAddressBuf = addressToBuffer(toAddress)
 
     subMemUsage(runState, inOffset, inLength)
@@ -736,11 +756,11 @@ export const handlers: { [k: string]: OpHandler } = {
     const ret = await runState.eei.callCode(gasLimit, toAddressBuf, value, data)
     // Write return data to memory
     writeCallOutput(runState, outOffset, outLength)
-    runState.stack.push(ret)
+    runState.stack.push(Promise.resolve(ret))
   },
   DELEGATECALL: async function(runState: RunState) {
     const value = runState.eei.getCallValue()
-    let [gasLimit, toAddress, inOffset, inLength, outOffset, outLength] = runState.stack.popN(6)
+    let [gasLimit, toAddress, inOffset, inLength, outOffset, outLength] = await Promise.all(runState.stack.popN(6))
     const toAddressBuf = addressToBuffer(toAddress)
 
     subMemUsage(runState, inOffset, inLength)
@@ -755,11 +775,11 @@ export const handlers: { [k: string]: OpHandler } = {
     const ret = await runState.eei.callDelegate(gasLimit, toAddressBuf, value, data)
     // Write return data to memory
     writeCallOutput(runState, outOffset, outLength)
-    runState.stack.push(ret)
+    runState.stack.push(Promise.resolve(ret))
   },
   STATICCALL: async function(runState: RunState) {
     const value = new BN(0)
-    let [gasLimit, toAddress, inOffset, inLength, outOffset, outLength] = runState.stack.popN(6)
+    let [gasLimit, toAddress, inOffset, inLength, outOffset, outLength] = await Promise.all(runState.stack.popN(6))
     const toAddressBuf = addressToBuffer(toAddress)
 
     subMemUsage(runState, inOffset, inLength)
@@ -774,10 +794,10 @@ export const handlers: { [k: string]: OpHandler } = {
     const ret = await runState.eei.callStatic(gasLimit, toAddressBuf, value, data)
     // Write return data to memory
     writeCallOutput(runState, outOffset, outLength)
-    runState.stack.push(ret)
+    runState.stack.push(Promise.resolve(ret))
   },
-  RETURN: function(runState: RunState) {
-    const [offset, length] = runState.stack.popN(2)
+  RETURN: async function(runState: RunState) {
+    const [offset, length] = await Promise.all(runState.stack.popN(2))
     subMemUsage(runState, offset, length)
     let returnData = Buffer.alloc(0)
     if (!length.isZero()) {
@@ -785,8 +805,8 @@ export const handlers: { [k: string]: OpHandler } = {
     }
     runState.eei.finish(returnData)
   },
-  REVERT: function(runState: RunState) {
-    const [offset, length] = runState.stack.popN(2)
+  REVERT: async function(runState: RunState) {
+    const [offset, length] = await Promise.all(runState.stack.popN(2))
     subMemUsage(runState, offset, length)
     let returnData = Buffer.alloc(0)
     if (!length.isZero()) {
@@ -796,7 +816,7 @@ export const handlers: { [k: string]: OpHandler } = {
   },
   // '0x70', range - other
   SELFDESTRUCT: async function(runState: RunState) {
-    let selfdestructToAddress = runState.stack.pop()
+    let selfdestructToAddress = await runState.stack.pop()
     if (runState.eei.isStatic()) {
       trap(ERROR.STATIC_STATE_CHANGE)
     }
