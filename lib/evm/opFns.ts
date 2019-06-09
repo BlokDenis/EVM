@@ -69,52 +69,67 @@ export const handlers: { [k: string]: OpHandler } = {
     runState.stack.push(result)
   },
   DIV: async function(runState: RunState) {
-    const [a, b] = await Promise.all(runState.stack.popN(2))
-    let r
-    if (b.isZero()) {
-      r = new BN(b)
-    } else {
-      r = a.div(b)
-    }
-    runState.stack.push(Promise.resolve(r))
+    const stackInput = runState.stack.popN(2)
+
+    const result = (async () => {
+      const [a, b] = await Promise.all(stackInput)
+      if (b.isZero()) {
+        return new BN(b)
+      } else {
+        return a.div(b)
+      }
+    })()
+
+    runState.stack.push(result)
   },
   SDIV: async function(runState: RunState) {
-    let [a, b] = await Promise.all(runState.stack.popN(2))
-    let r
-    if (b.isZero()) {
-      r = new BN(b)
-    } else {
-      a = a.fromTwos(256)
-      b = b.fromTwos(256)
-      r = a.div(b).toTwos(256)
-    }
-    runState.stack.push(Promise.resolve(r))
+    const stackInput = runState.stack.popN(2)
+
+    const result = (async () => {
+      const [a, b] = await Promise.all(stackInput)
+      if (b.isZero()) {
+        return new BN(b)
+      } else {
+        const a2 = a.fromTwos(256)
+        const b2 = b.fromTwos(256)
+        return a2.div(b2).toTwos(256)
+      }
+    })()
+
+    runState.stack.push(result)
   },
   MOD: async function(runState: RunState) {
-    const [a, b] = await Promise.all(runState.stack.popN(2))
-    let r
-    if (b.isZero()) {
-      r = new BN(b)
-    } else {
-      r = a.mod(b)
-    }
-    runState.stack.push(Promise.resolve(r))
+    const stackInput = runState.stack.popN(2)
+
+    const result = (async () => {
+      const [a, b] = await Promise.all(stackInput)
+      if (b.isZero()) {
+        return new BN(b)
+      } else {
+        return a.mod(b)
+      }
+    })()
+
+    runState.stack.push(result)
   },
   SMOD: async function(runState: RunState) {
-    let [a, b] = await Promise.all(runState.stack.popN(2))
-    let r
-    if (b.isZero()) {
-      r = new BN(b)
-    } else {
-      a = a.fromTwos(256)
-      b = b.fromTwos(256)
-      r = a.abs().mod(b.abs())
-      if (a.isNeg()) {
+    const stackInput = runState.stack.popN(2)
+
+    const result = (async () => {
+      const [a, b] = await Promise.all(stackInput)
+      if (b.isZero()) {
+        return new BN(b)
+      }
+      const a2 = a.fromTwos(256)
+      const b2 = b.fromTwos(256)
+      let r = a2.abs().mod(b2.abs())
+      if (a2.isNeg()) {
         r = r.ineg()
       }
-      r = r.toTwos(256)
-    }
-    runState.stack.push(Promise.resolve(r))
+      return r.toTwos(256)
+    })()
+
+    runState.stack.push(result)
   },
   ADDMOD: async function(runState: RunState) {
     const [a, b, c] = await Promise.all(runState.stack.popN(3))
