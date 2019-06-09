@@ -92,6 +92,7 @@ export default function runTx(this: VM, opts: RunTxOpts, cb: RunTxCb) {
         })
       })
       .catch(err => {
+	console.log(err)
         this.stateManager.revert(function() {
           cb(err, null)
         })

@@ -38,26 +38,35 @@ export const handlers: { [k: string]: OpHandler } = {
     trap(ERROR.STOP)
   },
   ADD: async function(runState: RunState) {
-    const [a, b] = await Promise.all(runState.stack.popN(2))
-    const r = a.add(b).mod(utils.TWO_POW256)
-    runState.stack.push(Promise.resolve(r))
+    const stackInput = runState.stack.popN(2)
 
-    // const p = (async () => {
-    //   const [a, b] = await Promise.all(runState.stack.popN(2))
-    //   return a.add(b).mod(utils.TWO_POW256)
-    // })()
+    const result = (async () => {
+      await new Promise(resolve => setTimeout(resolve, 100))
+      const [a, b] = await Promise.all(stackInput)
+      return a.add(b).mod(utils.TWO_POW256)
+    })()
     
-    // runState.stack.push(p)
+    runState.stack.push(result)
   },
   MUL: async function(runState: RunState) {
-    const [a, b] = await Promise.all(runState.stack.popN(2))
-    const r = a.mul(b).mod(utils.TWO_POW256)
-    runState.stack.push(Promise.resolve(r))
+    const stackInput = runState.stack.popN(2)
+
+    const result = (async () => {
+      const [a, b] = await Promise.all(stackInput)
+      return a.mul(b).mod(utils.TWO_POW256)
+    })()
+
+    runState.stack.push(result)
   },
   SUB: async function(runState: RunState) {
-    const [a, b] = await Promise.all(runState.stack.popN(2))
-    const r = a.sub(b).toTwos(256)
-    runState.stack.push(Promise.resolve(r))
+    const stackInput = runState.stack.popN(2)
+
+    const result = (async () => {
+      const [a, b] = await Promise.all(stackInput)
+      return a.sub(b).toTwos(256)
+    })()
+
+    runState.stack.push(result)
   },
   DIV: async function(runState: RunState) {
     const [a, b] = await Promise.all(runState.stack.popN(2))
@@ -495,24 +504,25 @@ export const handlers: { [k: string]: OpHandler } = {
     runState.memory.write(offsetNum, 1, buf)
   },
   SLOAD: async function(runState: RunState) {
-    console.log('SLOAD')
-    // const p = (async () => {
-    //   let key = await runState.stack.pop()
-    //   const keyBuf = key.toArrayLike(Buffer, 'be', 32)
+    let keyP = runState.stack.pop()
+    const p = (async () => {
+      await new Promise(resolve => setTimeout(resolve, 100))
+      const key = await keyP
+      const keyBuf = key.toArrayLike(Buffer, 'be', 32)
   
-    //   const value = await runState.eei.storageLoad(keyBuf)
-    //   const valueBN = value.length ? new BN(value) : new BN(0)
-    //   return valueBN
-    // })()
+      const value = await runState.eei.storageLoad(keyBuf)
+      const valueBN = value.length ? new BN(value) : new BN(0)
+      return valueBN
+    })()
     
-    // runState.stack.push(p)
+    runState.stack.push(p)
 
-    let key = await runState.stack.pop()
-    const keyBuf = key.toArrayLike(Buffer, 'be', 32)
+    // let key = await runState.stack.pop()
+    // const keyBuf = key.toArrayLike(Buffer, 'be', 32)
 
-    const value = await runState.eei.storageLoad(keyBuf)
-    const valueBN = value.length ? new BN(value) : new BN(0)
-    runState.stack.push(Promise.resolve(valueBN))
+    // const value = await runState.eei.storageLoad(keyBuf)
+    // const valueBN = value.length ? new BN(value) : new BN(0)
+    // runState.stack.push(Promise.resolve(valueBN))
   },
   SSTORE: async function(runState: RunState) {
     if (runState.eei.isStatic()) {
