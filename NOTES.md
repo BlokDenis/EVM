@@ -151,4 +151,26 @@ BALANCE
 CALL with value
 BALANCE
 
+some situations to consider:
 
+### 1 - enter function
+CALLDATALOAD
+JUMPI
+
+### 2 - read some data based on tx input
+CALLDATALOAD
+SLOAD
+
+### 3 - load data from other contract
+PUSH address
+PUSH 4byte
+CALL
+
+### 4 - branch based on result of both
+EQ
+JUMPI
+
+
+1 completes instantly
+2,3 run in parallel
+4 runs after 2,3
