@@ -3,7 +3,21 @@
   "private": true,
   "devDependencies": {
     "husky": "^4.2.5",
-    "lerna": "^3.20.2"
+    "lerna": "^3.20.2",
+    "@ethereumjs/config-nyc": "^1.1.1",
+    "@ethereumjs/config-prettier": "^1.1.1",
+    "@ethereumjs/config-tsc": "^1.1.1",
+    "@ethereumjs/config-tslint": "^1.1.1",
+    "@types/node": "^11.13.4",
+    "@types/tape": "^4.2.33",
+    "nyc": "^14.0.0",
+    "tape": "^4.9.2",
+    "ts-node": "^8.8.2",
+    "tslint": "^5.16.0",
+    "typedoc": "next",
+    "typedoc-plugin-markdown": "^2.2.17",
+    "typescript": "^3.8.2",
+    "typestrict": "^1.0.2"
   },
   "husky": {
     "hooks": {

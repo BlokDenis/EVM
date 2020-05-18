@@ -46,13 +46,7 @@
     "merkle-patricia-tree": "^2.1.2"
   },
   "devDependencies": {
-    "@ethereumjs/config-nyc": "^1.1.1",
-    "@ethereumjs/config-prettier": "^1.1.1",
-    "@ethereumjs/config-tsc": "^1.1.1",
-    "@ethereumjs/config-tslint": "^1.1.1",
     "@types/lru-cache": "^5.1.0",
-    "@types/node": "^11.13.4",
-    "@types/tape": "^4.2.33",
     "browserify": "^16.2.3",
     "ethereumjs-blockchain": "^4.0.3",
     "istanbul": "^0.4.1",
@@ -63,12 +57,7 @@
     "karma-tap": "^4.1.4",
     "nyc": "^15.0.0",
     "prettier": "^1.17.0",
-    "tape": "^4.0.3",
-    "ts-node": "^8.0.3",
-    "tslint": "^5.15.0",
     "typedoc": "next",
-    "typedoc-plugin-markdown": "^2.2.17",
-    "typescript": "^3.4.3",
     "typestrict": "^1.0.2"
   },
   "publishConfig": {
