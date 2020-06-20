@@ -14,6 +14,9 @@ import runBlockchain from './runBlockchain'
 const AsyncEventEmitter = require('async-eventemitter')
 const Trie = require('merkle-patricia-tree/secure.js')
 const promisify = require('util.promisify')
+const mcl = require('mcl-wasm')
+const mclInitPromise = mcl.init(mcl.BLS12_381)  // We can use the same instance of mcl for all VMs. The methods are static.
+
 
 /**
  * Options for instantiating a [[VM]].
@@ -73,6 +76,7 @@ export default class VM extends AsyncEventEmitter {
   _opcodes: OpcodeList
   public readonly _emit: (topic: string, data: any) => Promise<void>
   protected isInitialized: boolean = false
+  public readonly _mcl: any // pointer to the mcl package
 
   /**
    * VM async constructor. Creates engine instance and initializes it.
@@ -135,6 +139,8 @@ export default class VM extends AsyncEventEmitter {
     this.allowUnlimitedContractSize =
       opts.allowUnlimitedContractSize === undefined ? false : opts.allowUnlimitedContractSize
 
+    this._mcl = mcl
+
     // We cache this promisified function as it's called from the main execution loop, and
     // promisifying each time has a huge performance impact.
     this._emit = promisify(this.emit.bind(this))
@@ -154,6 +160,8 @@ export default class VM extends AsyncEventEmitter {
         .forEach(async (k: Buffer) => await this.stateManager.putAccount(k, new Account()))
       await this.stateManager.commit()
     }
+
+    await mclInitPromise // ensure that mcl is initialized.
 
     this.isInitialized = true
   }
