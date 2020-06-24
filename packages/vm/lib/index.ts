@@ -1,4 +1,3 @@
-import BN = require('bn.js')
 import Account from '@ethereumjs/account'
 import Blockchain from '@ethereumjs/blockchain'
 import Common from '@ethereumjs/common'
