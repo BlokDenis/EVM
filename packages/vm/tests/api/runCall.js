@@ -157,3 +157,72 @@ tape('Ensure that precompile activation creates non-empty accounts', async (t) =
 
     t.end()
 })
+
+tape('Ensure that allow unlimited contract size works', async (t) => {
+    // setup the accounts for this test
+    const caller1 = Buffer.from('00000000000000000000000000000000000000ee', 'hex')                   // caller addres
+    const caller2 = Buffer.from('00000000000000000000000000000000000000ff', 'hex')                   // caller addres
+    // setup the vm
+    const common = new Common('mainnet', 'istanbul')
+    const vm = new VM({ common: common, allowUnlimitedContractSize: true })        
+                       
+    const codeMessageDeploy = "600D380380600D6000396000F3" + ("00").repeat(24577) // deploy a contract which is too large (by EIP 170)
+
+    /*
+        Code:
+            PUSH 0x0D (13)  <- 13 is the length of this code
+            CODESIZE
+            SUB             <- length of the contract to be deployed
+            DUP1            <- duplicate the length (we need it again at RETURN)
+            PUSH 0x0D (13)  <- offset of the code to be deployed
+            PUSH 0          <- memory offset to dump code in
+            CODECOPY        <- dump the to-be-deployed code in the memory 
+            PUSH 0          
+            RETURN          <- deploy contract 
+    */
+
+   const codeCreateDeploy = "6010380380601060003960006000F000" + codeMessageDeploy
+
+    /*
+        Code:
+            PUSH 0x10 (16)  <- 16 is the length of this code
+            CODESIZE
+            SUB             <- length of the contract to be deployed
+            DUP1            <- duplicate the length (we need it again at RETURN)
+            PUSH 0x10 (16)  <- offset of the code to be deployed
+            PUSH 0          <- memory offset to dump code in
+            CODECOPY        <- dump the to-be-deployed code in the memory 
+            PUSH 0          
+            PUSH 0
+            CREATE          <- create the contract (this performs the codeMessageDeploy transaction, but now from a contract)
+            STOP
+            <after STOP the code of codeMessageDeploy is written>
+    */
+
+    let resultMessageDeploy = await vm.runCall({
+        caller: caller1, 
+        gasLimit: new BN(0xffffffffff),
+        to: null,
+        value: new BN(0),
+        data: Buffer.from(codeMessageDeploy, 'hex')
+    })
+
+    let deployedCodeMessageDeploy = await vm.stateManager.getContractCode(resultMessageDeploy.createdAddress)
+    t.assert(deployedCodeMessageDeploy.length == 24577, "contract did deploy as expected")
+
+    let resultCreateDeploy = await vm.runCall({
+        caller: caller2, 
+        gasLimit: new BN(0xffffffffff),
+        to: null,
+        value: new BN(0),
+        data: Buffer.from(codeCreateDeploy, 'hex'),
+    })
+
+    let deployedCode = await vm.stateManager.getContractCode(Buffer.from("855c46180b29fa849ced59cc984a0a31332c876c", 'hex'))
+    let deployedCodeEmpty = await vm.stateManager.getContractCode(resultCreateDeploy.createdAddress)
+
+    t.assert(deployedCodeEmpty.length == 0, "contract we are calling too should be empty as no code is deployed there")
+
+    t.assert(deployedCode.length == 24577, "contract did deploy as expected")
+    t.end()
+})
