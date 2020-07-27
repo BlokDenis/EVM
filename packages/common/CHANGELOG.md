@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 (modification: no type change headlines) and this project adheres to
 [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [1.5.2] - 2020-07-26
+
+This is a maintenance release.
+
+- Udpates Goerli chain ID, PR [#792](https://github.com/ethereumjs/ethereumjs-vm/pull/792).
+
+[1.5.2]: https://github.com/ethereumjs/ethereumjs-vm/compare/%40ethereumjs%2Fcommon%401.5.1...%40ethereumjs%2Fcommon%401.5.2
+
 ## [1.5.1] - 2020-05-04
 
 This is a maintenance release.
