@@ -10,7 +10,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 This is a maintenance release.
 
-- Udpates Goerli chain ID, PR [#792](https://github.com/ethereumjs/ethereumjs-vm/pull/792).
+- Updates Goerli chain ID, PR [#792](https://github.com/ethereumjs/ethereumjs-vm/pull/792).
 
 [1.5.2]: https://github.com/ethereumjs/ethereumjs-vm/compare/%40ethereumjs%2Fcommon%401.5.1...%40ethereumjs%2Fcommon%401.5.2
 
