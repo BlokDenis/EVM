@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1598524091051,
+  "lastUpdate": 1598801693720,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-vm",
   "entries": {
     "Benchmark": [
@@ -466,6 +466,100 @@ window.BENCHMARK_DATA = {
             "range": "±2.00%",
             "unit": "ops/sec",
             "extra": "77 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ev@ethereum.org",
+            "name": "Ev",
+            "username": "evertonfraga"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "428ae935de4d01198354d826867303068786bb4b",
+          "message": "Replace gitter badge (#854)\n\n* Replace gitter badge\r\n\r\n* account: replace gitter badge\r\n\r\n* block: replacing gitter badge\r\n\r\n* block: replacing gitter badge\r\n\r\n* blockchain: replacing gitter badge\r\n\r\n* common: replace gitter badge\r\n\r\n* Update README.md\r\n\r\n* tx: replace gitter badge\r\n\r\n* vm: replace gitter badge",
+          "timestamp": "2020-08-30T11:28:59-04:00",
+          "tree_id": "06833918d89e7917ffb3b190b1894b0743fdab6c",
+          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/428ae935de4d01198354d826867303068786bb4b"
+        },
+        "date": 1598801693102,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1840,
+            "range": "±5.84%",
+            "unit": "ops/sec",
+            "extra": "75 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1774,
+            "range": "±9.10%",
+            "unit": "ops/sec",
+            "extra": "78 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1738,
+            "range": "±9.75%",
+            "unit": "ops/sec",
+            "extra": "76 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1912,
+            "range": "±1.62%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1864,
+            "range": "±1.83%",
+            "unit": "ops/sec",
+            "extra": "80 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1827,
+            "range": "±1.64%",
+            "unit": "ops/sec",
+            "extra": "80 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1484,
+            "range": "±13.48%",
+            "unit": "ops/sec",
+            "extra": "64 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1813,
+            "range": "±2.54%",
+            "unit": "ops/sec",
+            "extra": "79 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1814,
+            "range": "±1.55%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1797,
+            "range": "±1.86%",
+            "unit": "ops/sec",
+            "extra": "76 samples"
           }
         ]
       }
