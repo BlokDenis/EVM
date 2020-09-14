@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1600110291051,
+  "lastUpdate": 1600112628547,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-vm",
   "entries": {
     "Benchmark": [
@@ -1782,6 +1782,100 @@ window.BENCHMARK_DATA = {
             "range": "±2.14%",
             "unit": "ops/sec",
             "extra": "83 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "10e76c9e42ae350789a508b4f7c70a1a778fd0f4",
+          "message": "Merge pull request #869 from ethereumjs/move-eip-support-to-common\n\nMove EIP Integration to Common",
+          "timestamp": "2020-09-14T21:38:57+02:00",
+          "tree_id": "0f46c99ebe88a180a4fe58eb74e964a3e128c929",
+          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/10e76c9e42ae350789a508b4f7c70a1a778fd0f4"
+        },
+        "date": 1600112626862,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1888,
+            "range": "±3.09%",
+            "unit": "ops/sec",
+            "extra": "81 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1976,
+            "range": "±5.37%",
+            "unit": "ops/sec",
+            "extra": "79 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1882,
+            "range": "±10.65%",
+            "unit": "ops/sec",
+            "extra": "76 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 2038,
+            "range": "±2.09%",
+            "unit": "ops/sec",
+            "extra": "83 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 2076,
+            "range": "±1.55%",
+            "unit": "ops/sec",
+            "extra": "83 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1631,
+            "range": "±11.52%",
+            "unit": "ops/sec",
+            "extra": "68 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1927,
+            "range": "±2.30%",
+            "unit": "ops/sec",
+            "extra": "81 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1874,
+            "range": "±1.99%",
+            "unit": "ops/sec",
+            "extra": "81 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1883,
+            "range": "±1.90%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1819,
+            "range": "±2.50%",
+            "unit": "ops/sec",
+            "extra": "71 samples"
           }
         ]
       }
