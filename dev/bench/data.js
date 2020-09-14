@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1600074815915,
+  "lastUpdate": 1600108133486,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-vm",
   "entries": {
     "Benchmark": [
@@ -1594,6 +1594,100 @@ window.BENCHMARK_DATA = {
             "range": "±1.29%",
             "unit": "ops/sec",
             "extra": "90 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ev@ethereum.org",
+            "name": "Ev",
+            "username": "evertonfraga"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "c81c2472c1e70e45704bea53d3b383dd42b265d9",
+          "message": "block: setting browser tests concurrency to 1 (#868)",
+          "timestamp": "2020-09-14T11:24:07-07:00",
+          "tree_id": "a12530865f75fc0d2a0f51e451434faf12307f70",
+          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/c81c2472c1e70e45704bea53d3b383dd42b265d9"
+        },
+        "date": 1600108132815,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 2156,
+            "range": "±3.36%",
+            "unit": "ops/sec",
+            "extra": "83 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 2147,
+            "range": "±5.86%",
+            "unit": "ops/sec",
+            "extra": "77 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 2194,
+            "range": "±2.16%",
+            "unit": "ops/sec",
+            "extra": "77 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1849,
+            "range": "±10.69%",
+            "unit": "ops/sec",
+            "extra": "74 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 2078,
+            "range": "±1.58%",
+            "unit": "ops/sec",
+            "extra": "83 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 2047,
+            "range": "±1.72%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1743,
+            "range": "±13.09%",
+            "unit": "ops/sec",
+            "extra": "71 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1602,
+            "range": "±13.24%",
+            "unit": "ops/sec",
+            "extra": "76 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1994,
+            "range": "±1.97%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1957,
+            "range": "±2.20%",
+            "unit": "ops/sec",
+            "extra": "76 samples"
           }
         ]
       }
