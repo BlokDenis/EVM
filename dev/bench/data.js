@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1600152837299,
+  "lastUpdate": 1600154394587,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-vm",
   "entries": {
     "Benchmark": [
@@ -1970,6 +1970,100 @@ window.BENCHMARK_DATA = {
             "range": "±1.71%",
             "unit": "ops/sec",
             "extra": "82 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "d246b2b2eea3f518eb04490325df37f5491bdf20",
+          "message": "Merge pull request #861 from ethereumjs/upgrade-karma-browser-deps\n\nUpgrade karma dependencies to latest",
+          "timestamp": "2020-09-15T09:12:43+02:00",
+          "tree_id": "c68193d73ae0255f3d216dc2d9df5d228936d443",
+          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/d246b2b2eea3f518eb04490325df37f5491bdf20"
+        },
+        "date": 1600154393973,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 2220,
+            "range": "±4.36%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 2163,
+            "range": "±1.69%",
+            "unit": "ops/sec",
+            "extra": "80 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 2024,
+            "range": "±8.86%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 2093,
+            "range": "±1.83%",
+            "unit": "ops/sec",
+            "extra": "83 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1987,
+            "range": "±1.91%",
+            "unit": "ops/sec",
+            "extra": "79 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 2110,
+            "range": "±1.86%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 2097,
+            "range": "±1.91%",
+            "unit": "ops/sec",
+            "extra": "83 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 2082,
+            "range": "±4.57%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1883,
+            "range": "±11.26%",
+            "unit": "ops/sec",
+            "extra": "76 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1282,
+            "range": "±22.55%",
+            "unit": "ops/sec",
+            "extra": "65 samples"
           }
         ]
       }
