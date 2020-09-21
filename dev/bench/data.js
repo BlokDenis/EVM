@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1600712071974,
+  "lastUpdate": 1600716863689,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-vm",
   "entries": {
     "Benchmark": [
@@ -2346,6 +2346,100 @@ window.BENCHMARK_DATA = {
             "range": "±1.67%",
             "unit": "ops/sec",
             "extra": "78 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ev@ethereum.org",
+            "name": "Ev",
+            "username": "evertonfraga"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "d15e7beecec3c7764bc7e5e121f095acd506187b",
+          "message": "docs: removing standard badge (#885)\n\nCo-authored-by: Ryan Ghods <ryan@ryanio.com>",
+          "timestamp": "2020-09-21T15:28:16-04:00",
+          "tree_id": "5d75311a3e02d7f583ff596d2d02f4fddb20a348",
+          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/d15e7beecec3c7764bc7e5e121f095acd506187b"
+        },
+        "date": 1600716863073,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1742,
+            "range": "±4.44%",
+            "unit": "ops/sec",
+            "extra": "81 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1781,
+            "range": "±6.65%",
+            "unit": "ops/sec",
+            "extra": "83 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1664,
+            "range": "±9.40%",
+            "unit": "ops/sec",
+            "extra": "81 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1744,
+            "range": "±1.58%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1727,
+            "range": "±1.33%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1705,
+            "range": "±1.55%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1737,
+            "range": "±1.18%",
+            "unit": "ops/sec",
+            "extra": "89 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1462,
+            "range": "±12.55%",
+            "unit": "ops/sec",
+            "extra": "76 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1341,
+            "range": "±13.08%",
+            "unit": "ops/sec",
+            "extra": "75 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1663,
+            "range": "±1.63%",
+            "unit": "ops/sec",
+            "extra": "81 samples"
           }
         ]
       }
