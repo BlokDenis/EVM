@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1601996825243,
+  "lastUpdate": 1602065457219,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-vm",
   "entries": {
     "Benchmark": [
@@ -3004,6 +3004,100 @@ window.BENCHMARK_DATA = {
             "range": "±2.00%",
             "unit": "ops/sec",
             "extra": "78 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "ff751305069b6c661f33d1b68375c8509ffeabd7",
+          "message": "Merge pull request #880 from ethereumjs/storage-slots-32-bytes\n\nVM: Strip zeros when putting contract storage in StateManager",
+          "timestamp": "2020-10-07T12:06:21+02:00",
+          "tree_id": "9ad9fa5428e249012dc842c6db95ba1e2d1e4abb",
+          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/ff751305069b6c661f33d1b68375c8509ffeabd7"
+        },
+        "date": 1602065456606,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1882,
+            "range": "±2.60%",
+            "unit": "ops/sec",
+            "extra": "83 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1862,
+            "range": "±6.70%",
+            "unit": "ops/sec",
+            "extra": "74 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1981,
+            "range": "±1.82%",
+            "unit": "ops/sec",
+            "extra": "81 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1959,
+            "range": "±1.76%",
+            "unit": "ops/sec",
+            "extra": "79 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1887,
+            "range": "±1.72%",
+            "unit": "ops/sec",
+            "extra": "80 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1807,
+            "range": "±1.62%",
+            "unit": "ops/sec",
+            "extra": "83 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1826,
+            "range": "±1.89%",
+            "unit": "ops/sec",
+            "extra": "78 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1293,
+            "range": "±15.36%",
+            "unit": "ops/sec",
+            "extra": "64 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1694,
+            "range": "±2.39%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1785,
+            "range": "±1.72%",
+            "unit": "ops/sec",
+            "extra": "81 samples"
           }
         ]
       }
