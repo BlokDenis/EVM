@@ -1,102 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1602144116100,
+  "lastUpdate": 1602523592276,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-vm",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "ev@ethereum.org",
-            "name": "Ev",
-            "username": "evertonfraga"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "428ae935de4d01198354d826867303068786bb4b",
-          "message": "Replace gitter badge (#854)\n\n* Replace gitter badge\r\n\r\n* account: replace gitter badge\r\n\r\n* block: replacing gitter badge\r\n\r\n* block: replacing gitter badge\r\n\r\n* blockchain: replacing gitter badge\r\n\r\n* common: replace gitter badge\r\n\r\n* Update README.md\r\n\r\n* tx: replace gitter badge\r\n\r\n* vm: replace gitter badge",
-          "timestamp": "2020-08-30T11:28:59-04:00",
-          "tree_id": "06833918d89e7917ffb3b190b1894b0743fdab6c",
-          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/428ae935de4d01198354d826867303068786bb4b"
-        },
-        "date": 1598801693102,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "Block 9422905",
-            "value": 1840,
-            "range": "±5.84%",
-            "unit": "ops/sec",
-            "extra": "75 samples"
-          },
-          {
-            "name": "Block 9422906",
-            "value": 1774,
-            "range": "±9.10%",
-            "unit": "ops/sec",
-            "extra": "78 samples"
-          },
-          {
-            "name": "Block 9422907",
-            "value": 1738,
-            "range": "±9.75%",
-            "unit": "ops/sec",
-            "extra": "76 samples"
-          },
-          {
-            "name": "Block 9422908",
-            "value": 1912,
-            "range": "±1.62%",
-            "unit": "ops/sec",
-            "extra": "84 samples"
-          },
-          {
-            "name": "Block 9422909",
-            "value": 1864,
-            "range": "±1.83%",
-            "unit": "ops/sec",
-            "extra": "80 samples"
-          },
-          {
-            "name": "Block 9422910",
-            "value": 1827,
-            "range": "±1.64%",
-            "unit": "ops/sec",
-            "extra": "80 samples"
-          },
-          {
-            "name": "Block 9422911",
-            "value": 1484,
-            "range": "±13.48%",
-            "unit": "ops/sec",
-            "extra": "64 samples"
-          },
-          {
-            "name": "Block 9422912",
-            "value": 1813,
-            "range": "±2.54%",
-            "unit": "ops/sec",
-            "extra": "79 samples"
-          },
-          {
-            "name": "Block 9422913",
-            "value": 1814,
-            "range": "±1.55%",
-            "unit": "ops/sec",
-            "extra": "84 samples"
-          },
-          {
-            "name": "Block 9422914",
-            "value": 1797,
-            "range": "±1.86%",
-            "unit": "ops/sec",
-            "extra": "76 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2820,6 +2726,100 @@ window.BENCHMARK_DATA = {
             "range": "±1.10%",
             "unit": "ops/sec",
             "extra": "83 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "7f3f4b417da1902069a5be463019f7bbba581041",
+          "message": "Block library refactoring (#883)\n\n* block -> refactor: reworked header class with static factory instantiation helpers, removed defineProperties usage, fixed header tests\n\n* block -> refactoring: added new static factory helpers to block class\n\n* block -> refactor: fix build errors, remove unused imports, unpad number-value buffers in header\n\n* block -> rename Header to BlockHeader\n\n* block/tx -> fix block tests\n\n* block -> enforce BNs on fields which are interpreted as numbers\n\n* block -> edge case in toBN\n\nblock -> fix tests, fix util\n\n* ethash -> make ethash compatible with block\n\n* have validateTransactions return a string[] (https://github.com/ethereumjs/ethereumjs-vm/pull/812#discussion_r459125017)\n\n* let => const\n\n* set default param to resolve js runtime check\n\n* continue refactoring and simplifying methods\nfreeze both block and header objects\nuse Address for coinbase\n\n* api updates\n\n* continuing work\n\n* inline buffer validations. add checks for extraData, mixHash and nonce\n\n* various fixups\n\n* continuing various work\n\n* continuing work and refactoring\n  added Block.genesis() and BlockHeader.genesis() alias\n  update vm\n\n* re-add timestamp to genesis (for rinkeby)\n\n* last fixups\n\n* update readme, benchmarks\n\n* update vm readme, simplify validate\n\n* fix timestamp validation\n\n* use native eq\n\n* make blockchain optional in block.validate()\nmove genTxTrie() inside validateTransactionsTrie()\n\n* fixups\n\n* remove BLOCK_difficulty_GivenAsList from skip list (https://github.com/ethereumjs/ethereumjs-vm/pull/883#issuecomment-699028602)\n\nCo-authored-by: Jochem Brouwer <jochembrouwer96@gmail.com>\nCo-authored-by: Ryan Ghods <ryan@ryanio.com>",
+          "timestamp": "2020-10-12T10:17:20-07:00",
+          "tree_id": "255f3ec2c65b7f3cf8a5b5f22195779bcf442e4e",
+          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/7f3f4b417da1902069a5be463019f7bbba581041"
+        },
+        "date": 1602523591581,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1798,
+            "range": "±2.19%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1716,
+            "range": "±5.64%",
+            "unit": "ops/sec",
+            "extra": "81 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1752,
+            "range": "±1.22%",
+            "unit": "ops/sec",
+            "extra": "88 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1713,
+            "range": "±0.70%",
+            "unit": "ops/sec",
+            "extra": "89 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1694,
+            "range": "±1.44%",
+            "unit": "ops/sec",
+            "extra": "80 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1686,
+            "range": "±1.06%",
+            "unit": "ops/sec",
+            "extra": "89 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1694,
+            "range": "±1.27%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1653,
+            "range": "±0.86%",
+            "unit": "ops/sec",
+            "extra": "90 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1122,
+            "range": "±18.73%",
+            "unit": "ops/sec",
+            "extra": "54 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1593,
+            "range": "±1.72%",
+            "unit": "ops/sec",
+            "extra": "77 samples"
           }
         ]
       }
