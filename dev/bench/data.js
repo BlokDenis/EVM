@@ -1,102 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1603266082031,
+  "lastUpdate": 1603268087429,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-vm",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "ev@ethereum.org",
-            "name": "Ev",
-            "username": "evertonfraga"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "7c354a4cd549ce359e8355420a24cb8f8c029b19",
-          "message": "Fixing hoisting documentation (#864)\n\n* Fixing hoisting documentation\r\n\r\n* Update README.md\r\n\r\nCo-authored-by: Ryan Ghods <ryan@ryanio.com>\r\n\r\nCo-authored-by: Ryan Ghods <ryan@ryanio.com>",
-          "timestamp": "2020-09-09T00:21:38-04:00",
-          "tree_id": "fcd38bf7a1543b222654cb3b175f49c5df689c04",
-          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/7c354a4cd549ce359e8355420a24cb8f8c029b19"
-        },
-        "date": 1599625557828,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "Block 9422905",
-            "value": 1896,
-            "range": "±6.44%",
-            "unit": "ops/sec",
-            "extra": "78 samples"
-          },
-          {
-            "name": "Block 9422906",
-            "value": 1997,
-            "range": "±5.83%",
-            "unit": "ops/sec",
-            "extra": "80 samples"
-          },
-          {
-            "name": "Block 9422907",
-            "value": 1921,
-            "range": "±8.88%",
-            "unit": "ops/sec",
-            "extra": "79 samples"
-          },
-          {
-            "name": "Block 9422908",
-            "value": 2116,
-            "range": "±1.15%",
-            "unit": "ops/sec",
-            "extra": "86 samples"
-          },
-          {
-            "name": "Block 9422909",
-            "value": 2071,
-            "range": "±1.72%",
-            "unit": "ops/sec",
-            "extra": "84 samples"
-          },
-          {
-            "name": "Block 9422910",
-            "value": 1724,
-            "range": "±14.31%",
-            "unit": "ops/sec",
-            "extra": "69 samples"
-          },
-          {
-            "name": "Block 9422911",
-            "value": 2059,
-            "range": "±1.82%",
-            "unit": "ops/sec",
-            "extra": "80 samples"
-          },
-          {
-            "name": "Block 9422912",
-            "value": 2136,
-            "range": "±1.61%",
-            "unit": "ops/sec",
-            "extra": "86 samples"
-          },
-          {
-            "name": "Block 9422913",
-            "value": 2128,
-            "range": "±1.82%",
-            "unit": "ops/sec",
-            "extra": "87 samples"
-          },
-          {
-            "name": "Block 9422914",
-            "value": 2131,
-            "range": "±1.63%",
-            "unit": "ops/sec",
-            "extra": "83 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2820,6 +2726,100 @@ window.BENCHMARK_DATA = {
             "range": "±1.35%",
             "unit": "ops/sec",
             "extra": "78 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "2f0e6d000951de37e96ea3a05d8faa4e037f4377",
+          "message": "Merge pull request #921 from ethereumjs/add-browser-field\n\nAdd browser field to package.json's of modules with browser builds",
+          "timestamp": "2020-10-21T09:59:14+02:00",
+          "tree_id": "0214bf4f3f944a4710660aaba43bed6edd5c5184",
+          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/2f0e6d000951de37e96ea3a05d8faa4e037f4377"
+        },
+        "date": 1603268086821,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1834,
+            "range": "±2.27%",
+            "unit": "ops/sec",
+            "extra": "90 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1867,
+            "range": "±0.66%",
+            "unit": "ops/sec",
+            "extra": "93 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1845,
+            "range": "±0.60%",
+            "unit": "ops/sec",
+            "extra": "94 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1641,
+            "range": "±7.71%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1745,
+            "range": "±1.35%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1755,
+            "range": "±1.14%",
+            "unit": "ops/sec",
+            "extra": "83 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1753,
+            "range": "±1.05%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1727,
+            "range": "±0.94%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1714,
+            "range": "±1.13%",
+            "unit": "ops/sec",
+            "extra": "81 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1521,
+            "range": "±9.76%",
+            "unit": "ops/sec",
+            "extra": "73 samples"
           }
         ]
       }
