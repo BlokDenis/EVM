@@ -1,102 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1603351957114,
+  "lastUpdate": 1603389503387,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-vm",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "e6d5c2b94d5e5a3f0f18a146b7c70820aa5c256d",
-          "message": "Chain setup API / Centralize default HF / Common options dict / Block HFbyBlockNumber & initWithGenesisHeader options (#863)\n\n* common, all consumers: switch to an option dictionary for instantiation as preparation for new eips option and future non-breaking option additions\r\n\r\n* vm: removed chain, hardfork options from the constructor\r\n\r\n* common, vm, tx: centralize default hardfork setting in Common (default if none provided, before: null), remove static default HF references from VM, tx\r\n\r\n* block, common: new block/header option hardforkByBlockNumber, removed chain/hardfork options, added Common method setHardforkByBlockNumber()\r\n\r\n* tx: remove chain/hardfork options from the constructor\r\n\r\n* block: simplified header/block initialization code, moved genesis header init to constructor, made setGenesisParams() private\r\n\r\n* blockchain, ethash: update genesis block creation in blockchain and ethash, removed chain/hardfork options for blockchain\r\n\r\n* vm, others: throw on chain/hardfork still being passed on constructors to prevent implicitly wrong chain setups, fixed VM API tests\r\n\r\n* vm, block: fix VM StateTest runner, block hardforkByBlockNumber typo correction\r\n\r\n* vm: fix merge conflict in package.json\r\n\r\n* vm, block, common: readded block data runtime check, moved Common DEFAULT_HARDFORK to class, small fixes\r\n\r\n* Update packages/vm/CHANGELOG.md\r\n\r\nfix small typo\r\n\r\nCo-authored-by: Ryan Ghods <ryan@ryanio.com>",
-          "timestamp": "2020-09-10T11:36:08-07:00",
-          "tree_id": "daf879ae40d8f44c96745e263e2bb3d7590eaf0c",
-          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/e6d5c2b94d5e5a3f0f18a146b7c70820aa5c256d"
-        },
-        "date": 1599763254270,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "Block 9422905",
-            "value": 1946,
-            "range": "±3.67%",
-            "unit": "ops/sec",
-            "extra": "83 samples"
-          },
-          {
-            "name": "Block 9422906",
-            "value": 2004,
-            "range": "±5.31%",
-            "unit": "ops/sec",
-            "extra": "83 samples"
-          },
-          {
-            "name": "Block 9422907",
-            "value": 1891,
-            "range": "±10.72%",
-            "unit": "ops/sec",
-            "extra": "78 samples"
-          },
-          {
-            "name": "Block 9422908",
-            "value": 2054,
-            "range": "±1.53%",
-            "unit": "ops/sec",
-            "extra": "87 samples"
-          },
-          {
-            "name": "Block 9422909",
-            "value": 2118,
-            "range": "±1.65%",
-            "unit": "ops/sec",
-            "extra": "84 samples"
-          },
-          {
-            "name": "Block 9422910",
-            "value": 2206,
-            "range": "±1.99%",
-            "unit": "ops/sec",
-            "extra": "83 samples"
-          },
-          {
-            "name": "Block 9422911",
-            "value": 1498,
-            "range": "±19.10%",
-            "unit": "ops/sec",
-            "extra": "60 samples"
-          },
-          {
-            "name": "Block 9422912",
-            "value": 2036,
-            "range": "±2.00%",
-            "unit": "ops/sec",
-            "extra": "81 samples"
-          },
-          {
-            "name": "Block 9422913",
-            "value": 1874,
-            "range": "±2.46%",
-            "unit": "ops/sec",
-            "extra": "78 samples"
-          },
-          {
-            "name": "Block 9422914",
-            "value": 1896,
-            "range": "±2.54%",
-            "unit": "ops/sec",
-            "extra": "77 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2820,6 +2726,100 @@ window.BENCHMARK_DATA = {
             "range": "±1.66%",
             "unit": "ops/sec",
             "extra": "85 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jochembrouwer96@gmail.com",
+            "name": "Jochem Brouwer",
+            "username": "jochem-brouwer"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f6113ced06efcf421336833d392aed59cdc7f391",
+          "message": "Merge pull request #920 from ethereumjs/remove-eslint-ignores\n\nRe-evaluate the ignored ESLint rules",
+          "timestamp": "2020-10-22T19:40:25+02:00",
+          "tree_id": "d047cefc280b644c5bd20da701f98de449b7fa7f",
+          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/f6113ced06efcf421336833d392aed59cdc7f391"
+        },
+        "date": 1603389502767,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1818,
+            "range": "±2.42%",
+            "unit": "ops/sec",
+            "extra": "88 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1806,
+            "range": "±1.54%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1699,
+            "range": "±7.56%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1758,
+            "range": "±1.11%",
+            "unit": "ops/sec",
+            "extra": "89 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1712,
+            "range": "±1.78%",
+            "unit": "ops/sec",
+            "extra": "83 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1693,
+            "range": "±1.74%",
+            "unit": "ops/sec",
+            "extra": "78 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1705,
+            "range": "±1.09%",
+            "unit": "ops/sec",
+            "extra": "90 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1700,
+            "range": "±0.90%",
+            "unit": "ops/sec",
+            "extra": "92 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1635,
+            "range": "±1.05%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1213,
+            "range": "±13.29%",
+            "unit": "ops/sec",
+            "extra": "61 samples"
           }
         ]
       }
