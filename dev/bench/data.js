@@ -1,102 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1604996839541,
+  "lastUpdate": 1605010012759,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-vm",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "38dc920322470e49092c6b0bcdca6b9db0f9e233",
-          "message": "common: added EIP-based HF file format as preparation for Yolo v2 integration (and other ephemeral testnets) (#876)\n\nCo-authored-by: Ryan Ghods <ryan@ryanio.com>",
-          "timestamp": "2020-09-21T15:23:52-07:00",
-          "tree_id": "99e77b939bd845e0395156b5e5e747fb45a07ad6",
-          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/38dc920322470e49092c6b0bcdca6b9db0f9e233"
-        },
-        "date": 1600727305824,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "Block 9422905",
-            "value": 1956,
-            "range": "±6.85%",
-            "unit": "ops/sec",
-            "extra": "76 samples"
-          },
-          {
-            "name": "Block 9422906",
-            "value": 1960,
-            "range": "±9.33%",
-            "unit": "ops/sec",
-            "extra": "78 samples"
-          },
-          {
-            "name": "Block 9422907",
-            "value": 2063,
-            "range": "±2.23%",
-            "unit": "ops/sec",
-            "extra": "83 samples"
-          },
-          {
-            "name": "Block 9422908",
-            "value": 2010,
-            "range": "±1.57%",
-            "unit": "ops/sec",
-            "extra": "81 samples"
-          },
-          {
-            "name": "Block 9422909",
-            "value": 1672,
-            "range": "±12.10%",
-            "unit": "ops/sec",
-            "extra": "69 samples"
-          },
-          {
-            "name": "Block 9422910",
-            "value": 1975,
-            "range": "±2.35%",
-            "unit": "ops/sec",
-            "extra": "83 samples"
-          },
-          {
-            "name": "Block 9422911",
-            "value": 2013,
-            "range": "±2.31%",
-            "unit": "ops/sec",
-            "extra": "83 samples"
-          },
-          {
-            "name": "Block 9422912",
-            "value": 1944,
-            "range": "±1.89%",
-            "unit": "ops/sec",
-            "extra": "83 samples"
-          },
-          {
-            "name": "Block 9422913",
-            "value": 1798,
-            "range": "±2.55%",
-            "unit": "ops/sec",
-            "extra": "76 samples"
-          },
-          {
-            "name": "Block 9422914",
-            "value": 1939,
-            "range": "±1.96%",
-            "unit": "ops/sec",
-            "extra": "84 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2820,6 +2726,100 @@ window.BENCHMARK_DATA = {
             "range": "±1.15%",
             "unit": "ops/sec",
             "extra": "90 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "d7d9123be2b4492e42cf65cf64716bc379f67501",
+          "message": "Merge pull request #937 from ethereumjs/poa-preparations\n\nStructural Preparations for PoA Support",
+          "timestamp": "2020-11-10T13:00:34+01:00",
+          "tree_id": "602439fda72d04b3722c85d5e5685987da82467d",
+          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/d7d9123be2b4492e42cf65cf64716bc379f67501"
+        },
+        "date": 1605010011906,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 2256,
+            "range": "±3.21%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 2124,
+            "range": "±9.28%",
+            "unit": "ops/sec",
+            "extra": "81 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 2159,
+            "range": "±2.06%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1828,
+            "range": "±10.43%",
+            "unit": "ops/sec",
+            "extra": "72 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 2176,
+            "range": "±2.01%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 2169,
+            "range": "±1.92%",
+            "unit": "ops/sec",
+            "extra": "88 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 2157,
+            "range": "±1.84%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 2121,
+            "range": "±1.80%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 2074,
+            "range": "±1.98%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1956,
+            "range": "±2.06%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
           }
         ]
       }
