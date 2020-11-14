@@ -1,102 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1605200078465,
+  "lastUpdate": 1605381539418,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-vm",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "ff751305069b6c661f33d1b68375c8509ffeabd7",
-          "message": "Merge pull request #880 from ethereumjs/storage-slots-32-bytes\n\nVM: Strip zeros when putting contract storage in StateManager",
-          "timestamp": "2020-10-07T12:06:21+02:00",
-          "tree_id": "9ad9fa5428e249012dc842c6db95ba1e2d1e4abb",
-          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/ff751305069b6c661f33d1b68375c8509ffeabd7"
-        },
-        "date": 1602065456606,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "Block 9422905",
-            "value": 1882,
-            "range": "±2.60%",
-            "unit": "ops/sec",
-            "extra": "83 samples"
-          },
-          {
-            "name": "Block 9422906",
-            "value": 1862,
-            "range": "±6.70%",
-            "unit": "ops/sec",
-            "extra": "74 samples"
-          },
-          {
-            "name": "Block 9422907",
-            "value": 1981,
-            "range": "±1.82%",
-            "unit": "ops/sec",
-            "extra": "81 samples"
-          },
-          {
-            "name": "Block 9422908",
-            "value": 1959,
-            "range": "±1.76%",
-            "unit": "ops/sec",
-            "extra": "79 samples"
-          },
-          {
-            "name": "Block 9422909",
-            "value": 1887,
-            "range": "±1.72%",
-            "unit": "ops/sec",
-            "extra": "80 samples"
-          },
-          {
-            "name": "Block 9422910",
-            "value": 1807,
-            "range": "±1.62%",
-            "unit": "ops/sec",
-            "extra": "83 samples"
-          },
-          {
-            "name": "Block 9422911",
-            "value": 1826,
-            "range": "±1.89%",
-            "unit": "ops/sec",
-            "extra": "78 samples"
-          },
-          {
-            "name": "Block 9422912",
-            "value": 1293,
-            "range": "±15.36%",
-            "unit": "ops/sec",
-            "extra": "64 samples"
-          },
-          {
-            "name": "Block 9422913",
-            "value": 1694,
-            "range": "±2.39%",
-            "unit": "ops/sec",
-            "extra": "86 samples"
-          },
-          {
-            "name": "Block 9422914",
-            "value": 1785,
-            "range": "±1.72%",
-            "unit": "ops/sec",
-            "extra": "81 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2820,6 +2726,100 @@ window.BENCHMARK_DATA = {
             "range": "±11.55%",
             "unit": "ops/sec",
             "extra": "67 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "222283bbb6780e4effa4cf8089e60d7d98b16571",
+          "message": "Small Release/README Fixes (#949)\n\n* monorepo: small README fixes and corrections\r\n\r\n* Apply suggestions from code review\r\n\r\nCo-authored-by: Ev <ev@ethereum.org>\r\n\r\nCo-authored-by: Ryan Ghods <ryan@ryanio.com>\r\nCo-authored-by: Ev <ev@ethereum.org>",
+          "timestamp": "2020-11-14T10:54:13-08:00",
+          "tree_id": "1b96c6ac55dfc8fd755c7214276f5e656c758534",
+          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/222283bbb6780e4effa4cf8089e60d7d98b16571"
+        },
+        "date": 1605381538496,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1643,
+            "range": "±3.35%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1636,
+            "range": "±3.49%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1569,
+            "range": "±8.25%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1642,
+            "range": "±0.95%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1430,
+            "range": "±10.13%",
+            "unit": "ops/sec",
+            "extra": "75 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1598,
+            "range": "±1.54%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1626,
+            "range": "±1.16%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1592,
+            "range": "±0.88%",
+            "unit": "ops/sec",
+            "extra": "81 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1554,
+            "range": "±1.07%",
+            "unit": "ops/sec",
+            "extra": "80 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1118,
+            "range": "±16.65%",
+            "unit": "ops/sec",
+            "extra": "56 samples"
           }
         ]
       }
