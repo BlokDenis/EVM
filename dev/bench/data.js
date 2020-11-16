@@ -1,102 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1605524769352,
+  "lastUpdate": 1605528992276,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-vm",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "7f3f4b417da1902069a5be463019f7bbba581041",
-          "message": "Block library refactoring (#883)\n\n* block -> refactor: reworked header class with static factory instantiation helpers, removed defineProperties usage, fixed header tests\n\n* block -> refactoring: added new static factory helpers to block class\n\n* block -> refactor: fix build errors, remove unused imports, unpad number-value buffers in header\n\n* block -> rename Header to BlockHeader\n\n* block/tx -> fix block tests\n\n* block -> enforce BNs on fields which are interpreted as numbers\n\n* block -> edge case in toBN\n\nblock -> fix tests, fix util\n\n* ethash -> make ethash compatible with block\n\n* have validateTransactions return a string[] (https://github.com/ethereumjs/ethereumjs-vm/pull/812#discussion_r459125017)\n\n* let => const\n\n* set default param to resolve js runtime check\n\n* continue refactoring and simplifying methods\nfreeze both block and header objects\nuse Address for coinbase\n\n* api updates\n\n* continuing work\n\n* inline buffer validations. add checks for extraData, mixHash and nonce\n\n* various fixups\n\n* continuing various work\n\n* continuing work and refactoring\n  added Block.genesis() and BlockHeader.genesis() alias\n  update vm\n\n* re-add timestamp to genesis (for rinkeby)\n\n* last fixups\n\n* update readme, benchmarks\n\n* update vm readme, simplify validate\n\n* fix timestamp validation\n\n* use native eq\n\n* make blockchain optional in block.validate()\nmove genTxTrie() inside validateTransactionsTrie()\n\n* fixups\n\n* remove BLOCK_difficulty_GivenAsList from skip list (https://github.com/ethereumjs/ethereumjs-vm/pull/883#issuecomment-699028602)\n\nCo-authored-by: Jochem Brouwer <jochembrouwer96@gmail.com>\nCo-authored-by: Ryan Ghods <ryan@ryanio.com>",
-          "timestamp": "2020-10-12T10:17:20-07:00",
-          "tree_id": "255f3ec2c65b7f3cf8a5b5f22195779bcf442e4e",
-          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/7f3f4b417da1902069a5be463019f7bbba581041"
-        },
-        "date": 1602523591581,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "Block 9422905",
-            "value": 1798,
-            "range": "±2.19%",
-            "unit": "ops/sec",
-            "extra": "85 samples"
-          },
-          {
-            "name": "Block 9422906",
-            "value": 1716,
-            "range": "±5.64%",
-            "unit": "ops/sec",
-            "extra": "81 samples"
-          },
-          {
-            "name": "Block 9422907",
-            "value": 1752,
-            "range": "±1.22%",
-            "unit": "ops/sec",
-            "extra": "88 samples"
-          },
-          {
-            "name": "Block 9422908",
-            "value": 1713,
-            "range": "±0.70%",
-            "unit": "ops/sec",
-            "extra": "89 samples"
-          },
-          {
-            "name": "Block 9422909",
-            "value": 1694,
-            "range": "±1.44%",
-            "unit": "ops/sec",
-            "extra": "80 samples"
-          },
-          {
-            "name": "Block 9422910",
-            "value": 1686,
-            "range": "±1.06%",
-            "unit": "ops/sec",
-            "extra": "89 samples"
-          },
-          {
-            "name": "Block 9422911",
-            "value": 1694,
-            "range": "±1.27%",
-            "unit": "ops/sec",
-            "extra": "84 samples"
-          },
-          {
-            "name": "Block 9422912",
-            "value": 1653,
-            "range": "±0.86%",
-            "unit": "ops/sec",
-            "extra": "90 samples"
-          },
-          {
-            "name": "Block 9422913",
-            "value": 1122,
-            "range": "±18.73%",
-            "unit": "ops/sec",
-            "extra": "54 samples"
-          },
-          {
-            "name": "Block 9422914",
-            "value": 1593,
-            "range": "±1.72%",
-            "unit": "ops/sec",
-            "extra": "77 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2820,6 +2726,100 @@ window.BENCHMARK_DATA = {
             "range": "±1.60%",
             "unit": "ops/sec",
             "extra": "83 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "81fc88b25fda1d5319b6c26893fb50a4db63ba7e",
+          "message": "Merge pull request #935 from ethereumjs/validate-uncles\n\nBlock: support uncle validation",
+          "timestamp": "2020-11-16T12:50:27+01:00",
+          "tree_id": "799ba936a19fb78ea7ae024b820cafb7f90f2de6",
+          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/81fc88b25fda1d5319b6c26893fb50a4db63ba7e"
+        },
+        "date": 1605528991330,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1596,
+            "range": "±4.64%",
+            "unit": "ops/sec",
+            "extra": "79 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1618,
+            "range": "±1.58%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1543,
+            "range": "±8.03%",
+            "unit": "ops/sec",
+            "extra": "78 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1628,
+            "range": "±1.42%",
+            "unit": "ops/sec",
+            "extra": "80 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1558,
+            "range": "±1.76%",
+            "unit": "ops/sec",
+            "extra": "79 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1589,
+            "range": "±1.63%",
+            "unit": "ops/sec",
+            "extra": "79 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1556,
+            "range": "±1.91%",
+            "unit": "ops/sec",
+            "extra": "78 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1154,
+            "range": "±16.76%",
+            "unit": "ops/sec",
+            "extra": "61 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1496,
+            "range": "±1.71%",
+            "unit": "ops/sec",
+            "extra": "78 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1413,
+            "range": "±2.25%",
+            "unit": "ops/sec",
+            "extra": "75 samples"
           }
         ]
       }
