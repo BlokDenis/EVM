@@ -1,102 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1605537002957,
+  "lastUpdate": 1605610837796,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-vm",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "4be4159d31b01addf8fab52a7592bcbdc51a9296",
-          "message": "Merge pull request #913 from ethereumjs/update-ethereumjs-config-rebased\n\nUpdates to ethereumjs-config v2.0.0 (Cherry Pick Edition 🍒 )",
-          "timestamp": "2020-10-20T13:55:26+02:00",
-          "tree_id": "24cc63e87a9d899167c5e95056da17d741439aab",
-          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/4be4159d31b01addf8fab52a7592bcbdc51a9296"
-        },
-        "date": 1603196068225,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "Block 9422905",
-            "value": 1909,
-            "range": "±2.19%",
-            "unit": "ops/sec",
-            "extra": "89 samples"
-          },
-          {
-            "name": "Block 9422906",
-            "value": 1826,
-            "range": "±6.15%",
-            "unit": "ops/sec",
-            "extra": "84 samples"
-          },
-          {
-            "name": "Block 9422907",
-            "value": 1893,
-            "range": "±0.74%",
-            "unit": "ops/sec",
-            "extra": "92 samples"
-          },
-          {
-            "name": "Block 9422908",
-            "value": 1864,
-            "range": "±0.77%",
-            "unit": "ops/sec",
-            "extra": "90 samples"
-          },
-          {
-            "name": "Block 9422909",
-            "value": 1583,
-            "range": "±11.02%",
-            "unit": "ops/sec",
-            "extra": "79 samples"
-          },
-          {
-            "name": "Block 9422910",
-            "value": 1764,
-            "range": "±2.15%",
-            "unit": "ops/sec",
-            "extra": "90 samples"
-          },
-          {
-            "name": "Block 9422911",
-            "value": 1775,
-            "range": "±0.39%",
-            "unit": "ops/sec",
-            "extra": "92 samples"
-          },
-          {
-            "name": "Block 9422912",
-            "value": 1774,
-            "range": "±0.75%",
-            "unit": "ops/sec",
-            "extra": "92 samples"
-          },
-          {
-            "name": "Block 9422913",
-            "value": 1786,
-            "range": "±0.79%",
-            "unit": "ops/sec",
-            "extra": "92 samples"
-          },
-          {
-            "name": "Block 9422914",
-            "value": 1729,
-            "range": "±0.90%",
-            "unit": "ops/sec",
-            "extra": "91 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2820,6 +2726,100 @@ window.BENCHMARK_DATA = {
             "range": "±1.25%",
             "unit": "ops/sec",
             "extra": "76 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "c188339850da94bee22769152af3f2c518588515",
+          "message": "Merge pull request #951 from ethereumjs/ci/vm-tests-on-demand\n\nOn-demand testing for VM State and Blockchain",
+          "timestamp": "2020-11-17T11:41:04+01:00",
+          "tree_id": "42594b2117508d141d4b2f61b9e3a5beb94d1ee5",
+          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/c188339850da94bee22769152af3f2c518588515"
+        },
+        "date": 1605610836962,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1935,
+            "range": "±3.85%",
+            "unit": "ops/sec",
+            "extra": "81 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1898,
+            "range": "±5.01%",
+            "unit": "ops/sec",
+            "extra": "81 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1828,
+            "range": "±8.84%",
+            "unit": "ops/sec",
+            "extra": "76 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1941,
+            "range": "±2.02%",
+            "unit": "ops/sec",
+            "extra": "80 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1912,
+            "range": "±1.55%",
+            "unit": "ops/sec",
+            "extra": "83 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1898,
+            "range": "±1.72%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1542,
+            "range": "±15.16%",
+            "unit": "ops/sec",
+            "extra": "63 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1858,
+            "range": "±2.00%",
+            "unit": "ops/sec",
+            "extra": "81 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1828,
+            "range": "±1.87%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1637,
+            "range": "±2.19%",
+            "unit": "ops/sec",
+            "extra": "79 samples"
           }
         ]
       }
