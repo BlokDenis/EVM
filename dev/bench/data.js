@@ -1,102 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1606296133009,
+  "lastUpdate": 1606354766296,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-vm",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "1afe8dbbb62d1be6a0a595b4a90bdf3a34c841a6",
-          "message": "Merge pull request #889 from ethereumjs/eip-2929\n\nEIP-2929: Gas cost increases for state access opcodes",
-          "timestamp": "2020-10-21T12:09:29+02:00",
-          "tree_id": "df296671c095f764b939e38a18292d9357baaefc",
-          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/1afe8dbbb62d1be6a0a595b4a90bdf3a34c841a6"
-        },
-        "date": 1603276071442,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "Block 9422905",
-            "value": 1808,
-            "range": "±2.52%",
-            "unit": "ops/sec",
-            "extra": "87 samples"
-          },
-          {
-            "name": "Block 9422906",
-            "value": 1789,
-            "range": "±1.27%",
-            "unit": "ops/sec",
-            "extra": "85 samples"
-          },
-          {
-            "name": "Block 9422907",
-            "value": 1742,
-            "range": "±1.37%",
-            "unit": "ops/sec",
-            "extra": "84 samples"
-          },
-          {
-            "name": "Block 9422908",
-            "value": 1572,
-            "range": "±10.21%",
-            "unit": "ops/sec",
-            "extra": "77 samples"
-          },
-          {
-            "name": "Block 9422909",
-            "value": 1758,
-            "range": "±1.37%",
-            "unit": "ops/sec",
-            "extra": "87 samples"
-          },
-          {
-            "name": "Block 9422910",
-            "value": 1698,
-            "range": "±1.58%",
-            "unit": "ops/sec",
-            "extra": "83 samples"
-          },
-          {
-            "name": "Block 9422911",
-            "value": 1723,
-            "range": "±1.35%",
-            "unit": "ops/sec",
-            "extra": "84 samples"
-          },
-          {
-            "name": "Block 9422912",
-            "value": 1670,
-            "range": "±4.69%",
-            "unit": "ops/sec",
-            "extra": "79 samples"
-          },
-          {
-            "name": "Block 9422913",
-            "value": 1174,
-            "range": "±18.39%",
-            "unit": "ops/sec",
-            "extra": "68 samples"
-          },
-          {
-            "name": "Block 9422914",
-            "value": 1601,
-            "range": "±1.55%",
-            "unit": "ops/sec",
-            "extra": "82 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2820,6 +2726,100 @@ window.BENCHMARK_DATA = {
             "range": "±20.02%",
             "unit": "ops/sec",
             "extra": "65 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jochembrouwer96@gmail.com",
+            "name": "Jochem Brouwer",
+            "username": "jochem-brouwer"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "93b476e99e14eab22e333940d713209888a3f330",
+          "message": "VM: add selectHardforkByBlockNumber option (#966)\n\n* vm: add selectHardforkByBlockNumber option",
+          "timestamp": "2020-11-25T17:19:22-08:00",
+          "tree_id": "6799892d4e88da84dd765de9d6ae393acba10a37",
+          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/93b476e99e14eab22e333940d713209888a3f330"
+        },
+        "date": 1606354765479,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1687,
+            "range": "±3.35%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1683,
+            "range": "±3.89%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1566,
+            "range": "±7.54%",
+            "unit": "ops/sec",
+            "extra": "78 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1703,
+            "range": "±0.98%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1658,
+            "range": "±1.08%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1627,
+            "range": "±1.12%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1287,
+            "range": "±13.65%",
+            "unit": "ops/sec",
+            "extra": "68 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1602,
+            "range": "±1.47%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1594,
+            "range": "±1.06%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1541,
+            "range": "±0.84%",
+            "unit": "ops/sec",
+            "extra": "79 samples"
           }
         ]
       }
