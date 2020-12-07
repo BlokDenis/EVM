@@ -1,102 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1607335819649,
+  "lastUpdate": 1607336829402,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-vm",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "jochembrouwer96@gmail.com",
-            "name": "Jochem Brouwer",
-            "username": "jochem-brouwer"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "d601257397f2ff3d10b7cd383af5a5d484213c86",
-          "message": "Blockchain: Add reorg test + do not skip any reorg test in VM (#926)\n\n* blokchain: add reorg test\r\n\r\n* vm: re-check skipped tests\r\n\r\n* blockchain: fix tests\r\n\r\nvm: fix skipped tests\r\n\r\n* blockchain/vm: fix tests\r\n\r\n* blockchain: make test more explicit\r\n\r\n* blockchain: tests: remove a lot of unncessary `new BN`",
-          "timestamp": "2020-10-30T15:16:14-07:00",
-          "tree_id": "177cb1b0f5218e94f8fb93bb46cbf4ea1a2905c4",
-          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/d601257397f2ff3d10b7cd383af5a5d484213c86"
-        },
-        "date": 1604097255678,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "Block 9422905",
-            "value": 1939,
-            "range": "±3.01%",
-            "unit": "ops/sec",
-            "extra": "79 samples"
-          },
-          {
-            "name": "Block 9422906",
-            "value": 1930,
-            "range": "±6.05%",
-            "unit": "ops/sec",
-            "extra": "83 samples"
-          },
-          {
-            "name": "Block 9422907",
-            "value": 1974,
-            "range": "±1.53%",
-            "unit": "ops/sec",
-            "extra": "84 samples"
-          },
-          {
-            "name": "Block 9422908",
-            "value": 1936,
-            "range": "±1.58%",
-            "unit": "ops/sec",
-            "extra": "85 samples"
-          },
-          {
-            "name": "Block 9422909",
-            "value": 1637,
-            "range": "±10.19%",
-            "unit": "ops/sec",
-            "extra": "71 samples"
-          },
-          {
-            "name": "Block 9422910",
-            "value": 1841,
-            "range": "±2.03%",
-            "unit": "ops/sec",
-            "extra": "80 samples"
-          },
-          {
-            "name": "Block 9422911",
-            "value": 1849,
-            "range": "±2.06%",
-            "unit": "ops/sec",
-            "extra": "84 samples"
-          },
-          {
-            "name": "Block 9422912",
-            "value": 1871,
-            "range": "±1.74%",
-            "unit": "ops/sec",
-            "extra": "85 samples"
-          },
-          {
-            "name": "Block 9422913",
-            "value": 1791,
-            "range": "±2.17%",
-            "unit": "ops/sec",
-            "extra": "79 samples"
-          },
-          {
-            "name": "Block 9422914",
-            "value": 1770,
-            "range": "±2.21%",
-            "unit": "ops/sec",
-            "extra": "81 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2820,6 +2726,100 @@ window.BENCHMARK_DATA = {
             "range": "±1.64%",
             "unit": "ops/sec",
             "extra": "80 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "5cf640802eddc266f0e445cc15e60cd9f3a00b95",
+          "message": "Merge pull request #1007 from ethereumjs/update-package-diagram\n\nUpdate package relationship diagram",
+          "timestamp": "2020-12-07T11:07:01+01:00",
+          "tree_id": "a9acf8b5e160644b75f88b8d12c9a7ebe8df643b",
+          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/5cf640802eddc266f0e445cc15e60cd9f3a00b95"
+        },
+        "date": 1607336828515,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1754,
+            "range": "±2.76%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1825,
+            "range": "±1.16%",
+            "unit": "ops/sec",
+            "extra": "89 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1844,
+            "range": "±1.18%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1620,
+            "range": "±10.28%",
+            "unit": "ops/sec",
+            "extra": "79 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1806,
+            "range": "±0.84%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1712,
+            "range": "±0.75%",
+            "unit": "ops/sec",
+            "extra": "89 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1659,
+            "range": "±1.02%",
+            "unit": "ops/sec",
+            "extra": "91 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1627,
+            "range": "±0.79%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1574,
+            "range": "±1.20%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1540,
+            "range": "±2.21%",
+            "unit": "ops/sec",
+            "extra": "74 samples"
           }
         ]
       }
