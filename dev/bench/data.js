@@ -1,102 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1607590260200,
+  "lastUpdate": 1607938614860,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-vm",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "5f46d146dfaebe58404089493425d34d4b5a8630",
-          "message": "Merge pull request #927 from ethereumjs/remove-db-coupling-blockchain\n\nBlockchain: refactor: Add abstract DB operation, let DB manage the implementation of this OP + make DB handle Cache",
-          "timestamp": "2020-11-06T10:35:56+01:00",
-          "tree_id": "35d1fa84849e29515c7a4092c7a202f00d34f0e4",
-          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/5f46d146dfaebe58404089493425d34d4b5a8630"
-        },
-        "date": 1604656485224,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "Block 9422905",
-            "value": 1749,
-            "range": "±2.71%",
-            "unit": "ops/sec",
-            "extra": "86 samples"
-          },
-          {
-            "name": "Block 9422906",
-            "value": 1740,
-            "range": "±4.62%",
-            "unit": "ops/sec",
-            "extra": "87 samples"
-          },
-          {
-            "name": "Block 9422907",
-            "value": 1785,
-            "range": "±1.04%",
-            "unit": "ops/sec",
-            "extra": "92 samples"
-          },
-          {
-            "name": "Block 9422908",
-            "value": 1579,
-            "range": "±9.93%",
-            "unit": "ops/sec",
-            "extra": "80 samples"
-          },
-          {
-            "name": "Block 9422909",
-            "value": 1767,
-            "range": "±0.80%",
-            "unit": "ops/sec",
-            "extra": "93 samples"
-          },
-          {
-            "name": "Block 9422910",
-            "value": 1671,
-            "range": "±0.91%",
-            "unit": "ops/sec",
-            "extra": "91 samples"
-          },
-          {
-            "name": "Block 9422911",
-            "value": 1477,
-            "range": "±10.51%",
-            "unit": "ops/sec",
-            "extra": "72 samples"
-          },
-          {
-            "name": "Block 9422912",
-            "value": 1449,
-            "range": "±11.41%",
-            "unit": "ops/sec",
-            "extra": "78 samples"
-          },
-          {
-            "name": "Block 9422913",
-            "value": 1587,
-            "range": "±1.63%",
-            "unit": "ops/sec",
-            "extra": "77 samples"
-          },
-          {
-            "name": "Block 9422914",
-            "value": 1636,
-            "range": "±1.54%",
-            "unit": "ops/sec",
-            "extra": "78 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2820,6 +2726,100 @@ window.BENCHMARK_DATA = {
             "range": "±19.66%",
             "unit": "ops/sec",
             "extra": "62 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "c0e9b8a91f7d98ee2386e48b1af576116e9f23b7",
+          "message": "Merge pull request #1011 from ethereumjs/fix-vm-default-block-common\n\nUse vm's common when creating default blocks in `runCall` and `runCode`",
+          "timestamp": "2020-12-14T10:29:26+01:00",
+          "tree_id": "a8e365cc8d2ac80a89a3ca93c174f2d88427093e",
+          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/c0e9b8a91f7d98ee2386e48b1af576116e9f23b7"
+        },
+        "date": 1607938614059,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 2226,
+            "range": "±2.06%",
+            "unit": "ops/sec",
+            "extra": "90 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 2096,
+            "range": "±6.02%",
+            "unit": "ops/sec",
+            "extra": "89 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 2213,
+            "range": "±0.86%",
+            "unit": "ops/sec",
+            "extra": "94 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 2187,
+            "range": "±1.16%",
+            "unit": "ops/sec",
+            "extra": "93 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 2135,
+            "range": "±1.28%",
+            "unit": "ops/sec",
+            "extra": "94 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1722,
+            "range": "±14.00%",
+            "unit": "ops/sec",
+            "extra": "76 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 2088,
+            "range": "±1.10%",
+            "unit": "ops/sec",
+            "extra": "93 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 2071,
+            "range": "±1.19%",
+            "unit": "ops/sec",
+            "extra": "91 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 2023,
+            "range": "±1.44%",
+            "unit": "ops/sec",
+            "extra": "93 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1866,
+            "range": "±5.86%",
+            "unit": "ops/sec",
+            "extra": "89 samples"
           }
         ]
       }
