@@ -1,102 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1608242437357,
+  "lastUpdate": 1608322497437,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-vm",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "23366ccde15ad6d1d751c5337bf4e579ba2e44cf",
-          "message": "Merge pull request #944 from ethereumjs/tx-constructor-improvements\n\nTx Constructor Restructuring",
-          "timestamp": "2020-11-10T21:12:10+01:00",
-          "tree_id": "a0e7cb61088fc60a43308acdb32a2d4cb239ca56",
-          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/23366ccde15ad6d1d751c5337bf4e579ba2e44cf"
-        },
-        "date": 1605039869700,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "Block 9422905",
-            "value": 1999,
-            "range": "±3.43%",
-            "unit": "ops/sec",
-            "extra": "85 samples"
-          },
-          {
-            "name": "Block 9422906",
-            "value": 2274,
-            "range": "±1.26%",
-            "unit": "ops/sec",
-            "extra": "88 samples"
-          },
-          {
-            "name": "Block 9422907",
-            "value": 1904,
-            "range": "±10.53%",
-            "unit": "ops/sec",
-            "extra": "74 samples"
-          },
-          {
-            "name": "Block 9422908",
-            "value": 2242,
-            "range": "±1.40%",
-            "unit": "ops/sec",
-            "extra": "89 samples"
-          },
-          {
-            "name": "Block 9422909",
-            "value": 2008,
-            "range": "±2.40%",
-            "unit": "ops/sec",
-            "extra": "81 samples"
-          },
-          {
-            "name": "Block 9422910",
-            "value": 1818,
-            "range": "±2.36%",
-            "unit": "ops/sec",
-            "extra": "82 samples"
-          },
-          {
-            "name": "Block 9422911",
-            "value": 1907,
-            "range": "±2.06%",
-            "unit": "ops/sec",
-            "extra": "79 samples"
-          },
-          {
-            "name": "Block 9422912",
-            "value": 1934,
-            "range": "±2.10%",
-            "unit": "ops/sec",
-            "extra": "80 samples"
-          },
-          {
-            "name": "Block 9422913",
-            "value": 1776,
-            "range": "±2.05%",
-            "unit": "ops/sec",
-            "extra": "82 samples"
-          },
-          {
-            "name": "Block 9422914",
-            "value": 1739,
-            "range": "±2.39%",
-            "unit": "ops/sec",
-            "extra": "74 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2820,6 +2726,100 @@ window.BENCHMARK_DATA = {
             "range": "±1.56%",
             "unit": "ops/sec",
             "extra": "82 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "582b4efd86ed59ace758de9369be2292b7a5f61e",
+          "message": "Merge pull request #1020 from ethereumjs/client-eth64-update\n\nIntegrate ETH/64 Protocol into Client",
+          "timestamp": "2020-12-18T20:54:18+01:00",
+          "tree_id": "5d821eb077fc91fe9f7974abba953baf85469b0d",
+          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/582b4efd86ed59ace758de9369be2292b7a5f61e"
+        },
+        "date": 1608322496645,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1818,
+            "range": "±3.53%",
+            "unit": "ops/sec",
+            "extra": "81 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1813,
+            "range": "±1.39%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1646,
+            "range": "±7.78%",
+            "unit": "ops/sec",
+            "extra": "79 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1778,
+            "range": "±1.68%",
+            "unit": "ops/sec",
+            "extra": "76 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1738,
+            "range": "±1.55%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1661,
+            "range": "±1.69%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1689,
+            "range": "±0.93%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1362,
+            "range": "±12.88%",
+            "unit": "ops/sec",
+            "extra": "66 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1634,
+            "range": "±1.30%",
+            "unit": "ops/sec",
+            "extra": "81 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1559,
+            "range": "±2.00%",
+            "unit": "ops/sec",
+            "extra": "66 samples"
           }
         ]
       }
