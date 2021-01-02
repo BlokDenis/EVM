@@ -1,102 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1608322497437,
+  "lastUpdate": 1609578563856,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-vm",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "ev@ethereum.org",
-            "name": "Ev",
-            "username": "evertonfraga"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "daf1bb714217c6fa9379056616e223bc9fcdb58c",
-          "message": "Removes Account package from dependency chart (#948)",
-          "timestamp": "2020-11-11T13:22:17-08:00",
-          "tree_id": "3fa350fcb89c8902d5055755ee41cfe1bdbc3fd4",
-          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/daf1bb714217c6fa9379056616e223bc9fcdb58c"
-        },
-        "date": 1605131263895,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "Block 9422905",
-            "value": 1670,
-            "range": "±5.46%",
-            "unit": "ops/sec",
-            "extra": "84 samples"
-          },
-          {
-            "name": "Block 9422906",
-            "value": 1620,
-            "range": "±6.57%",
-            "unit": "ops/sec",
-            "extra": "84 samples"
-          },
-          {
-            "name": "Block 9422907",
-            "value": 1630,
-            "range": "±1.03%",
-            "unit": "ops/sec",
-            "extra": "87 samples"
-          },
-          {
-            "name": "Block 9422908",
-            "value": 1477,
-            "range": "±10.47%",
-            "unit": "ops/sec",
-            "extra": "73 samples"
-          },
-          {
-            "name": "Block 9422909",
-            "value": 1608,
-            "range": "±0.85%",
-            "unit": "ops/sec",
-            "extra": "79 samples"
-          },
-          {
-            "name": "Block 9422910",
-            "value": 1585,
-            "range": "±1.18%",
-            "unit": "ops/sec",
-            "extra": "81 samples"
-          },
-          {
-            "name": "Block 9422911",
-            "value": 1561,
-            "range": "±1.39%",
-            "unit": "ops/sec",
-            "extra": "75 samples"
-          },
-          {
-            "name": "Block 9422912",
-            "value": 1531,
-            "range": "±1.31%",
-            "unit": "ops/sec",
-            "extra": "77 samples"
-          },
-          {
-            "name": "Block 9422913",
-            "value": 1517,
-            "range": "±1.45%",
-            "unit": "ops/sec",
-            "extra": "74 samples"
-          },
-          {
-            "name": "Block 9422914",
-            "value": 1061,
-            "range": "±18.21%",
-            "unit": "ops/sec",
-            "extra": "55 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2820,6 +2726,100 @@ window.BENCHMARK_DATA = {
             "range": "±2.00%",
             "unit": "ops/sec",
             "extra": "66 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "eb2e4c825f942fc13a58b6dab49a91c876c9d6e4",
+          "message": "Merge pull request #1022 from ethereumjs/fix-client-node-tests\n\nclient: fix Fetcher.ts failure on Node v14",
+          "timestamp": "2021-01-02T10:02:01+01:00",
+          "tree_id": "4524ebb647a35b74add34569703ce5d5cf321ce1",
+          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/eb2e4c825f942fc13a58b6dab49a91c876c9d6e4"
+        },
+        "date": 1609578563069,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 2182,
+            "range": "±2.91%",
+            "unit": "ops/sec",
+            "extra": "92 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 2187,
+            "range": "±1.13%",
+            "unit": "ops/sec",
+            "extra": "91 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 2151,
+            "range": "±1.12%",
+            "unit": "ops/sec",
+            "extra": "93 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1876,
+            "range": "±9.23%",
+            "unit": "ops/sec",
+            "extra": "90 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 2072,
+            "range": "±1.29%",
+            "unit": "ops/sec",
+            "extra": "91 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 2079,
+            "range": "±1.22%",
+            "unit": "ops/sec",
+            "extra": "91 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 2029,
+            "range": "±1.19%",
+            "unit": "ops/sec",
+            "extra": "93 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1971,
+            "range": "±1.50%",
+            "unit": "ops/sec",
+            "extra": "90 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1920,
+            "range": "±1.76%",
+            "unit": "ops/sec",
+            "extra": "89 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1232,
+            "range": "±21.95%",
+            "unit": "ops/sec",
+            "extra": "59 samples"
           }
         ]
       }
