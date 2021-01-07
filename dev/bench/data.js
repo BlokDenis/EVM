@@ -1,102 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1610035463518,
+  "lastUpdate": 1610039391362,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-vm",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "81fc88b25fda1d5319b6c26893fb50a4db63ba7e",
-          "message": "Merge pull request #935 from ethereumjs/validate-uncles\n\nBlock: support uncle validation",
-          "timestamp": "2020-11-16T12:50:27+01:00",
-          "tree_id": "799ba936a19fb78ea7ae024b820cafb7f90f2de6",
-          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/81fc88b25fda1d5319b6c26893fb50a4db63ba7e"
-        },
-        "date": 1605528991330,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "Block 9422905",
-            "value": 1596,
-            "range": "±4.64%",
-            "unit": "ops/sec",
-            "extra": "79 samples"
-          },
-          {
-            "name": "Block 9422906",
-            "value": 1618,
-            "range": "±1.58%",
-            "unit": "ops/sec",
-            "extra": "82 samples"
-          },
-          {
-            "name": "Block 9422907",
-            "value": 1543,
-            "range": "±8.03%",
-            "unit": "ops/sec",
-            "extra": "78 samples"
-          },
-          {
-            "name": "Block 9422908",
-            "value": 1628,
-            "range": "±1.42%",
-            "unit": "ops/sec",
-            "extra": "80 samples"
-          },
-          {
-            "name": "Block 9422909",
-            "value": 1558,
-            "range": "±1.76%",
-            "unit": "ops/sec",
-            "extra": "79 samples"
-          },
-          {
-            "name": "Block 9422910",
-            "value": 1589,
-            "range": "±1.63%",
-            "unit": "ops/sec",
-            "extra": "79 samples"
-          },
-          {
-            "name": "Block 9422911",
-            "value": 1556,
-            "range": "±1.91%",
-            "unit": "ops/sec",
-            "extra": "78 samples"
-          },
-          {
-            "name": "Block 9422912",
-            "value": 1154,
-            "range": "±16.76%",
-            "unit": "ops/sec",
-            "extra": "61 samples"
-          },
-          {
-            "name": "Block 9422913",
-            "value": 1496,
-            "range": "±1.71%",
-            "unit": "ops/sec",
-            "extra": "78 samples"
-          },
-          {
-            "name": "Block 9422914",
-            "value": 1413,
-            "range": "±2.25%",
-            "unit": "ops/sec",
-            "extra": "75 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2820,6 +2726,100 @@ window.BENCHMARK_DATA = {
             "range": "±18.56%",
             "unit": "ops/sec",
             "extra": "60 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "b1bcb033267899c6a8edbc5712fca07a58de00cf",
+          "message": "Merge pull request #1030 from ethereumjs/more-performant-trie-checkpointing-mechanism\n\nTrie: Rework Checkpointing Mechanism",
+          "timestamp": "2021-01-07T17:52:08+01:00",
+          "tree_id": "d42dbb9cfd75e9aa2cd738dd4dd24bc57376be1b",
+          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/b1bcb033267899c6a8edbc5712fca07a58de00cf"
+        },
+        "date": 1610039390547,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1748,
+            "range": "±5.12%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1832,
+            "range": "±1.11%",
+            "unit": "ops/sec",
+            "extra": "91 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1790,
+            "range": "±1.42%",
+            "unit": "ops/sec",
+            "extra": "91 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1610,
+            "range": "±9.86%",
+            "unit": "ops/sec",
+            "extra": "78 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1732,
+            "range": "±1.23%",
+            "unit": "ops/sec",
+            "extra": "90 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1738,
+            "range": "±1.02%",
+            "unit": "ops/sec",
+            "extra": "90 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1710,
+            "range": "±1.06%",
+            "unit": "ops/sec",
+            "extra": "92 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1709,
+            "range": "±1.40%",
+            "unit": "ops/sec",
+            "extra": "80 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1646,
+            "range": "±1.64%",
+            "unit": "ops/sec",
+            "extra": "79 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1585,
+            "range": "±1.85%",
+            "unit": "ops/sec",
+            "extra": "77 samples"
           }
         ]
       }
