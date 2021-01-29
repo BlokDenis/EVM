@@ -1,102 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1611836518736,
+  "lastUpdate": 1611879556089,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "d7e30531961b2432129722e69835f3da20eaf8ae",
-          "message": "Merge pull request #1005 from ethereumjs/update-client-diagram\n\nUpdate client diagram",
-          "timestamp": "2020-12-07T10:52:12+01:00",
-          "tree_id": "82bedaec0cb4c7a583473aa73001d6b4f2cbdba9",
-          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/d7e30531961b2432129722e69835f3da20eaf8ae"
-        },
-        "date": 1607335818823,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "Block 9422905",
-            "value": 1912,
-            "range": "±2.61%",
-            "unit": "ops/sec",
-            "extra": "87 samples"
-          },
-          {
-            "name": "Block 9422906",
-            "value": 1887,
-            "range": "±1.09%",
-            "unit": "ops/sec",
-            "extra": "86 samples"
-          },
-          {
-            "name": "Block 9422907",
-            "value": 1696,
-            "range": "±8.10%",
-            "unit": "ops/sec",
-            "extra": "85 samples"
-          },
-          {
-            "name": "Block 9422908",
-            "value": 1821,
-            "range": "±0.79%",
-            "unit": "ops/sec",
-            "extra": "89 samples"
-          },
-          {
-            "name": "Block 9422909",
-            "value": 1801,
-            "range": "±0.67%",
-            "unit": "ops/sec",
-            "extra": "92 samples"
-          },
-          {
-            "name": "Block 9422910",
-            "value": 1797,
-            "range": "±0.61%",
-            "unit": "ops/sec",
-            "extra": "93 samples"
-          },
-          {
-            "name": "Block 9422911",
-            "value": 1840,
-            "range": "±1.06%",
-            "unit": "ops/sec",
-            "extra": "83 samples"
-          },
-          {
-            "name": "Block 9422912",
-            "value": 1606,
-            "range": "±7.38%",
-            "unit": "ops/sec",
-            "extra": "84 samples"
-          },
-          {
-            "name": "Block 9422913",
-            "value": 1346,
-            "range": "±18.15%",
-            "unit": "ops/sec",
-            "extra": "74 samples"
-          },
-          {
-            "name": "Block 9422914",
-            "value": 1662,
-            "range": "±1.64%",
-            "unit": "ops/sec",
-            "extra": "80 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2820,6 +2726,100 @@ window.BENCHMARK_DATA = {
             "range": "±1.37%",
             "unit": "ops/sec",
             "extra": "85 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "epheph@gmail.com",
+            "name": "Scott Bigelow",
+            "username": "epheph"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "55f640003c9488fe9285d2c86b0c49bce643d0b5",
+          "message": "Update README.md (#1073)\n\nSmall typo in example",
+          "timestamp": "2021-01-28T16:11:52-08:00",
+          "tree_id": "05f9b7cd7fb75f914ab0d32d070502d41d7318ed",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/55f640003c9488fe9285d2c86b0c49bce643d0b5"
+        },
+        "date": 1611879555227,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 2218,
+            "range": "±2.62%",
+            "unit": "ops/sec",
+            "extra": "92 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 2205,
+            "range": "±0.89%",
+            "unit": "ops/sec",
+            "extra": "93 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1995,
+            "range": "±8.01%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 2119,
+            "range": "±1.18%",
+            "unit": "ops/sec",
+            "extra": "94 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 2084,
+            "range": "±1.18%",
+            "unit": "ops/sec",
+            "extra": "93 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 2052,
+            "range": "±1.28%",
+            "unit": "ops/sec",
+            "extra": "93 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 2004,
+            "range": "±1.46%",
+            "unit": "ops/sec",
+            "extra": "91 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1979,
+            "range": "±1.36%",
+            "unit": "ops/sec",
+            "extra": "92 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1941,
+            "range": "±1.68%",
+            "unit": "ops/sec",
+            "extra": "91 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1326,
+            "range": "±15.79%",
+            "unit": "ops/sec",
+            "extra": "63 samples"
           }
         ]
       }
