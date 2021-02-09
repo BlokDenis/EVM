@@ -1,102 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1612735517910,
+  "lastUpdate": 1612835666834,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "913c4701a62e3fd722268f1c43d7570e3c85e96f",
-          "message": "Merge pull request #1015 from ethereumjs/monorepo-add-mpt\n\nMPT monorepo transition",
-          "timestamp": "2020-12-15T11:38:00+01:00",
-          "tree_id": "c3bfa3c459647fbc230cfd022b0733f47a5e7ee9",
-          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/913c4701a62e3fd722268f1c43d7570e3c85e96f"
-        },
-        "date": 1608029259860,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "Block 9422905",
-            "value": 2199,
-            "range": "±2.41%",
-            "unit": "ops/sec",
-            "extra": "92 samples"
-          },
-          {
-            "name": "Block 9422906",
-            "value": 2220,
-            "range": "±0.92%",
-            "unit": "ops/sec",
-            "extra": "93 samples"
-          },
-          {
-            "name": "Block 9422907",
-            "value": 1999,
-            "range": "±9.47%",
-            "unit": "ops/sec",
-            "extra": "84 samples"
-          },
-          {
-            "name": "Block 9422908",
-            "value": 2162,
-            "range": "±1.01%",
-            "unit": "ops/sec",
-            "extra": "93 samples"
-          },
-          {
-            "name": "Block 9422909",
-            "value": 2150,
-            "range": "±1.09%",
-            "unit": "ops/sec",
-            "extra": "92 samples"
-          },
-          {
-            "name": "Block 9422910",
-            "value": 2119,
-            "range": "±1.08%",
-            "unit": "ops/sec",
-            "extra": "93 samples"
-          },
-          {
-            "name": "Block 9422911",
-            "value": 2108,
-            "range": "±1.14%",
-            "unit": "ops/sec",
-            "extra": "93 samples"
-          },
-          {
-            "name": "Block 9422912",
-            "value": 2070,
-            "range": "±1.20%",
-            "unit": "ops/sec",
-            "extra": "91 samples"
-          },
-          {
-            "name": "Block 9422913",
-            "value": 2006,
-            "range": "±1.55%",
-            "unit": "ops/sec",
-            "extra": "91 samples"
-          },
-          {
-            "name": "Block 9422914",
-            "value": 1933,
-            "range": "±1.42%",
-            "unit": "ops/sec",
-            "extra": "92 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2820,6 +2726,100 @@ window.BENCHMARK_DATA = {
             "range": "±1.53%",
             "unit": "ops/sec",
             "extra": "88 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "logvinov.leon@gmail.com",
+            "name": "Leonid Logvinov",
+            "username": "LogvinovLeon"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "4cb7fae863a11a5a8a96d53596961f2e463aea54",
+          "message": "VM: Add type definitions for logs (#1084)\n\n* Add type definition for Log",
+          "timestamp": "2021-02-08T17:41:21-08:00",
+          "tree_id": "b424aec125c53b3a2d124580e313462a6abdda36",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/4cb7fae863a11a5a8a96d53596961f2e463aea54"
+        },
+        "date": 1612835665991,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1794,
+            "range": "±3.18%",
+            "unit": "ops/sec",
+            "extra": "92 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1817,
+            "range": "±0.91%",
+            "unit": "ops/sec",
+            "extra": "91 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1810,
+            "range": "±0.59%",
+            "unit": "ops/sec",
+            "extra": "94 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1582,
+            "range": "±9.01%",
+            "unit": "ops/sec",
+            "extra": "83 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1742,
+            "range": "±0.91%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1706,
+            "range": "±0.75%",
+            "unit": "ops/sec",
+            "extra": "91 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1694,
+            "range": "±1.00%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1685,
+            "range": "±0.87%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1666,
+            "range": "±0.97%",
+            "unit": "ops/sec",
+            "extra": "80 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1566,
+            "range": "±1.44%",
+            "unit": "ops/sec",
+            "extra": "78 samples"
           }
         ]
       }
