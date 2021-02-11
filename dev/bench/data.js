@@ -1,102 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1613043312648,
+  "lastUpdate": 1613062150103,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "9b1a95a56612910d769b80945cc42a78c4c2c658",
-          "message": "Merge pull request #1019 from ethereumjs/client-fix-undefined-result\n\nclient: fix undefined BlockHeaders value when syncing",
-          "timestamp": "2020-12-17T22:38:31+01:00",
-          "tree_id": "1758de615e6a647e25e6d7dcfd0b63955b1aabe0",
-          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/9b1a95a56612910d769b80945cc42a78c4c2c658"
-        },
-        "date": 1608242436376,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "Block 9422905",
-            "value": 1797,
-            "range": "±2.79%",
-            "unit": "ops/sec",
-            "extra": "88 samples"
-          },
-          {
-            "name": "Block 9422906",
-            "value": 1862,
-            "range": "±0.69%",
-            "unit": "ops/sec",
-            "extra": "93 samples"
-          },
-          {
-            "name": "Block 9422907",
-            "value": 1844,
-            "range": "±0.56%",
-            "unit": "ops/sec",
-            "extra": "92 samples"
-          },
-          {
-            "name": "Block 9422908",
-            "value": 1534,
-            "range": "±10.19%",
-            "unit": "ops/sec",
-            "extra": "76 samples"
-          },
-          {
-            "name": "Block 9422909",
-            "value": 1723,
-            "range": "±1.04%",
-            "unit": "ops/sec",
-            "extra": "89 samples"
-          },
-          {
-            "name": "Block 9422910",
-            "value": 1745,
-            "range": "±1.23%",
-            "unit": "ops/sec",
-            "extra": "88 samples"
-          },
-          {
-            "name": "Block 9422911",
-            "value": 1740,
-            "range": "±0.64%",
-            "unit": "ops/sec",
-            "extra": "90 samples"
-          },
-          {
-            "name": "Block 9422912",
-            "value": 1738,
-            "range": "±0.54%",
-            "unit": "ops/sec",
-            "extra": "91 samples"
-          },
-          {
-            "name": "Block 9422913",
-            "value": 1701,
-            "range": "±1.29%",
-            "unit": "ops/sec",
-            "extra": "81 samples"
-          },
-          {
-            "name": "Block 9422914",
-            "value": 1580,
-            "range": "±1.56%",
-            "unit": "ops/sec",
-            "extra": "82 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2820,6 +2726,100 @@ window.BENCHMARK_DATA = {
             "range": "±2.12%",
             "unit": "ops/sec",
             "extra": "79 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "a983867f8046c1071f0b97befc7e6f1049772d71",
+          "message": "Merge pull request #1081 from ethereumjs/vm-fix-client-consensus-bug\n\nVM -> Mainnet: fix Frontier consensus bug along CREATE with not enough gas (WIP)",
+          "timestamp": "2021-02-11T17:40:42+01:00",
+          "tree_id": "0641e2955885492171627545ebbb413838e26318",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/a983867f8046c1071f0b97befc7e6f1049772d71"
+        },
+        "date": 1613062149403,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 2178,
+            "range": "±3.23%",
+            "unit": "ops/sec",
+            "extra": "89 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 2105,
+            "range": "±4.37%",
+            "unit": "ops/sec",
+            "extra": "89 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 2153,
+            "range": "±1.03%",
+            "unit": "ops/sec",
+            "extra": "94 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1892,
+            "range": "±8.36%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 2054,
+            "range": "±1.20%",
+            "unit": "ops/sec",
+            "extra": "93 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 2023,
+            "range": "±1.24%",
+            "unit": "ops/sec",
+            "extra": "93 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1988,
+            "range": "±1.16%",
+            "unit": "ops/sec",
+            "extra": "94 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1465,
+            "range": "±14.19%",
+            "unit": "ops/sec",
+            "extra": "70 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1922,
+            "range": "±1.57%",
+            "unit": "ops/sec",
+            "extra": "90 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1838,
+            "range": "±1.31%",
+            "unit": "ops/sec",
+            "extra": "91 samples"
           }
         ]
       }
