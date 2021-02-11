@@ -1,102 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1612835666834,
+  "lastUpdate": 1613032170183,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "a06ebdedcd0e09b9c2668df163cceaaf14983c12",
-          "message": "Merge pull request #1016 from ethereumjs/trie-housekeeping\n\ntrie: housekeeping tasks",
-          "timestamp": "2020-12-16T21:03:16+01:00",
-          "tree_id": "41d4295e0084ba10588a9dbfcdb90a372f671003",
-          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/a06ebdedcd0e09b9c2668df163cceaaf14983c12"
-        },
-        "date": 1608149737724,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "Block 9422905",
-            "value": 2009,
-            "range": "±2.59%",
-            "unit": "ops/sec",
-            "extra": "85 samples"
-          },
-          {
-            "name": "Block 9422906",
-            "value": 2059,
-            "range": "±1.79%",
-            "unit": "ops/sec",
-            "extra": "84 samples"
-          },
-          {
-            "name": "Block 9422907",
-            "value": 2026,
-            "range": "±1.48%",
-            "unit": "ops/sec",
-            "extra": "85 samples"
-          },
-          {
-            "name": "Block 9422908",
-            "value": 1752,
-            "range": "±11.11%",
-            "unit": "ops/sec",
-            "extra": "75 samples"
-          },
-          {
-            "name": "Block 9422909",
-            "value": 1895,
-            "range": "±2.08%",
-            "unit": "ops/sec",
-            "extra": "83 samples"
-          },
-          {
-            "name": "Block 9422910",
-            "value": 1928,
-            "range": "±1.60%",
-            "unit": "ops/sec",
-            "extra": "87 samples"
-          },
-          {
-            "name": "Block 9422911",
-            "value": 1847,
-            "range": "±1.83%",
-            "unit": "ops/sec",
-            "extra": "80 samples"
-          },
-          {
-            "name": "Block 9422912",
-            "value": 1879,
-            "range": "±1.82%",
-            "unit": "ops/sec",
-            "extra": "86 samples"
-          },
-          {
-            "name": "Block 9422913",
-            "value": 1849,
-            "range": "±1.87%",
-            "unit": "ops/sec",
-            "extra": "83 samples"
-          },
-          {
-            "name": "Block 9422914",
-            "value": 1822,
-            "range": "±2.09%",
-            "unit": "ops/sec",
-            "extra": "84 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2820,6 +2726,100 @@ window.BENCHMARK_DATA = {
             "range": "±1.44%",
             "unit": "ops/sec",
             "extra": "78 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "6822c084d8b9d3f97e35ae546a766fcc36547545",
+          "message": "Merge pull request #1088 from ethereumjs/client-block-poa-fixes\n\nClient/Block: Clique PoA fixes",
+          "timestamp": "2021-02-11T09:13:57+01:00",
+          "tree_id": "4b8f19729f8fe68366a2583e26f9d384fe482ef1",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/6822c084d8b9d3f97e35ae546a766fcc36547545"
+        },
+        "date": 1613032169445,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1669,
+            "range": "±4.99%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1712,
+            "range": "±1.49%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1577,
+            "range": "±9.52%",
+            "unit": "ops/sec",
+            "extra": "78 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1684,
+            "range": "±1.32%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1674,
+            "range": "±1.21%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1661,
+            "range": "±1.53%",
+            "unit": "ops/sec",
+            "extra": "79 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1321,
+            "range": "±13.48%",
+            "unit": "ops/sec",
+            "extra": "64 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1563,
+            "range": "±4.94%",
+            "unit": "ops/sec",
+            "extra": "80 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1591,
+            "range": "±1.29%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1540,
+            "range": "±1.11%",
+            "unit": "ops/sec",
+            "extra": "79 samples"
           }
         ]
       }
