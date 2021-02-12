@@ -1,102 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1613075611385,
+  "lastUpdate": 1613129562235,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "eb2e4c825f942fc13a58b6dab49a91c876c9d6e4",
-          "message": "Merge pull request #1022 from ethereumjs/fix-client-node-tests\n\nclient: fix Fetcher.ts failure on Node v14",
-          "timestamp": "2021-01-02T10:02:01+01:00",
-          "tree_id": "4524ebb647a35b74add34569703ce5d5cf321ce1",
-          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/eb2e4c825f942fc13a58b6dab49a91c876c9d6e4"
-        },
-        "date": 1609578563069,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "Block 9422905",
-            "value": 2182,
-            "range": "±2.91%",
-            "unit": "ops/sec",
-            "extra": "92 samples"
-          },
-          {
-            "name": "Block 9422906",
-            "value": 2187,
-            "range": "±1.13%",
-            "unit": "ops/sec",
-            "extra": "91 samples"
-          },
-          {
-            "name": "Block 9422907",
-            "value": 2151,
-            "range": "±1.12%",
-            "unit": "ops/sec",
-            "extra": "93 samples"
-          },
-          {
-            "name": "Block 9422908",
-            "value": 1876,
-            "range": "±9.23%",
-            "unit": "ops/sec",
-            "extra": "90 samples"
-          },
-          {
-            "name": "Block 9422909",
-            "value": 2072,
-            "range": "±1.29%",
-            "unit": "ops/sec",
-            "extra": "91 samples"
-          },
-          {
-            "name": "Block 9422910",
-            "value": 2079,
-            "range": "±1.22%",
-            "unit": "ops/sec",
-            "extra": "91 samples"
-          },
-          {
-            "name": "Block 9422911",
-            "value": 2029,
-            "range": "±1.19%",
-            "unit": "ops/sec",
-            "extra": "93 samples"
-          },
-          {
-            "name": "Block 9422912",
-            "value": 1971,
-            "range": "±1.50%",
-            "unit": "ops/sec",
-            "extra": "90 samples"
-          },
-          {
-            "name": "Block 9422913",
-            "value": 1920,
-            "range": "±1.76%",
-            "unit": "ops/sec",
-            "extra": "89 samples"
-          },
-          {
-            "name": "Block 9422914",
-            "value": 1232,
-            "range": "±21.95%",
-            "unit": "ops/sec",
-            "extra": "59 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2820,6 +2726,100 @@ window.BENCHMARK_DATA = {
             "range": "±1.26%",
             "unit": "ops/sec",
             "extra": "87 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "0a672dec106485e553e3095c528f6db34a22f6bf",
+          "message": "Merge pull request #1027 from ethereumjs/upgrade-libp2p\n\nUpgrade libp2p",
+          "timestamp": "2021-02-12T12:16:33+01:00",
+          "tree_id": "e69c0e59067bcdb6d6af5344fe94f86b6b03c73e",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/0a672dec106485e553e3095c528f6db34a22f6bf"
+        },
+        "date": 1613129561492,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1940,
+            "range": "±4.66%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1881,
+            "range": "±6.07%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1934,
+            "range": "±1.11%",
+            "unit": "ops/sec",
+            "extra": "88 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1912,
+            "range": "±1.06%",
+            "unit": "ops/sec",
+            "extra": "91 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1908,
+            "range": "±1.03%",
+            "unit": "ops/sec",
+            "extra": "91 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1914,
+            "range": "±1.02%",
+            "unit": "ops/sec",
+            "extra": "89 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1481,
+            "range": "±13.32%",
+            "unit": "ops/sec",
+            "extra": "70 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1821,
+            "range": "±1.31%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1825,
+            "range": "±1.20%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1761,
+            "range": "±1.59%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
           }
         ]
       }
