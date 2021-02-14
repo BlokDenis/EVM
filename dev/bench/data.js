@@ -1,102 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1613168675647,
+  "lastUpdate": 1613293026615,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "b1bcb033267899c6a8edbc5712fca07a58de00cf",
-          "message": "Merge pull request #1030 from ethereumjs/more-performant-trie-checkpointing-mechanism\n\nTrie: Rework Checkpointing Mechanism",
-          "timestamp": "2021-01-07T17:52:08+01:00",
-          "tree_id": "d42dbb9cfd75e9aa2cd738dd4dd24bc57376be1b",
-          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/b1bcb033267899c6a8edbc5712fca07a58de00cf"
-        },
-        "date": 1610039390547,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "Block 9422905",
-            "value": 1748,
-            "range": "±5.12%",
-            "unit": "ops/sec",
-            "extra": "86 samples"
-          },
-          {
-            "name": "Block 9422906",
-            "value": 1832,
-            "range": "±1.11%",
-            "unit": "ops/sec",
-            "extra": "91 samples"
-          },
-          {
-            "name": "Block 9422907",
-            "value": 1790,
-            "range": "±1.42%",
-            "unit": "ops/sec",
-            "extra": "91 samples"
-          },
-          {
-            "name": "Block 9422908",
-            "value": 1610,
-            "range": "±9.86%",
-            "unit": "ops/sec",
-            "extra": "78 samples"
-          },
-          {
-            "name": "Block 9422909",
-            "value": 1732,
-            "range": "±1.23%",
-            "unit": "ops/sec",
-            "extra": "90 samples"
-          },
-          {
-            "name": "Block 9422910",
-            "value": 1738,
-            "range": "±1.02%",
-            "unit": "ops/sec",
-            "extra": "90 samples"
-          },
-          {
-            "name": "Block 9422911",
-            "value": 1710,
-            "range": "±1.06%",
-            "unit": "ops/sec",
-            "extra": "92 samples"
-          },
-          {
-            "name": "Block 9422912",
-            "value": 1709,
-            "range": "±1.40%",
-            "unit": "ops/sec",
-            "extra": "80 samples"
-          },
-          {
-            "name": "Block 9422913",
-            "value": 1646,
-            "range": "±1.64%",
-            "unit": "ops/sec",
-            "extra": "79 samples"
-          },
-          {
-            "name": "Block 9422914",
-            "value": 1585,
-            "range": "±1.85%",
-            "unit": "ops/sec",
-            "extra": "77 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2820,6 +2726,100 @@ window.BENCHMARK_DATA = {
             "range": "±1.34%",
             "unit": "ops/sec",
             "extra": "78 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "761bef0454ec1ac299fb5afe62558da1b52cafa5",
+          "message": "Merge pull request #1103 from ethereumjs/fix-goerli-clique-difficulty-bug\n\nClient, Blockchain: Fix Goerli Clique Difficulty Bug",
+          "timestamp": "2021-02-14T09:34:57+01:00",
+          "tree_id": "912f78eb8a9a182f8064fdb83d9e2025720fe833",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/761bef0454ec1ac299fb5afe62558da1b52cafa5"
+        },
+        "date": 1613293025758,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1516,
+            "range": "±4.60%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1480,
+            "range": "±2.44%",
+            "unit": "ops/sec",
+            "extra": "83 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1484,
+            "range": "±1.76%",
+            "unit": "ops/sec",
+            "extra": "81 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1467,
+            "range": "±2.01%",
+            "unit": "ops/sec",
+            "extra": "80 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1242,
+            "range": "±12.04%",
+            "unit": "ops/sec",
+            "extra": "70 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1394,
+            "range": "±2.32%",
+            "unit": "ops/sec",
+            "extra": "77 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1363,
+            "range": "±2.04%",
+            "unit": "ops/sec",
+            "extra": "76 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1344,
+            "range": "±2.21%",
+            "unit": "ops/sec",
+            "extra": "76 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1284,
+            "range": "±2.77%",
+            "unit": "ops/sec",
+            "extra": "71 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1166,
+            "range": "±2.44%",
+            "unit": "ops/sec",
+            "extra": "67 samples"
           }
         ]
       }
