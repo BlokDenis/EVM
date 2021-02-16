@@ -1,102 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1613293026615,
+  "lastUpdate": 1613463350491,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "5953e091bda581a48efe91d08eb500930b133c45",
-          "message": "Merge pull request #1039 from ethereumjs/optional-block-gas-limit-validation\n\nAdd an option to disable the block gas limit check in runTx",
-          "timestamp": "2021-01-13T12:38:16+01:00",
-          "tree_id": "27dacb97d0a112cd27fee4bf234e9207308e6cae",
-          "url": "https://github.com/ethereumjs/ethereumjs-vm/commit/5953e091bda581a48efe91d08eb500930b133c45"
-        },
-        "date": 1610538433996,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "Block 9422905",
-            "value": 2164,
-            "range": "±5.02%",
-            "unit": "ops/sec",
-            "extra": "90 samples"
-          },
-          {
-            "name": "Block 9422906",
-            "value": 2192,
-            "range": "±1.02%",
-            "unit": "ops/sec",
-            "extra": "94 samples"
-          },
-          {
-            "name": "Block 9422907",
-            "value": 2152,
-            "range": "±0.99%",
-            "unit": "ops/sec",
-            "extra": "94 samples"
-          },
-          {
-            "name": "Block 9422908",
-            "value": 1872,
-            "range": "±10.70%",
-            "unit": "ops/sec",
-            "extra": "84 samples"
-          },
-          {
-            "name": "Block 9422909",
-            "value": 2099,
-            "range": "±1.27%",
-            "unit": "ops/sec",
-            "extra": "90 samples"
-          },
-          {
-            "name": "Block 9422910",
-            "value": 2075,
-            "range": "±1.30%",
-            "unit": "ops/sec",
-            "extra": "90 samples"
-          },
-          {
-            "name": "Block 9422911",
-            "value": 1985,
-            "range": "±1.33%",
-            "unit": "ops/sec",
-            "extra": "92 samples"
-          },
-          {
-            "name": "Block 9422912",
-            "value": 1992,
-            "range": "±1.33%",
-            "unit": "ops/sec",
-            "extra": "91 samples"
-          },
-          {
-            "name": "Block 9422913",
-            "value": 1962,
-            "range": "±1.71%",
-            "unit": "ops/sec",
-            "extra": "90 samples"
-          },
-          {
-            "name": "Block 9422914",
-            "value": 1881,
-            "range": "±1.65%",
-            "unit": "ops/sec",
-            "extra": "90 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2820,6 +2726,100 @@ window.BENCHMARK_DATA = {
             "range": "±2.44%",
             "unit": "ops/sec",
             "extra": "67 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "5fb23adb57d39552aa4d6b856e8ab84badd82344",
+          "message": "Merge pull request #1109 from ethereumjs/new-tx-release\n\nNew Tx Release v3.0.2",
+          "timestamp": "2021-02-16T09:02:13+01:00",
+          "tree_id": "85230cb3321f0de01d41cff77aee895d23bfe7ef",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/5fb23adb57d39552aa4d6b856e8ab84badd82344"
+        },
+        "date": 1613463349796,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1780,
+            "range": "±3.14%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1807,
+            "range": "±1.09%",
+            "unit": "ops/sec",
+            "extra": "90 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1780,
+            "range": "±1.03%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1576,
+            "range": "±12.41%",
+            "unit": "ops/sec",
+            "extra": "78 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1745,
+            "range": "±1.24%",
+            "unit": "ops/sec",
+            "extra": "88 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1707,
+            "range": "±1.11%",
+            "unit": "ops/sec",
+            "extra": "90 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1663,
+            "range": "±1.22%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1655,
+            "range": "±1.14%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1587,
+            "range": "±5.68%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1156,
+            "range": "±13.80%",
+            "unit": "ops/sec",
+            "extra": "76 samples"
           }
         ]
       }
