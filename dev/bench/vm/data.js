@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1614914121203,
+  "lastUpdate": 1614942645212,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
@@ -94,6 +94,100 @@ window.BENCHMARK_DATA = {
             "range": "±0.76%",
             "unit": "ops/sec",
             "extra": "82 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "11a29cfed063d00f65bb345ad1995671aac45fd6",
+          "message": "Merge pull request #1129 from ethereumjs/yolov3-client\n\nCommon: add YoloV3 network",
+          "timestamp": "2021-03-05T12:04:14+01:00",
+          "tree_id": "d363ff86a7b66642db38e724e1b178cc673ebcb1",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/11a29cfed063d00f65bb345ad1995671aac45fd6"
+        },
+        "date": 1614942644490,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1716,
+            "range": "±4.74%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1661,
+            "range": "±7.25%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1715,
+            "range": "±1.38%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1551,
+            "range": "±9.61%",
+            "unit": "ops/sec",
+            "extra": "78 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1713,
+            "range": "±1.15%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1694,
+            "range": "±1.43%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1677,
+            "range": "±1.44%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1685,
+            "range": "±1.05%",
+            "unit": "ops/sec",
+            "extra": "91 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1502,
+            "range": "±10.45%",
+            "unit": "ops/sec",
+            "extra": "78 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1179,
+            "range": "±20.11%",
+            "unit": "ops/sec",
+            "extra": "73 samples"
           }
         ]
       }
