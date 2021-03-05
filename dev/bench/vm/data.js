@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1614967038685,
+  "lastUpdate": 1614969088625,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
@@ -282,6 +282,100 @@ window.BENCHMARK_DATA = {
             "range": "±1.75%",
             "unit": "ops/sec",
             "extra": "86 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "c8908ea70ad3d04c0b629bee092101e17b15d36b",
+          "message": "VM, Block: large ChainID ecrecover fixes (#1139)\n\n* vm: fixed ecrecover call in ECRECOVER precompile for large chain IDs\r\n* block: fixed cliqueSigner() address recovery from signature for large chain IDs",
+          "timestamp": "2021-03-05T10:27:53-08:00",
+          "tree_id": "a1860ee25e53e702ed753232fbdd9792b3367be9",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/c8908ea70ad3d04c0b629bee092101e17b15d36b"
+        },
+        "date": 1614969087967,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1620,
+            "range": "±4.19%",
+            "unit": "ops/sec",
+            "extra": "88 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1565,
+            "range": "±5.05%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1463,
+            "range": "±8.50%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1557,
+            "range": "±2.67%",
+            "unit": "ops/sec",
+            "extra": "91 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1553,
+            "range": "±1.21%",
+            "unit": "ops/sec",
+            "extra": "89 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1488,
+            "range": "±2.22%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1154,
+            "range": "±15.71%",
+            "unit": "ops/sec",
+            "extra": "76 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1485,
+            "range": "±1.28%",
+            "unit": "ops/sec",
+            "extra": "90 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1408,
+            "range": "±1.43%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1457,
+            "range": "±2.01%",
+            "unit": "ops/sec",
+            "extra": "80 samples"
           }
         ]
       }
