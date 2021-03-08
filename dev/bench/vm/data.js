@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1615138287244,
+  "lastUpdate": 1615240143663,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
@@ -470,6 +470,100 @@ window.BENCHMARK_DATA = {
             "range": "±14.27%",
             "unit": "ops/sec",
             "extra": "72 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "82018919031a8dd9fd15fb62882ac33ce1c587f8",
+          "message": "Merge pull request #1142 from ethereumjs/update-tests-and-berlin-HF\n\nUpdate ethereum-tests submodule to 8.0.0 / Remove EIP-2315 from berlin",
+          "timestamp": "2021-03-08T22:45:37+01:00",
+          "tree_id": "949c94cdf006e8ade9fe771dc5564ae966d4e8e0",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/82018919031a8dd9fd15fb62882ac33ce1c587f8"
+        },
+        "date": 1615240142910,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1738,
+            "range": "±3.37%",
+            "unit": "ops/sec",
+            "extra": "89 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1629,
+            "range": "±9.16%",
+            "unit": "ops/sec",
+            "extra": "79 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1872,
+            "range": "±1.31%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1561,
+            "range": "±10.00%",
+            "unit": "ops/sec",
+            "extra": "79 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1752,
+            "range": "±1.57%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1720,
+            "range": "±1.04%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1799,
+            "range": "±1.59%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1747,
+            "range": "±1.70%",
+            "unit": "ops/sec",
+            "extra": "77 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1722,
+            "range": "±1.63%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1170,
+            "range": "±18.55%",
+            "unit": "ops/sec",
+            "extra": "64 samples"
           }
         ]
       }
