@@ -41,24 +41,7 @@ jobs:
       - name: Publish to virtual registry
         run: npm run e2e:publish
 
-      # An example installation with some checks that everything worked ok
-      - name: Validate
+      - name: Transaction Backwards Compatibility test
         run: |
-          echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-          echo "Verify resolutions.json object is correct  "
-          echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-          npm run e2e:resolutions
-          cat resolutions.json
-          echo ""
-          mkdir test-publish && cd test-publish
-          npm init --yes
-          yarn add @ethereumjs/vm@e2e --registry http://localhost:4873 --network-timeout 500000
-          echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-          echo "Verify virtually published vm was installed"
-          echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-          cat package.json
-          echo ""
-          echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-          echo "Verify vm uses virtually published dependencies"
-          echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-          cat node_modules/@ethereumjs/vm/package.json
+          source scripts/e2e-compat-tests.sh
+          tx_backwards_compatibility_test
