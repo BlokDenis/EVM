@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1615373574630,
+  "lastUpdate": 1615449585109,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
@@ -261,6 +261,93 @@ window.BENCHMARK_DATA = {
             "range": "±8.85%",
             "unit": "ops/sec",
             "extra": "46 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "892d332e7253679c3e517b9a6bd7dea95f124da3",
+          "message": "Merge pull request #1145 from ethereumjs/client-split-cli-transport-options\n\nClient: split CLI transports options for bootnodes and multiaddrs",
+          "timestamp": "2021-03-11T08:57:10+01:00",
+          "tree_id": "e4e8160e8d6e82a324ddc5958e2f57d45a8045fe",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/892d332e7253679c3e517b9a6bd7dea95f124da3"
+        },
+        "date": 1615449584317,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "1k-3-32-ran",
+            "value": 13738,
+            "range": "±15.09%",
+            "unit": "ops/sec",
+            "extra": "62 samples"
+          },
+          {
+            "name": "1k-5-32-ran",
+            "value": 15830,
+            "range": "±5.29%",
+            "unit": "ops/sec",
+            "extra": "67 samples"
+          },
+          {
+            "name": "1k-9-32-ran",
+            "value": 14589,
+            "range": "±2.99%",
+            "unit": "ops/sec",
+            "extra": "74 samples"
+          },
+          {
+            "name": "1k-1k-32-ran",
+            "value": 13854,
+            "range": "±3.72%",
+            "unit": "ops/sec",
+            "extra": "71 samples"
+          },
+          {
+            "name": "1k-1k-32-mir",
+            "value": 6371,
+            "range": "±26.32%",
+            "unit": "ops/sec",
+            "extra": "33 samples"
+          },
+          {
+            "name": "Checkpointing: 100 iterations",
+            "value": 966,
+            "range": "±21.12%",
+            "unit": "ops/sec",
+            "extra": "61 samples"
+          },
+          {
+            "name": "Checkpointing: 500 iterations",
+            "value": 137,
+            "range": "±84.96%",
+            "unit": "ops/sec",
+            "extra": "46 samples"
+          },
+          {
+            "name": "Checkpointing: 1000 iterations",
+            "value": 102,
+            "range": "±28.17%",
+            "unit": "ops/sec",
+            "extra": "57 samples"
+          },
+          {
+            "name": "Checkpointing: 5000 iterations",
+            "value": 10.03,
+            "range": "±118.37%",
+            "unit": "ops/sec",
+            "extra": "27 samples"
           }
         ]
       }
