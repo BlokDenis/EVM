@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1615540216910,
+  "lastUpdate": 1615628454221,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
@@ -522,6 +522,93 @@ window.BENCHMARK_DATA = {
             "range": "±95.42%",
             "unit": "ops/sec",
             "extra": "14 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "8c656dad4d4c5618bce2d1c13a5ddead834d3076",
+          "message": "Merge pull request #1147 from ethereumjs/local-client-connectivity\n\nClient: local client connections for debugging",
+          "timestamp": "2021-03-13T10:38:15+01:00",
+          "tree_id": "2b6fdf9b6beb86772691f61dfc34feb1933c522b",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/8c656dad4d4c5618bce2d1c13a5ddead834d3076"
+        },
+        "date": 1615628453506,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "1k-3-32-ran",
+            "value": 13522,
+            "range": "±7.67%",
+            "unit": "ops/sec",
+            "extra": "66 samples"
+          },
+          {
+            "name": "1k-5-32-ran",
+            "value": 11833,
+            "range": "±16.38%",
+            "unit": "ops/sec",
+            "extra": "68 samples"
+          },
+          {
+            "name": "1k-9-32-ran",
+            "value": 9527,
+            "range": "±22.46%",
+            "unit": "ops/sec",
+            "extra": "50 samples"
+          },
+          {
+            "name": "1k-1k-32-ran",
+            "value": 13555,
+            "range": "±3.51%",
+            "unit": "ops/sec",
+            "extra": "72 samples"
+          },
+          {
+            "name": "1k-1k-32-mir",
+            "value": 14225,
+            "range": "±4.35%",
+            "unit": "ops/sec",
+            "extra": "72 samples"
+          },
+          {
+            "name": "Checkpointing: 100 iterations",
+            "value": 1046,
+            "range": "±7.65%",
+            "unit": "ops/sec",
+            "extra": "61 samples"
+          },
+          {
+            "name": "Checkpointing: 500 iterations",
+            "value": 122,
+            "range": "±91.34%",
+            "unit": "ops/sec",
+            "extra": "41 samples"
+          },
+          {
+            "name": "Checkpointing: 1000 iterations",
+            "value": 102,
+            "range": "±25.44%",
+            "unit": "ops/sec",
+            "extra": "58 samples"
+          },
+          {
+            "name": "Checkpointing: 5000 iterations",
+            "value": 10.66,
+            "range": "±113.72%",
+            "unit": "ops/sec",
+            "extra": "28 samples"
           }
         ]
       }
