@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1615665419052,
+  "lastUpdate": 1615833923874,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
@@ -1316,6 +1316,100 @@ window.BENCHMARK_DATA = {
             "range": "±8.37%",
             "unit": "ops/sec",
             "extra": "83 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "christophergewecke@gmail.com",
+            "name": "cgewecke",
+            "username": "cgewecke"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "d40ba15775e646471ee49cda4a20453ef0625764",
+          "message": "Merge pull request #1149 from ethereumjs/fix-devp2p-browser-dns\n\nFix devp2p browser compatibility",
+          "timestamp": "2021-03-15T11:41:20-07:00",
+          "tree_id": "4b080102d58a58e5d8a53cb5ab0805bda2ecfcb9",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/d40ba15775e646471ee49cda4a20453ef0625764"
+        },
+        "date": 1615833923214,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1563,
+            "range": "±3.53%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1579,
+            "range": "±4.03%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1454,
+            "range": "±9.34%",
+            "unit": "ops/sec",
+            "extra": "80 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1563,
+            "range": "±1.43%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1329,
+            "range": "±12.52%",
+            "unit": "ops/sec",
+            "extra": "73 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1557,
+            "range": "±1.51%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1556,
+            "range": "±1.37%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1477,
+            "range": "±1.69%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1486,
+            "range": "±1.38%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1474,
+            "range": "±1.83%",
+            "unit": "ops/sec",
+            "extra": "77 samples"
           }
         ]
       }
