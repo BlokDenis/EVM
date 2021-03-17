@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1615892185004,
+  "lastUpdate": 1616011223003,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
@@ -868,6 +868,93 @@ window.BENCHMARK_DATA = {
             "name": "Checkpointing: 5000 iterations",
             "value": 25.99,
             "range": "±11.82%",
+            "unit": "ops/sec",
+            "extra": "25 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f97d9ebcaea80d3eeb1b01dcacb2941bebec3e99",
+          "message": "Merge pull request #1153 from ethereumjs/remove-genesis-hf-check\n\nMake genesis params settable for any hardfork in block headers",
+          "timestamp": "2021-03-17T20:57:40+01:00",
+          "tree_id": "0cdb06fbd07663dd1193353cbcddd42453e7c752",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/f97d9ebcaea80d3eeb1b01dcacb2941bebec3e99"
+        },
+        "date": 1616011222166,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "1k-3-32-ran",
+            "value": 15038,
+            "range": "±17.44%",
+            "unit": "ops/sec",
+            "extra": "64 samples"
+          },
+          {
+            "name": "1k-5-32-ran",
+            "value": 16905,
+            "range": "±2.42%",
+            "unit": "ops/sec",
+            "extra": "71 samples"
+          },
+          {
+            "name": "1k-9-32-ran",
+            "value": 15510,
+            "range": "±2.23%",
+            "unit": "ops/sec",
+            "extra": "70 samples"
+          },
+          {
+            "name": "1k-1k-32-ran",
+            "value": 13416,
+            "range": "±10.63%",
+            "unit": "ops/sec",
+            "extra": "64 samples"
+          },
+          {
+            "name": "1k-1k-32-mir",
+            "value": 6314,
+            "range": "±14.18%",
+            "unit": "ops/sec",
+            "extra": "43 samples"
+          },
+          {
+            "name": "Checkpointing: 100 iterations",
+            "value": 1116,
+            "range": "±7.37%",
+            "unit": "ops/sec",
+            "extra": "62 samples"
+          },
+          {
+            "name": "Checkpointing: 500 iterations",
+            "value": 131,
+            "range": "±93.77%",
+            "unit": "ops/sec",
+            "extra": "43 samples"
+          },
+          {
+            "name": "Checkpointing: 1000 iterations",
+            "value": 100,
+            "range": "±41.39%",
+            "unit": "ops/sec",
+            "extra": "59 samples"
+          },
+          {
+            "name": "Checkpointing: 5000 iterations",
+            "value": 26.02,
+            "range": "±11.94%",
             "unit": "ops/sec",
             "extra": "25 samples"
           }
