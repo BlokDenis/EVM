@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1616423409853,
+  "lastUpdate": 1616448091743,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
@@ -1131,6 +1131,93 @@ window.BENCHMARK_DATA = {
             "range": "±134.52%",
             "unit": "ops/sec",
             "extra": "18 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "4bd73d18f30bbfdd5a97e22e922a0ad1e28d9e28",
+          "message": "Merge pull request #1160 from ethereumjs/codecov-patch-threshold\n\ncodecov: configure threshold for patch status check",
+          "timestamp": "2021-03-22T22:18:43+01:00",
+          "tree_id": "bcc57e0059187aa2fb804827d55dea4cac72699b",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/4bd73d18f30bbfdd5a97e22e922a0ad1e28d9e28"
+        },
+        "date": 1616448090726,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "1k-3-32-ran",
+            "value": 13531,
+            "range": "±13.69%",
+            "unit": "ops/sec",
+            "extra": "64 samples"
+          },
+          {
+            "name": "1k-5-32-ran",
+            "value": 14291,
+            "range": "±7.99%",
+            "unit": "ops/sec",
+            "extra": "73 samples"
+          },
+          {
+            "name": "1k-9-32-ran",
+            "value": 13882,
+            "range": "±3.39%",
+            "unit": "ops/sec",
+            "extra": "74 samples"
+          },
+          {
+            "name": "1k-1k-32-ran",
+            "value": 13478,
+            "range": "±4.04%",
+            "unit": "ops/sec",
+            "extra": "73 samples"
+          },
+          {
+            "name": "1k-1k-32-mir",
+            "value": 7301,
+            "range": "±25.89%",
+            "unit": "ops/sec",
+            "extra": "39 samples"
+          },
+          {
+            "name": "Checkpointing: 100 iterations",
+            "value": 1060,
+            "range": "±9.72%",
+            "unit": "ops/sec",
+            "extra": "66 samples"
+          },
+          {
+            "name": "Checkpointing: 500 iterations",
+            "value": 140,
+            "range": "±80.40%",
+            "unit": "ops/sec",
+            "extra": "49 samples"
+          },
+          {
+            "name": "Checkpointing: 1000 iterations",
+            "value": 107,
+            "range": "±27.79%",
+            "unit": "ops/sec",
+            "extra": "57 samples"
+          },
+          {
+            "name": "Checkpointing: 5000 iterations",
+            "value": 10.51,
+            "range": "±115.82%",
+            "unit": "ops/sec",
+            "extra": "27 samples"
           }
         ]
       }
