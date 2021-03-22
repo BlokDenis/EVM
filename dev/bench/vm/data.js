@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1616423565433,
+  "lastUpdate": 1616448163444,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
@@ -1786,6 +1786,100 @@ window.BENCHMARK_DATA = {
             "range": "±1.25%",
             "unit": "ops/sec",
             "extra": "76 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "4bd73d18f30bbfdd5a97e22e922a0ad1e28d9e28",
+          "message": "Merge pull request #1160 from ethereumjs/codecov-patch-threshold\n\ncodecov: configure threshold for patch status check",
+          "timestamp": "2021-03-22T22:18:43+01:00",
+          "tree_id": "bcc57e0059187aa2fb804827d55dea4cac72699b",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/4bd73d18f30bbfdd5a97e22e922a0ad1e28d9e28"
+        },
+        "date": 1616448162616,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1618,
+            "range": "±2.38%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1569,
+            "range": "±5.85%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1617,
+            "range": "±1.19%",
+            "unit": "ops/sec",
+            "extra": "90 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1625,
+            "range": "±0.95%",
+            "unit": "ops/sec",
+            "extra": "92 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1581,
+            "range": "±1.40%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1283,
+            "range": "±10.51%",
+            "unit": "ops/sec",
+            "extra": "72 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1535,
+            "range": "±1.60%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1527,
+            "range": "±1.16%",
+            "unit": "ops/sec",
+            "extra": "90 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1509,
+            "range": "±0.77%",
+            "unit": "ops/sec",
+            "extra": "92 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1498,
+            "range": "±1.46%",
+            "unit": "ops/sec",
+            "extra": "81 samples"
           }
         ]
       }
