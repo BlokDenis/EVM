@@ -94,6 +94,14 @@ export class FullEthereumService extends EthereumService {
       peer.eth!.send('BlockBodies', bodies)
     } else if (message.name === 'NewBlockHashes') {
       await this.synchronizer.announced(message.data, peer)
+    } else if (message.name === 'GetNodeData') {
+      let data: (Buffer | null)[] = await Promise.all(
+        message.data.map((hash: Buffer) => (<any>this.config.vm!.stateManager)._trie.db.get(hash))
+      )
+      data = data.filter((value: Buffer | null) => {
+        return !(value === null)
+      })
+      peer.eth!.send('NodeData', data)
     }
   }
 
