@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1616791220208,
+  "lastUpdate": 1617039114094,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
@@ -2256,6 +2256,100 @@ window.BENCHMARK_DATA = {
             "range": "±20.12%",
             "unit": "ops/sec",
             "extra": "61 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "christophergewecke@gmail.com",
+            "name": "cgewecke",
+            "username": "cgewecke"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "71c54f6917c79465fc1025f009a9e0d45c2cbf36",
+          "message": "Merge pull request #1172 from ethereumjs/disable-e2e-temporarily\n\nTemporarily disable e2e tests (due to intermittent failures)",
+          "timestamp": "2021-03-29T10:27:54-07:00",
+          "tree_id": "5fb7e021d5fdc79bab2899c3162c0bc05de646f7",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/71c54f6917c79465fc1025f009a9e0d45c2cbf36"
+        },
+        "date": 1617039113295,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1553,
+            "range": "±3.61%",
+            "unit": "ops/sec",
+            "extra": "80 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1588,
+            "range": "±0.88%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1435,
+            "range": "±9.17%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1551,
+            "range": "±0.84%",
+            "unit": "ops/sec",
+            "extra": "89 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1540,
+            "range": "±1.23%",
+            "unit": "ops/sec",
+            "extra": "78 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1531,
+            "range": "±1.08%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1490,
+            "range": "±1.81%",
+            "unit": "ops/sec",
+            "extra": "71 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1466,
+            "range": "±1.27%",
+            "unit": "ops/sec",
+            "extra": "80 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1458,
+            "range": "±1.16%",
+            "unit": "ops/sec",
+            "extra": "80 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1454,
+            "range": "±1.47%",
+            "unit": "ops/sec",
+            "extra": "80 samples"
           }
         ]
       }
