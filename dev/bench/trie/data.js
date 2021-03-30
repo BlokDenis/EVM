@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1617039029436,
+  "lastUpdate": 1617072331881,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
@@ -1653,6 +1653,93 @@ window.BENCHMARK_DATA = {
             "range": "±93.89%",
             "unit": "ops/sec",
             "extra": "18 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "71e0f67147b03c431e8ce08ef83e53927223f094",
+          "message": "VM: Generate Access Lists in runTx() (#1170)\n\n* util: added new EIP-1352 conformant Address.isPrecompileOrSystemAddress() function\r\n* vm: added reportAccessList option to runTx(), added simple test\r\n* vm: separated StateManager accessList generation functionality to its own method generateAccessList (not part of interface yet)\r\n* vm -> access lists: added storage maps from REVERT to access list generation logic, unified folding logic, add note on AL generation edge case\r\n* vm -> access lists: added StateManager.generateAccessList() API tests\r\n* vm -> access lists: add sorting to StateManager.generateAccessList()\r\n* karma: fix example, use tsconfig\r\n* update homestead test count from 7004 to 7001 to fix nightly runs (one test must have been removed, as one singular test takes 3 tests)\r\nCo-authored-by: Ryan Ghods <ryan@ryanio.com>",
+          "timestamp": "2021-03-29T19:42:54-07:00",
+          "tree_id": "1434d3b82e805c68d3152cc38d6e78f0caa5fef0",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/71e0f67147b03c431e8ce08ef83e53927223f094"
+        },
+        "date": 1617072329407,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "1k-3-32-ran",
+            "value": 15730,
+            "range": "±12.58%",
+            "unit": "ops/sec",
+            "extra": "68 samples"
+          },
+          {
+            "name": "1k-5-32-ran",
+            "value": 17189,
+            "range": "±1.79%",
+            "unit": "ops/sec",
+            "extra": "72 samples"
+          },
+          {
+            "name": "1k-9-32-ran",
+            "value": 15793,
+            "range": "±1.35%",
+            "unit": "ops/sec",
+            "extra": "69 samples"
+          },
+          {
+            "name": "1k-1k-32-ran",
+            "value": 14751,
+            "range": "±3.20%",
+            "unit": "ops/sec",
+            "extra": "69 samples"
+          },
+          {
+            "name": "1k-1k-32-mir",
+            "value": 5454,
+            "range": "±35.28%",
+            "unit": "ops/sec",
+            "extra": "30 samples"
+          },
+          {
+            "name": "Checkpointing: 100 iterations",
+            "value": 1132,
+            "range": "±7.11%",
+            "unit": "ops/sec",
+            "extra": "62 samples"
+          },
+          {
+            "name": "Checkpointing: 500 iterations",
+            "value": 107,
+            "range": "±109.50%",
+            "unit": "ops/sec",
+            "extra": "43 samples"
+          },
+          {
+            "name": "Checkpointing: 1000 iterations",
+            "value": 114,
+            "range": "±13.79%",
+            "unit": "ops/sec",
+            "extra": "57 samples"
+          },
+          {
+            "name": "Checkpointing: 5000 iterations",
+            "value": 24.56,
+            "range": "±11.70%",
+            "unit": "ops/sec",
+            "extra": "28 samples"
           }
         ]
       }
