@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1617072331881,
+  "lastUpdate": 1617073269377,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
@@ -1740,6 +1740,93 @@ window.BENCHMARK_DATA = {
             "range": "±11.70%",
             "unit": "ops/sec",
             "extra": "28 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "christophergewecke@gmail.com",
+            "name": "cgewecke",
+            "username": "cgewecke"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "cfc250629758f24e4b8e2e46baf75ad8c5633215",
+          "message": "util -> return false (instead of throwing) for non-hex-prefixed addresses for \"isValid..\" methods (#1173)",
+          "timestamp": "2021-03-29T19:58:42-07:00",
+          "tree_id": "b2b14c585b42fa57a6fcf7a910677cc8fe3bd1fe",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/cfc250629758f24e4b8e2e46baf75ad8c5633215"
+        },
+        "date": 1617073266814,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "1k-3-32-ran",
+            "value": 15831,
+            "range": "±13.98%",
+            "unit": "ops/sec",
+            "extra": "68 samples"
+          },
+          {
+            "name": "1k-5-32-ran",
+            "value": 17469,
+            "range": "±2.10%",
+            "unit": "ops/sec",
+            "extra": "77 samples"
+          },
+          {
+            "name": "1k-9-32-ran",
+            "value": 17356,
+            "range": "±2.11%",
+            "unit": "ops/sec",
+            "extra": "76 samples"
+          },
+          {
+            "name": "1k-1k-32-ran",
+            "value": 12944,
+            "range": "±16.52%",
+            "unit": "ops/sec",
+            "extra": "58 samples"
+          },
+          {
+            "name": "1k-1k-32-mir",
+            "value": 9880,
+            "range": "±31.48%",
+            "unit": "ops/sec",
+            "extra": "55 samples"
+          },
+          {
+            "name": "Checkpointing: 100 iterations",
+            "value": 1380,
+            "range": "±5.62%",
+            "unit": "ops/sec",
+            "extra": "63 samples"
+          },
+          {
+            "name": "Checkpointing: 500 iterations",
+            "value": 99.56,
+            "range": "±133.54%",
+            "unit": "ops/sec",
+            "extra": "25 samples"
+          },
+          {
+            "name": "Checkpointing: 1000 iterations",
+            "value": 135,
+            "range": "±11.50%",
+            "unit": "ops/sec",
+            "extra": "58 samples"
+          },
+          {
+            "name": "Checkpointing: 5000 iterations",
+            "value": 10.11,
+            "range": "±131.71%",
+            "unit": "ops/sec",
+            "extra": "16 samples"
           }
         ]
       }
