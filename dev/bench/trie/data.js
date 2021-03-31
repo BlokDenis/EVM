@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1617215846039,
+  "lastUpdate": 1617227042540,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
@@ -2001,6 +2001,93 @@ window.BENCHMARK_DATA = {
             "range": "±123.88%",
             "unit": "ops/sec",
             "extra": "26 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "e4e5be2a2f9e11bab52a56edb17293837ad52ea2",
+          "message": "Merge pull request #1183 from ethereumjs/vm-fix-access-list-generation-issues\n\nVM: fix access list generation bugs in runTx()",
+          "timestamp": "2021-03-31T23:41:35+02:00",
+          "tree_id": "e7429352e73e0063f4d50ae39ed7d4d3bb729249",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/e4e5be2a2f9e11bab52a56edb17293837ad52ea2"
+        },
+        "date": 1617227041574,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "1k-3-32-ran",
+            "value": 20324,
+            "range": "±12.54%",
+            "unit": "ops/sec",
+            "extra": "70 samples"
+          },
+          {
+            "name": "1k-5-32-ran",
+            "value": 23139,
+            "range": "±2.31%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "1k-9-32-ran",
+            "value": 21159,
+            "range": "±4.49%",
+            "unit": "ops/sec",
+            "extra": "80 samples"
+          },
+          {
+            "name": "1k-1k-32-ran",
+            "value": 7468,
+            "range": "±23.98%",
+            "unit": "ops/sec",
+            "extra": "54 samples"
+          },
+          {
+            "name": "1k-1k-32-mir",
+            "value": 22836,
+            "range": "±2.90%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Checkpointing: 100 iterations",
+            "value": 1466,
+            "range": "±4.91%",
+            "unit": "ops/sec",
+            "extra": "62 samples"
+          },
+          {
+            "name": "Checkpointing: 500 iterations",
+            "value": 114,
+            "range": "±118.41%",
+            "unit": "ops/sec",
+            "extra": "24 samples"
+          },
+          {
+            "name": "Checkpointing: 1000 iterations",
+            "value": 161,
+            "range": "±6.28%",
+            "unit": "ops/sec",
+            "extra": "60 samples"
+          },
+          {
+            "name": "Checkpointing: 5000 iterations",
+            "value": 13.84,
+            "range": "±85.82%",
+            "unit": "ops/sec",
+            "extra": "35 samples"
           }
         ]
       }
