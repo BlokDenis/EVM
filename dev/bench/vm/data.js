@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1617073364865,
+  "lastUpdate": 1617200527945,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
@@ -2538,6 +2538,100 @@ window.BENCHMARK_DATA = {
             "range": "±0.93%",
             "unit": "ops/sec",
             "extra": "87 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "486b992019572eb252ab93f150416a37f0d8162a",
+          "message": "Merge pull request #1179 from ethereumjs/fix-default-access-list\n\nFix default value for empty access lists",
+          "timestamp": "2021-03-31T16:17:54+02:00",
+          "tree_id": "22fd8c9553c366a9fb8e6c5507393ad4e4b9c181",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/486b992019572eb252ab93f150416a37f0d8162a"
+        },
+        "date": 1617200527148,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1580,
+            "range": "±3.20%",
+            "unit": "ops/sec",
+            "extra": "88 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1549,
+            "range": "±6.42%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1583,
+            "range": "±0.90%",
+            "unit": "ops/sec",
+            "extra": "90 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1403,
+            "range": "±9.14%",
+            "unit": "ops/sec",
+            "extra": "81 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1545,
+            "range": "±0.89%",
+            "unit": "ops/sec",
+            "extra": "88 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1547,
+            "range": "±0.91%",
+            "unit": "ops/sec",
+            "extra": "88 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1508,
+            "range": "±0.97%",
+            "unit": "ops/sec",
+            "extra": "88 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1516,
+            "range": "±0.77%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1446,
+            "range": "±1.42%",
+            "unit": "ops/sec",
+            "extra": "83 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1463,
+            "range": "±1.07%",
+            "unit": "ops/sec",
+            "extra": "83 samples"
           }
         ]
       }
