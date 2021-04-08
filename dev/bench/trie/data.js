@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1617698146893,
+  "lastUpdate": 1617910070026,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
@@ -2349,6 +2349,93 @@ window.BENCHMARK_DATA = {
             "range": "±153.64%",
             "unit": "ops/sec",
             "extra": "17 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "36e739613597070c2f54623811f55403feb46dbd",
+          "message": "Merge pull request #1190 from ethereumjs/fix-tx-constructor-bug\n\nTx: fix AccessListEIP2930Transaction constructor bug with v=0",
+          "timestamp": "2021-04-08T21:25:20+02:00",
+          "tree_id": "217e515e9fd218f90ff4a18fa7e53f92aac095aa",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/36e739613597070c2f54623811f55403feb46dbd"
+        },
+        "date": 1617910069156,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "1k-3-32-ran",
+            "value": 15247,
+            "range": "±14.34%",
+            "unit": "ops/sec",
+            "extra": "64 samples"
+          },
+          {
+            "name": "1k-5-32-ran",
+            "value": 16686,
+            "range": "±2.38%",
+            "unit": "ops/sec",
+            "extra": "71 samples"
+          },
+          {
+            "name": "1k-9-32-ran",
+            "value": 15567,
+            "range": "±2.50%",
+            "unit": "ops/sec",
+            "extra": "70 samples"
+          },
+          {
+            "name": "1k-1k-32-ran",
+            "value": 14542,
+            "range": "±3.03%",
+            "unit": "ops/sec",
+            "extra": "66 samples"
+          },
+          {
+            "name": "1k-1k-32-mir",
+            "value": 6103,
+            "range": "±27.44%",
+            "unit": "ops/sec",
+            "extra": "18 samples"
+          },
+          {
+            "name": "Checkpointing: 100 iterations",
+            "value": 1063,
+            "range": "±7.98%",
+            "unit": "ops/sec",
+            "extra": "62 samples"
+          },
+          {
+            "name": "Checkpointing: 500 iterations",
+            "value": 133,
+            "range": "±83.64%",
+            "unit": "ops/sec",
+            "extra": "55 samples"
+          },
+          {
+            "name": "Checkpointing: 1000 iterations",
+            "value": 99.28,
+            "range": "±35.26%",
+            "unit": "ops/sec",
+            "extra": "58 samples"
+          },
+          {
+            "name": "Checkpointing: 5000 iterations",
+            "value": 9.52,
+            "range": "±122.35%",
+            "unit": "ops/sec",
+            "extra": "26 samples"
           }
         ]
       }
