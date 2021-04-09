@@ -1,102 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1617910139302,
+  "lastUpdate": 1617955378621,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "jochembrouwer96@gmail.com",
-            "name": "Jochem Brouwer",
-            "username": "jochem-brouwer"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "94651f7b42bb24a34dcc7fdd4d2daadb568d7c23",
-          "message": "Merge pull request #1141 from ethereumjs/eip2718-eip2930-improvements\n\nEIP-2718/EIP-2930 Typed Tx Improvements and Tests",
-          "timestamp": "2021-03-07T18:27:47+01:00",
-          "tree_id": "d671948fd13c0b07df55977664b504e8cf25114e",
-          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/94651f7b42bb24a34dcc7fdd4d2daadb568d7c23"
-        },
-        "date": 1615138286527,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "Block 9422905",
-            "value": 1449,
-            "range": "±4.55%",
-            "unit": "ops/sec",
-            "extra": "82 samples"
-          },
-          {
-            "name": "Block 9422906",
-            "value": 1456,
-            "range": "±5.98%",
-            "unit": "ops/sec",
-            "extra": "79 samples"
-          },
-          {
-            "name": "Block 9422907",
-            "value": 1483,
-            "range": "±1.48%",
-            "unit": "ops/sec",
-            "extra": "84 samples"
-          },
-          {
-            "name": "Block 9422908",
-            "value": 1493,
-            "range": "±1.07%",
-            "unit": "ops/sec",
-            "extra": "89 samples"
-          },
-          {
-            "name": "Block 9422909",
-            "value": 1258,
-            "range": "±12.63%",
-            "unit": "ops/sec",
-            "extra": "68 samples"
-          },
-          {
-            "name": "Block 9422910",
-            "value": 1435,
-            "range": "±1.18%",
-            "unit": "ops/sec",
-            "extra": "83 samples"
-          },
-          {
-            "name": "Block 9422911",
-            "value": 1424,
-            "range": "±1.36%",
-            "unit": "ops/sec",
-            "extra": "82 samples"
-          },
-          {
-            "name": "Block 9422912",
-            "value": 1413,
-            "range": "±1.18%",
-            "unit": "ops/sec",
-            "extra": "85 samples"
-          },
-          {
-            "name": "Block 9422913",
-            "value": 1164,
-            "range": "±13.34%",
-            "unit": "ops/sec",
-            "extra": "66 samples"
-          },
-          {
-            "name": "Block 9422914",
-            "value": 1153,
-            "range": "±14.27%",
-            "unit": "ops/sec",
-            "extra": "72 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2820,6 +2726,100 @@ window.BENCHMARK_DATA = {
             "range": "±0.97%",
             "unit": "ops/sec",
             "extra": "89 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "d34ba9018be3f9466cc6090fe742a37803b56e44",
+          "message": "Merge pull request #1185 from ethereumjs/vm-updates\n\nvm: add tx receipt to RunTxResult, allow BlockBuilder to build a block with zero txs",
+          "timestamp": "2021-04-09T09:59:07+02:00",
+          "tree_id": "c5f79c0026fe7ea70a7a132cdce48f8c1b9aa186",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/d34ba9018be3f9466cc6090fe742a37803b56e44"
+        },
+        "date": 1617955377681,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1718,
+            "range": "±2.82%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1700,
+            "range": "±4.07%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1704,
+            "range": "±1.36%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1609,
+            "range": "±2.24%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1419,
+            "range": "±10.66%",
+            "unit": "ops/sec",
+            "extra": "73 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1614,
+            "range": "±4.49%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1639,
+            "range": "±1.75%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1645,
+            "range": "±1.55%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1640,
+            "range": "±1.41%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1617,
+            "range": "±1.40%",
+            "unit": "ops/sec",
+            "extra": "83 samples"
           }
         ]
       }
