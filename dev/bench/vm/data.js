@@ -1,102 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1618255870008,
+  "lastUpdate": 1618945365504,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "892d332e7253679c3e517b9a6bd7dea95f124da3",
-          "message": "Merge pull request #1145 from ethereumjs/client-split-cli-transport-options\n\nClient: split CLI transports options for bootnodes and multiaddrs",
-          "timestamp": "2021-03-11T08:57:10+01:00",
-          "tree_id": "e4e8160e8d6e82a324ddc5958e2f57d45a8045fe",
-          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/892d332e7253679c3e517b9a6bd7dea95f124da3"
-        },
-        "date": 1615449665499,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "Block 9422905",
-            "value": 1577,
-            "range": "±3.40%",
-            "unit": "ops/sec",
-            "extra": "88 samples"
-          },
-          {
-            "name": "Block 9422906",
-            "value": 1544,
-            "range": "±7.38%",
-            "unit": "ops/sec",
-            "extra": "87 samples"
-          },
-          {
-            "name": "Block 9422907",
-            "value": 1593,
-            "range": "±0.82%",
-            "unit": "ops/sec",
-            "extra": "87 samples"
-          },
-          {
-            "name": "Block 9422908",
-            "value": 1582,
-            "range": "±0.76%",
-            "unit": "ops/sec",
-            "extra": "90 samples"
-          },
-          {
-            "name": "Block 9422909",
-            "value": 1366,
-            "range": "±10.99%",
-            "unit": "ops/sec",
-            "extra": "78 samples"
-          },
-          {
-            "name": "Block 9422910",
-            "value": 1547,
-            "range": "±1.10%",
-            "unit": "ops/sec",
-            "extra": "81 samples"
-          },
-          {
-            "name": "Block 9422911",
-            "value": 1531,
-            "range": "±1.21%",
-            "unit": "ops/sec",
-            "extra": "87 samples"
-          },
-          {
-            "name": "Block 9422912",
-            "value": 1508,
-            "range": "±0.85%",
-            "unit": "ops/sec",
-            "extra": "85 samples"
-          },
-          {
-            "name": "Block 9422913",
-            "value": 1482,
-            "range": "±0.66%",
-            "unit": "ops/sec",
-            "extra": "86 samples"
-          },
-          {
-            "name": "Block 9422914",
-            "value": 1468,
-            "range": "±0.72%",
-            "unit": "ops/sec",
-            "extra": "85 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2820,6 +2726,100 @@ window.BENCHMARK_DATA = {
             "range": "±2.15%",
             "unit": "ops/sec",
             "extra": "76 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "77563348+emersonmacro@users.noreply.github.com",
+            "name": "emersonmacro",
+            "username": "emersonmacro"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "58ede194c2e179b0ee5363871271c3d164f1e768",
+          "message": "VM: Small fixes in events spec file (#1208)",
+          "timestamp": "2021-04-20T11:58:55-07:00",
+          "tree_id": "4ac4669b7fa74d65b5421fc486aa63b1c10ef574",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/58ede194c2e179b0ee5363871271c3d164f1e768"
+        },
+        "date": 1618945364753,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1644,
+            "range": "±3.51%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1567,
+            "range": "±7.78%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1508,
+            "range": "±7.03%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1620,
+            "range": "±0.60%",
+            "unit": "ops/sec",
+            "extra": "93 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1388,
+            "range": "±9.58%",
+            "unit": "ops/sec",
+            "extra": "78 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1553,
+            "range": "±0.67%",
+            "unit": "ops/sec",
+            "extra": "93 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1532,
+            "range": "±0.61%",
+            "unit": "ops/sec",
+            "extra": "93 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1516,
+            "range": "±0.80%",
+            "unit": "ops/sec",
+            "extra": "92 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1488,
+            "range": "±1.07%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1032,
+            "range": "±18.18%",
+            "unit": "ops/sec",
+            "extra": "54 samples"
           }
         ]
       }
