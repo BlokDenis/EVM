@@ -1,102 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1619181321779,
+  "lastUpdate": 1619422341755,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "b2d171ce13c9e26893152f744040108f5748b499",
-          "message": "Merge pull request #1156 from ethereumjs/small-bn-fixes\n\nClient: small BN fixes",
-          "timestamp": "2021-03-18T20:58:54+01:00",
-          "tree_id": "0a247905805db4e2c1e184756d140556c467506a",
-          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/b2d171ce13c9e26893152f744040108f5748b499"
-        },
-        "date": 1616097776107,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "Block 9422905",
-            "value": 1607,
-            "range": "±3.05%",
-            "unit": "ops/sec",
-            "extra": "84 samples"
-          },
-          {
-            "name": "Block 9422906",
-            "value": 1673,
-            "range": "±0.99%",
-            "unit": "ops/sec",
-            "extra": "88 samples"
-          },
-          {
-            "name": "Block 9422907",
-            "value": 1524,
-            "range": "±5.14%",
-            "unit": "ops/sec",
-            "extra": "84 samples"
-          },
-          {
-            "name": "Block 9422908",
-            "value": 1616,
-            "range": "±0.96%",
-            "unit": "ops/sec",
-            "extra": "88 samples"
-          },
-          {
-            "name": "Block 9422909",
-            "value": 1597,
-            "range": "±1.06%",
-            "unit": "ops/sec",
-            "extra": "90 samples"
-          },
-          {
-            "name": "Block 9422910",
-            "value": 1591,
-            "range": "±1.43%",
-            "unit": "ops/sec",
-            "extra": "80 samples"
-          },
-          {
-            "name": "Block 9422911",
-            "value": 1540,
-            "range": "±1.45%",
-            "unit": "ops/sec",
-            "extra": "83 samples"
-          },
-          {
-            "name": "Block 9422912",
-            "value": 1538,
-            "range": "±0.88%",
-            "unit": "ops/sec",
-            "extra": "86 samples"
-          },
-          {
-            "name": "Block 9422913",
-            "value": 1274,
-            "range": "±12.99%",
-            "unit": "ops/sec",
-            "extra": "72 samples"
-          },
-          {
-            "name": "Block 9422914",
-            "value": 1382,
-            "range": "±9.57%",
-            "unit": "ops/sec",
-            "extra": "79 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2820,6 +2726,100 @@ window.BENCHMARK_DATA = {
             "range": "±15.35%",
             "unit": "ops/sec",
             "extra": "72 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "da3e27d611979efea732e5e6da5b5d50a17b978e",
+          "message": "Merge pull request #1216 from ethereumjs/vm-statemanager-getStateRoot-optimization\n\nVM: remove StateManager.getStateRoot() force parameter and throwing behavior",
+          "timestamp": "2021-04-26T09:28:44+02:00",
+          "tree_id": "66966a11ddc15d8e937ce353dfb8daac752acd5d",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/da3e27d611979efea732e5e6da5b5d50a17b978e"
+        },
+        "date": 1619422340889,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1743,
+            "range": "±4.36%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1701,
+            "range": "±5.11%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1656,
+            "range": "±6.70%",
+            "unit": "ops/sec",
+            "extra": "81 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1779,
+            "range": "±1.00%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1487,
+            "range": "±11.62%",
+            "unit": "ops/sec",
+            "extra": "70 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1749,
+            "range": "±1.13%",
+            "unit": "ops/sec",
+            "extra": "89 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1727,
+            "range": "±1.21%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1693,
+            "range": "±1.24%",
+            "unit": "ops/sec",
+            "extra": "89 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1653,
+            "range": "±1.07%",
+            "unit": "ops/sec",
+            "extra": "90 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1133,
+            "range": "±19.53%",
+            "unit": "ops/sec",
+            "extra": "61 samples"
           }
         ]
       }
