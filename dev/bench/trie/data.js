@@ -1,95 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1619181245713,
+  "lastUpdate": 1619422274508,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "f97d9ebcaea80d3eeb1b01dcacb2941bebec3e99",
-          "message": "Merge pull request #1153 from ethereumjs/remove-genesis-hf-check\n\nMake genesis params settable for any hardfork in block headers",
-          "timestamp": "2021-03-17T20:57:40+01:00",
-          "tree_id": "0cdb06fbd07663dd1193353cbcddd42453e7c752",
-          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/f97d9ebcaea80d3eeb1b01dcacb2941bebec3e99"
-        },
-        "date": 1616011222166,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "1k-3-32-ran",
-            "value": 15038,
-            "range": "±17.44%",
-            "unit": "ops/sec",
-            "extra": "64 samples"
-          },
-          {
-            "name": "1k-5-32-ran",
-            "value": 16905,
-            "range": "±2.42%",
-            "unit": "ops/sec",
-            "extra": "71 samples"
-          },
-          {
-            "name": "1k-9-32-ran",
-            "value": 15510,
-            "range": "±2.23%",
-            "unit": "ops/sec",
-            "extra": "70 samples"
-          },
-          {
-            "name": "1k-1k-32-ran",
-            "value": 13416,
-            "range": "±10.63%",
-            "unit": "ops/sec",
-            "extra": "64 samples"
-          },
-          {
-            "name": "1k-1k-32-mir",
-            "value": 6314,
-            "range": "±14.18%",
-            "unit": "ops/sec",
-            "extra": "43 samples"
-          },
-          {
-            "name": "Checkpointing: 100 iterations",
-            "value": 1116,
-            "range": "±7.37%",
-            "unit": "ops/sec",
-            "extra": "62 samples"
-          },
-          {
-            "name": "Checkpointing: 500 iterations",
-            "value": 131,
-            "range": "±93.77%",
-            "unit": "ops/sec",
-            "extra": "43 samples"
-          },
-          {
-            "name": "Checkpointing: 1000 iterations",
-            "value": 100,
-            "range": "±41.39%",
-            "unit": "ops/sec",
-            "extra": "59 samples"
-          },
-          {
-            "name": "Checkpointing: 5000 iterations",
-            "value": 26.02,
-            "range": "±11.94%",
-            "unit": "ops/sec",
-            "extra": "25 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2610,6 +2523,93 @@ window.BENCHMARK_DATA = {
             "range": "±121.65%",
             "unit": "ops/sec",
             "extra": "26 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "da3e27d611979efea732e5e6da5b5d50a17b978e",
+          "message": "Merge pull request #1216 from ethereumjs/vm-statemanager-getStateRoot-optimization\n\nVM: remove StateManager.getStateRoot() force parameter and throwing behavior",
+          "timestamp": "2021-04-26T09:28:44+02:00",
+          "tree_id": "66966a11ddc15d8e937ce353dfb8daac752acd5d",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/da3e27d611979efea732e5e6da5b5d50a17b978e"
+        },
+        "date": 1619422273636,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "1k-3-32-ran",
+            "value": 14668,
+            "range": "±11.91%",
+            "unit": "ops/sec",
+            "extra": "66 samples"
+          },
+          {
+            "name": "1k-5-32-ran",
+            "value": 13139,
+            "range": "±12.22%",
+            "unit": "ops/sec",
+            "extra": "71 samples"
+          },
+          {
+            "name": "1k-9-32-ran",
+            "value": 14827,
+            "range": "±2.75%",
+            "unit": "ops/sec",
+            "extra": "72 samples"
+          },
+          {
+            "name": "1k-1k-32-ran",
+            "value": 13783,
+            "range": "±3.68%",
+            "unit": "ops/sec",
+            "extra": "72 samples"
+          },
+          {
+            "name": "1k-1k-32-mir",
+            "value": 8373,
+            "range": "±20.86%",
+            "unit": "ops/sec",
+            "extra": "38 samples"
+          },
+          {
+            "name": "Checkpointing: 100 iterations",
+            "value": 798,
+            "range": "±29.31%",
+            "unit": "ops/sec",
+            "extra": "56 samples"
+          },
+          {
+            "name": "Checkpointing: 500 iterations",
+            "value": 144,
+            "range": "±73.84%",
+            "unit": "ops/sec",
+            "extra": "61 samples"
+          },
+          {
+            "name": "Checkpointing: 1000 iterations",
+            "value": 117,
+            "range": "±7.54%",
+            "unit": "ops/sec",
+            "extra": "56 samples"
+          },
+          {
+            "name": "Checkpointing: 5000 iterations",
+            "value": 24.02,
+            "range": "±10.20%",
+            "unit": "ops/sec",
+            "extra": "28 samples"
           }
         ]
       }
