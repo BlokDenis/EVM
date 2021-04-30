@@ -1,95 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1619637477004,
+  "lastUpdate": 1619819731070,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "3d9854db3ce0e15263ff4c3c0db9eb31cbb967d3",
-          "message": "Merge pull request #1167 from ethereumjs/fix-common-custom-chain-error\n\nBlockchain: New Release v5.2.1 / Fixed Common custom chain error / VM API test rework and custom chain test additions",
-          "timestamp": "2021-03-26T21:36:40+01:00",
-          "tree_id": "a1f98708728f2af66411db8c572bf3a3d51c02f1",
-          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/3d9854db3ce0e15263ff4c3c0db9eb31cbb967d3"
-        },
-        "date": 1616791164690,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "1k-3-32-ran",
-            "value": 14401,
-            "range": "±12.55%",
-            "unit": "ops/sec",
-            "extra": "66 samples"
-          },
-          {
-            "name": "1k-5-32-ran",
-            "value": 13260,
-            "range": "±22.67%",
-            "unit": "ops/sec",
-            "extra": "71 samples"
-          },
-          {
-            "name": "1k-9-32-ran",
-            "value": 14694,
-            "range": "±3.47%",
-            "unit": "ops/sec",
-            "extra": "73 samples"
-          },
-          {
-            "name": "1k-1k-32-ran",
-            "value": 13785,
-            "range": "±3.68%",
-            "unit": "ops/sec",
-            "extra": "72 samples"
-          },
-          {
-            "name": "1k-1k-32-mir",
-            "value": 6808,
-            "range": "±25.71%",
-            "unit": "ops/sec",
-            "extra": "35 samples"
-          },
-          {
-            "name": "Checkpointing: 100 iterations",
-            "value": 1080,
-            "range": "±8.92%",
-            "unit": "ops/sec",
-            "extra": "65 samples"
-          },
-          {
-            "name": "Checkpointing: 500 iterations",
-            "value": 142,
-            "range": "±81.13%",
-            "unit": "ops/sec",
-            "extra": "51 samples"
-          },
-          {
-            "name": "Checkpointing: 1000 iterations",
-            "value": 114,
-            "range": "±20.91%",
-            "unit": "ops/sec",
-            "extra": "59 samples"
-          },
-          {
-            "name": "Checkpointing: 5000 iterations",
-            "value": 25.4,
-            "range": "±9.99%",
-            "unit": "ops/sec",
-            "extra": "26 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2610,6 +2523,93 @@ window.BENCHMARK_DATA = {
             "range": "±116.26%",
             "unit": "ops/sec",
             "extra": "27 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "4e8fbcb4f45c4af6bbd03db732ac028fac75e5ca",
+          "message": "Merge pull request #1237 from ethereumjs/fix-client-handshake-bug\n\nClient: Simple message queue to handle unhandled ETH messages during handshake",
+          "timestamp": "2021-04-30T23:53:32+02:00",
+          "tree_id": "293cffb60002ba16fa035dd85bac54f37618cf04",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/4e8fbcb4f45c4af6bbd03db732ac028fac75e5ca"
+        },
+        "date": 1619819730284,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "1k-3-32-ran",
+            "value": 18858,
+            "range": "±13.74%",
+            "unit": "ops/sec",
+            "extra": "71 samples"
+          },
+          {
+            "name": "1k-5-32-ran",
+            "value": 20758,
+            "range": "±2.74%",
+            "unit": "ops/sec",
+            "extra": "77 samples"
+          },
+          {
+            "name": "1k-9-32-ran",
+            "value": 18339,
+            "range": "±2.37%",
+            "unit": "ops/sec",
+            "extra": "74 samples"
+          },
+          {
+            "name": "1k-1k-32-ran",
+            "value": 7966,
+            "range": "±24.24%",
+            "unit": "ops/sec",
+            "extra": "34 samples"
+          },
+          {
+            "name": "1k-1k-32-mir",
+            "value": 16286,
+            "range": "±12.40%",
+            "unit": "ops/sec",
+            "extra": "70 samples"
+          },
+          {
+            "name": "Checkpointing: 100 iterations",
+            "value": 1262,
+            "range": "±6.70%",
+            "unit": "ops/sec",
+            "extra": "61 samples"
+          },
+          {
+            "name": "Checkpointing: 500 iterations",
+            "value": 95.86,
+            "range": "±130.56%",
+            "unit": "ops/sec",
+            "extra": "31 samples"
+          },
+          {
+            "name": "Checkpointing: 1000 iterations",
+            "value": 124,
+            "range": "±22.27%",
+            "unit": "ops/sec",
+            "extra": "61 samples"
+          },
+          {
+            "name": "Checkpointing: 5000 iterations",
+            "value": 9.05,
+            "range": "±119.77%",
+            "unit": "ops/sec",
+            "extra": "17 samples"
           }
         ]
       }
