@@ -1,95 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1620146780731,
+  "lastUpdate": 1620147623181,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "486b992019572eb252ab93f150416a37f0d8162a",
-          "message": "Merge pull request #1179 from ethereumjs/fix-default-access-list\n\nFix default value for empty access lists",
-          "timestamp": "2021-03-31T16:17:54+02:00",
-          "tree_id": "22fd8c9553c366a9fb8e6c5507393ad4e4b9c181",
-          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/486b992019572eb252ab93f150416a37f0d8162a"
-        },
-        "date": 1617200441621,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "1k-3-32-ran",
-            "value": 15586,
-            "range": "±13.53%",
-            "unit": "ops/sec",
-            "extra": "66 samples"
-          },
-          {
-            "name": "1k-5-32-ran",
-            "value": 17892,
-            "range": "±2.54%",
-            "unit": "ops/sec",
-            "extra": "62 samples"
-          },
-          {
-            "name": "1k-9-32-ran",
-            "value": 15679,
-            "range": "±2.46%",
-            "unit": "ops/sec",
-            "extra": "69 samples"
-          },
-          {
-            "name": "1k-1k-32-ran",
-            "value": 13541,
-            "range": "±11.26%",
-            "unit": "ops/sec",
-            "extra": "67 samples"
-          },
-          {
-            "name": "1k-1k-32-mir",
-            "value": 6763,
-            "range": "±21.09%",
-            "unit": "ops/sec",
-            "extra": "47 samples"
-          },
-          {
-            "name": "Checkpointing: 100 iterations",
-            "value": 1098,
-            "range": "±7.54%",
-            "unit": "ops/sec",
-            "extra": "63 samples"
-          },
-          {
-            "name": "Checkpointing: 500 iterations",
-            "value": 131,
-            "range": "±89.41%",
-            "unit": "ops/sec",
-            "extra": "46 samples"
-          },
-          {
-            "name": "Checkpointing: 1000 iterations",
-            "value": 111,
-            "range": "±17.77%",
-            "unit": "ops/sec",
-            "extra": "58 samples"
-          },
-          {
-            "name": "Checkpointing: 5000 iterations",
-            "value": 24.54,
-            "range": "±11.84%",
-            "unit": "ops/sec",
-            "extra": "27 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2610,6 +2523,93 @@ window.BENCHMARK_DATA = {
             "range": "±13.14%",
             "unit": "ops/sec",
             "extra": "25 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "48cb11412315f8375189d8348fb6e4692885c0ed",
+          "message": "Merge pull request #1241 from ethereumjs/small-fixes\n\nTwo small fixes (adds missing flow param to LesProtocol, fixes txRelay typo)",
+          "timestamp": "2021-05-04T18:58:06+02:00",
+          "tree_id": "5bcb0133e9eb29195f8c319c475be6230bea9132",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/48cb11412315f8375189d8348fb6e4692885c0ed"
+        },
+        "date": 1620147622287,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "1k-3-32-ran",
+            "value": 15822,
+            "range": "±14.24%",
+            "unit": "ops/sec",
+            "extra": "65 samples"
+          },
+          {
+            "name": "1k-5-32-ran",
+            "value": 17233,
+            "range": "±1.72%",
+            "unit": "ops/sec",
+            "extra": "75 samples"
+          },
+          {
+            "name": "1k-9-32-ran",
+            "value": 16676,
+            "range": "±1.65%",
+            "unit": "ops/sec",
+            "extra": "72 samples"
+          },
+          {
+            "name": "1k-1k-32-ran",
+            "value": 13193,
+            "range": "±11.80%",
+            "unit": "ops/sec",
+            "extra": "59 samples"
+          },
+          {
+            "name": "1k-1k-32-mir",
+            "value": 7525,
+            "range": "±21.50%",
+            "unit": "ops/sec",
+            "extra": "49 samples"
+          },
+          {
+            "name": "Checkpointing: 100 iterations",
+            "value": 1135,
+            "range": "±7.35%",
+            "unit": "ops/sec",
+            "extra": "64 samples"
+          },
+          {
+            "name": "Checkpointing: 500 iterations",
+            "value": 105,
+            "range": "±110.45%",
+            "unit": "ops/sec",
+            "extra": "46 samples"
+          },
+          {
+            "name": "Checkpointing: 1000 iterations",
+            "value": 109,
+            "range": "±22.37%",
+            "unit": "ops/sec",
+            "extra": "59 samples"
+          },
+          {
+            "name": "Checkpointing: 5000 iterations",
+            "value": 25.44,
+            "range": "±11.81%",
+            "unit": "ops/sec",
+            "extra": "26 samples"
           }
         ]
       }
