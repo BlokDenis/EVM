@@ -1,95 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1620851172442,
+  "lastUpdate": 1621421322205,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "36e739613597070c2f54623811f55403feb46dbd",
-          "message": "Merge pull request #1190 from ethereumjs/fix-tx-constructor-bug\n\nTx: fix AccessListEIP2930Transaction constructor bug with v=0",
-          "timestamp": "2021-04-08T21:25:20+02:00",
-          "tree_id": "217e515e9fd218f90ff4a18fa7e53f92aac095aa",
-          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/36e739613597070c2f54623811f55403feb46dbd"
-        },
-        "date": 1617910069156,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "1k-3-32-ran",
-            "value": 15247,
-            "range": "±14.34%",
-            "unit": "ops/sec",
-            "extra": "64 samples"
-          },
-          {
-            "name": "1k-5-32-ran",
-            "value": 16686,
-            "range": "±2.38%",
-            "unit": "ops/sec",
-            "extra": "71 samples"
-          },
-          {
-            "name": "1k-9-32-ran",
-            "value": 15567,
-            "range": "±2.50%",
-            "unit": "ops/sec",
-            "extra": "70 samples"
-          },
-          {
-            "name": "1k-1k-32-ran",
-            "value": 14542,
-            "range": "±3.03%",
-            "unit": "ops/sec",
-            "extra": "66 samples"
-          },
-          {
-            "name": "1k-1k-32-mir",
-            "value": 6103,
-            "range": "±27.44%",
-            "unit": "ops/sec",
-            "extra": "18 samples"
-          },
-          {
-            "name": "Checkpointing: 100 iterations",
-            "value": 1063,
-            "range": "±7.98%",
-            "unit": "ops/sec",
-            "extra": "62 samples"
-          },
-          {
-            "name": "Checkpointing: 500 iterations",
-            "value": 133,
-            "range": "±83.64%",
-            "unit": "ops/sec",
-            "extra": "55 samples"
-          },
-          {
-            "name": "Checkpointing: 1000 iterations",
-            "value": 99.28,
-            "range": "±35.26%",
-            "unit": "ops/sec",
-            "extra": "58 samples"
-          },
-          {
-            "name": "Checkpointing: 5000 iterations",
-            "value": 9.52,
-            "range": "±122.35%",
-            "unit": "ops/sec",
-            "extra": "26 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2610,6 +2523,93 @@ window.BENCHMARK_DATA = {
             "range": "±112.17%",
             "unit": "ops/sec",
             "extra": "29 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "a03be0fd11ea7e78b5689bb723aff70a97c9e3b1",
+          "message": "Merge pull request #1148 from ethereumjs/eip1559\n\nImplement EIP1559 Fee Market + EIP3198 BaseFee",
+          "timestamp": "2021-05-19T12:42:53+02:00",
+          "tree_id": "0c12f136dbbd692fb84ea7b7694ecc05406d6e3f",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/a03be0fd11ea7e78b5689bb723aff70a97c9e3b1"
+        },
+        "date": 1621421321405,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "1k-3-32-ran",
+            "value": 16223,
+            "range": "±14.52%",
+            "unit": "ops/sec",
+            "extra": "62 samples"
+          },
+          {
+            "name": "1k-5-32-ran",
+            "value": 18428,
+            "range": "±1.40%",
+            "unit": "ops/sec",
+            "extra": "76 samples"
+          },
+          {
+            "name": "1k-9-32-ran",
+            "value": 16562,
+            "range": "±1.21%",
+            "unit": "ops/sec",
+            "extra": "72 samples"
+          },
+          {
+            "name": "1k-1k-32-ran",
+            "value": 12503,
+            "range": "±13.15%",
+            "unit": "ops/sec",
+            "extra": "57 samples"
+          },
+          {
+            "name": "1k-1k-32-mir",
+            "value": 7042,
+            "range": "±22.91%",
+            "unit": "ops/sec",
+            "extra": "52 samples"
+          },
+          {
+            "name": "Checkpointing: 100 iterations",
+            "value": 1146,
+            "range": "±7.18%",
+            "unit": "ops/sec",
+            "extra": "65 samples"
+          },
+          {
+            "name": "Checkpointing: 500 iterations",
+            "value": 243,
+            "range": "±9.67%",
+            "unit": "ops/sec",
+            "extra": "46 samples"
+          },
+          {
+            "name": "Checkpointing: 1000 iterations",
+            "value": 101,
+            "range": "±36.78%",
+            "unit": "ops/sec",
+            "extra": "59 samples"
+          },
+          {
+            "name": "Checkpointing: 5000 iterations",
+            "value": 9.6,
+            "range": "±125.61%",
+            "unit": "ops/sec",
+            "extra": "25 samples"
           }
         ]
       }
