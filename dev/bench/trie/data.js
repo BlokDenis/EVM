@@ -1,95 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1621421322205,
+  "lastUpdate": 1621493950927,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "d34ba9018be3f9466cc6090fe742a37803b56e44",
-          "message": "Merge pull request #1185 from ethereumjs/vm-updates\n\nvm: add tx receipt to RunTxResult, allow BlockBuilder to build a block with zero txs",
-          "timestamp": "2021-04-09T09:59:07+02:00",
-          "tree_id": "c5f79c0026fe7ea70a7a132cdce48f8c1b9aa186",
-          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/d34ba9018be3f9466cc6090fe742a37803b56e44"
-        },
-        "date": 1617955283874,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "1k-3-32-ran",
-            "value": 21278,
-            "range": "±12.94%",
-            "unit": "ops/sec",
-            "extra": "67 samples"
-          },
-          {
-            "name": "1k-5-32-ran",
-            "value": 23247,
-            "range": "±2.78%",
-            "unit": "ops/sec",
-            "extra": "80 samples"
-          },
-          {
-            "name": "1k-9-32-ran",
-            "value": 18782,
-            "range": "±12.90%",
-            "unit": "ops/sec",
-            "extra": "74 samples"
-          },
-          {
-            "name": "1k-1k-32-ran",
-            "value": 10087,
-            "range": "±22.27%",
-            "unit": "ops/sec",
-            "extra": "56 samples"
-          },
-          {
-            "name": "1k-1k-32-mir",
-            "value": 21590,
-            "range": "±2.75%",
-            "unit": "ops/sec",
-            "extra": "81 samples"
-          },
-          {
-            "name": "Checkpointing: 100 iterations",
-            "value": 1341,
-            "range": "±5.24%",
-            "unit": "ops/sec",
-            "extra": "60 samples"
-          },
-          {
-            "name": "Checkpointing: 500 iterations",
-            "value": 87.94,
-            "range": "±129.36%",
-            "unit": "ops/sec",
-            "extra": "20 samples"
-          },
-          {
-            "name": "Checkpointing: 1000 iterations",
-            "value": 152,
-            "range": "±6.23%",
-            "unit": "ops/sec",
-            "extra": "57 samples"
-          },
-          {
-            "name": "Checkpointing: 5000 iterations",
-            "value": 7.61,
-            "range": "±161.73%",
-            "unit": "ops/sec",
-            "extra": "12 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2610,6 +2523,93 @@ window.BENCHMARK_DATA = {
             "range": "±125.61%",
             "unit": "ops/sec",
             "extra": "25 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f1d7ddb831dd32816f5d77db083472b46ead96f3",
+          "message": "Merge pull request #1261 from ethereumjs/additional-coverage\n\ntests: additional coverage",
+          "timestamp": "2021-05-20T08:57:02+02:00",
+          "tree_id": "ce01f6050e62076a9acbc585a6cc5b78c2b30c6b",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/f1d7ddb831dd32816f5d77db083472b46ead96f3"
+        },
+        "date": 1621493949708,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "1k-3-32-ran",
+            "value": 14048,
+            "range": "±12.72%",
+            "unit": "ops/sec",
+            "extra": "65 samples"
+          },
+          {
+            "name": "1k-5-32-ran",
+            "value": 15465,
+            "range": "±2.70%",
+            "unit": "ops/sec",
+            "extra": "75 samples"
+          },
+          {
+            "name": "1k-9-32-ran",
+            "value": 15281,
+            "range": "±2.64%",
+            "unit": "ops/sec",
+            "extra": "76 samples"
+          },
+          {
+            "name": "1k-1k-32-ran",
+            "value": 13676,
+            "range": "±3.23%",
+            "unit": "ops/sec",
+            "extra": "71 samples"
+          },
+          {
+            "name": "1k-1k-32-mir",
+            "value": 6086,
+            "range": "±30.64%",
+            "unit": "ops/sec",
+            "extra": "30 samples"
+          },
+          {
+            "name": "Checkpointing: 100 iterations",
+            "value": 1176,
+            "range": "±6.14%",
+            "unit": "ops/sec",
+            "extra": "61 samples"
+          },
+          {
+            "name": "Checkpointing: 500 iterations",
+            "value": 140,
+            "range": "±88.81%",
+            "unit": "ops/sec",
+            "extra": "40 samples"
+          },
+          {
+            "name": "Checkpointing: 1000 iterations",
+            "value": 105,
+            "range": "±33.89%",
+            "unit": "ops/sec",
+            "extra": "58 samples"
+          },
+          {
+            "name": "Checkpointing: 5000 iterations",
+            "value": 10.49,
+            "range": "±119.36%",
+            "unit": "ops/sec",
+            "extra": "26 samples"
           }
         ]
       }
