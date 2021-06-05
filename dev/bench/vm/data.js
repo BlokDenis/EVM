@@ -1,102 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1622716049501,
+  "lastUpdate": 1622862338638,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "228a4a57254c86943de6ab50cbb7bce56462e585",
-          "message": "Merge pull request #1218 from ethereumjs/new-devp2p-release\n\ndevp2p: New Release v4.0.0",
-          "timestamp": "2021-04-23T09:59:34+02:00",
-          "tree_id": "18cd688afa404b0bdb7989a1bf7767a03ad7dded",
-          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/228a4a57254c86943de6ab50cbb7bce56462e585"
-        },
-        "date": 1619165006527,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "Block 9422905",
-            "value": 1447,
-            "range": "±4.68%",
-            "unit": "ops/sec",
-            "extra": "81 samples"
-          },
-          {
-            "name": "Block 9422906",
-            "value": 1453,
-            "range": "±5.12%",
-            "unit": "ops/sec",
-            "extra": "83 samples"
-          },
-          {
-            "name": "Block 9422907",
-            "value": 1508,
-            "range": "±0.89%",
-            "unit": "ops/sec",
-            "extra": "87 samples"
-          },
-          {
-            "name": "Block 9422908",
-            "value": 1570,
-            "range": "±1.19%",
-            "unit": "ops/sec",
-            "extra": "85 samples"
-          },
-          {
-            "name": "Block 9422909",
-            "value": 1308,
-            "range": "±9.37%",
-            "unit": "ops/sec",
-            "extra": "80 samples"
-          },
-          {
-            "name": "Block 9422910",
-            "value": 1497,
-            "range": "±1.30%",
-            "unit": "ops/sec",
-            "extra": "83 samples"
-          },
-          {
-            "name": "Block 9422911",
-            "value": 1489,
-            "range": "±0.94%",
-            "unit": "ops/sec",
-            "extra": "86 samples"
-          },
-          {
-            "name": "Block 9422912",
-            "value": 1510,
-            "range": "±1.07%",
-            "unit": "ops/sec",
-            "extra": "86 samples"
-          },
-          {
-            "name": "Block 9422913",
-            "value": 1510,
-            "range": "±1.61%",
-            "unit": "ops/sec",
-            "extra": "79 samples"
-          },
-          {
-            "name": "Block 9422914",
-            "value": 1508,
-            "range": "±1.86%",
-            "unit": "ops/sec",
-            "extra": "77 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2820,6 +2726,100 @@ window.BENCHMARK_DATA = {
             "range": "±1.60%",
             "unit": "ops/sec",
             "extra": "91 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f28a87b14d180a86387b2600a7b5c58dbecbc655",
+          "message": "Tx: Improve Code Documentation (#1283)\n\n* tx -> docs: improved getMessageToSign() documentation on all tx types\r\n* tx -> docs: improved tx.type documentation, deprecated tx.transactionType\r\n* tx -> docs: improved tx.hash() code documentation\r\n* tx -> docs: improved raw() and serialize() code docs for legacy txs\r\n* tx -> docs: improved serialize() documentation\r\n* tx -> docs: added format notes on raw(), serialize() methods and respective static constructors\r\n* tx -> docs: improve sign() documentation\r\n* tx -> docs: improved fromTxData() static constructor documentation\r\n* tx -> docs: deprecated senderR, senderS, yParity aliases\r\n* tx -> docs: rebuild documentation\r\n* Apply typo suggestions from code review",
+          "timestamp": "2021-06-04T20:01:45-07:00",
+          "tree_id": "394f9c56057bcb6370967ff46b5fc24c564c15db",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/f28a87b14d180a86387b2600a7b5c58dbecbc655"
+        },
+        "date": 1622862337864,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1770,
+            "range": "±3.70%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1720,
+            "range": "±6.81%",
+            "unit": "ops/sec",
+            "extra": "80 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1790,
+            "range": "±1.18%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1709,
+            "range": "±1.70%",
+            "unit": "ops/sec",
+            "extra": "83 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1520,
+            "range": "±11.95%",
+            "unit": "ops/sec",
+            "extra": "73 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1734,
+            "range": "±1.35%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1689,
+            "range": "±1.20%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1592,
+            "range": "±1.48%",
+            "unit": "ops/sec",
+            "extra": "83 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1643,
+            "range": "±1.38%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1604,
+            "range": "±1.69%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
           }
         ]
       }
