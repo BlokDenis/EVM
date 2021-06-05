@@ -1,95 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1622863344158,
+  "lastUpdate": 1622864426036,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "da3e27d611979efea732e5e6da5b5d50a17b978e",
-          "message": "Merge pull request #1216 from ethereumjs/vm-statemanager-getStateRoot-optimization\n\nVM: remove StateManager.getStateRoot() force parameter and throwing behavior",
-          "timestamp": "2021-04-26T09:28:44+02:00",
-          "tree_id": "66966a11ddc15d8e937ce353dfb8daac752acd5d",
-          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/da3e27d611979efea732e5e6da5b5d50a17b978e"
-        },
-        "date": 1619422273636,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "1k-3-32-ran",
-            "value": 14668,
-            "range": "±11.91%",
-            "unit": "ops/sec",
-            "extra": "66 samples"
-          },
-          {
-            "name": "1k-5-32-ran",
-            "value": 13139,
-            "range": "±12.22%",
-            "unit": "ops/sec",
-            "extra": "71 samples"
-          },
-          {
-            "name": "1k-9-32-ran",
-            "value": 14827,
-            "range": "±2.75%",
-            "unit": "ops/sec",
-            "extra": "72 samples"
-          },
-          {
-            "name": "1k-1k-32-ran",
-            "value": 13783,
-            "range": "±3.68%",
-            "unit": "ops/sec",
-            "extra": "72 samples"
-          },
-          {
-            "name": "1k-1k-32-mir",
-            "value": 8373,
-            "range": "±20.86%",
-            "unit": "ops/sec",
-            "extra": "38 samples"
-          },
-          {
-            "name": "Checkpointing: 100 iterations",
-            "value": 798,
-            "range": "±29.31%",
-            "unit": "ops/sec",
-            "extra": "56 samples"
-          },
-          {
-            "name": "Checkpointing: 500 iterations",
-            "value": 144,
-            "range": "±73.84%",
-            "unit": "ops/sec",
-            "extra": "61 samples"
-          },
-          {
-            "name": "Checkpointing: 1000 iterations",
-            "value": 117,
-            "range": "±7.54%",
-            "unit": "ops/sec",
-            "extra": "56 samples"
-          },
-          {
-            "name": "Checkpointing: 5000 iterations",
-            "value": 24.02,
-            "range": "±10.20%",
-            "unit": "ops/sec",
-            "extra": "28 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2610,6 +2523,93 @@ window.BENCHMARK_DATA = {
             "range": "±132.07%",
             "unit": "ops/sec",
             "extra": "24 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ryan@ryanio.com",
+            "name": "Ryan Ghods",
+            "username": "ryanio"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "212507777e02360216a9ba4ce652d71a7b398668",
+          "message": "fully comment out e2e-tests file to disable GH actions (#1284)",
+          "timestamp": "2021-06-04T20:37:56-07:00",
+          "tree_id": "8d08ddaa24bc050eddf5e3dad2bd0aa0a36e4481",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/212507777e02360216a9ba4ce652d71a7b398668"
+        },
+        "date": 1622864425200,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "1k-3-32-ran",
+            "value": 19830,
+            "range": "±15.17%",
+            "unit": "ops/sec",
+            "extra": "68 samples"
+          },
+          {
+            "name": "1k-5-32-ran",
+            "value": 22781,
+            "range": "±1.86%",
+            "unit": "ops/sec",
+            "extra": "89 samples"
+          },
+          {
+            "name": "1k-9-32-ran",
+            "value": 20919,
+            "range": "±3.09%",
+            "unit": "ops/sec",
+            "extra": "76 samples"
+          },
+          {
+            "name": "1k-1k-32-ran",
+            "value": 7887,
+            "range": "±18.66%",
+            "unit": "ops/sec",
+            "extra": "35 samples"
+          },
+          {
+            "name": "1k-1k-32-mir",
+            "value": 20861,
+            "range": "±2.90%",
+            "unit": "ops/sec",
+            "extra": "74 samples"
+          },
+          {
+            "name": "Checkpointing: 100 iterations",
+            "value": 1284,
+            "range": "±6.12%",
+            "unit": "ops/sec",
+            "extra": "62 samples"
+          },
+          {
+            "name": "Checkpointing: 500 iterations",
+            "value": 121,
+            "range": "±116.43%",
+            "unit": "ops/sec",
+            "extra": "28 samples"
+          },
+          {
+            "name": "Checkpointing: 1000 iterations",
+            "value": 113,
+            "range": "±43.03%",
+            "unit": "ops/sec",
+            "extra": "58 samples"
+          },
+          {
+            "name": "Checkpointing: 5000 iterations",
+            "value": 7.88,
+            "range": "±125.46%",
+            "unit": "ops/sec",
+            "extra": "15 samples"
           }
         ]
       }
