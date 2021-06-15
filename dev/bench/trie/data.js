@@ -1,95 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1623400661405,
+  "lastUpdate": 1623744702595,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "77563348+emersonmacro@users.noreply.github.com",
-            "name": "emersonmacro",
-            "username": "emersonmacro"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "f6c9d9334d9afebdf12838b8216ef896fa03a74b",
-          "message": "Added client rpc eth tests for unsupported block params (#1235)\n\n* Added client rpc eth tests for unsupported block params",
-          "timestamp": "2021-05-01T17:06:21-07:00",
-          "tree_id": "355ae3cec6fab7ce14fbc30c692ac30fabe31655",
-          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/f6c9d9334d9afebdf12838b8216ef896fa03a74b"
-        },
-        "date": 1619914106135,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "1k-3-32-ran",
-            "value": 18079,
-            "range": "±12.46%",
-            "unit": "ops/sec",
-            "extra": "74 samples"
-          },
-          {
-            "name": "1k-5-32-ran",
-            "value": 19617,
-            "range": "±2.62%",
-            "unit": "ops/sec",
-            "extra": "77 samples"
-          },
-          {
-            "name": "1k-9-32-ran",
-            "value": 17665,
-            "range": "±2.28%",
-            "unit": "ops/sec",
-            "extra": "73 samples"
-          },
-          {
-            "name": "1k-1k-32-ran",
-            "value": 10540,
-            "range": "±17.80%",
-            "unit": "ops/sec",
-            "extra": "46 samples"
-          },
-          {
-            "name": "1k-1k-32-mir",
-            "value": 10739,
-            "range": "±30.39%",
-            "unit": "ops/sec",
-            "extra": "59 samples"
-          },
-          {
-            "name": "Checkpointing: 100 iterations",
-            "value": 1260,
-            "range": "±6.28%",
-            "unit": "ops/sec",
-            "extra": "62 samples"
-          },
-          {
-            "name": "Checkpointing: 500 iterations",
-            "value": 125,
-            "range": "±113.90%",
-            "unit": "ops/sec",
-            "extra": "31 samples"
-          },
-          {
-            "name": "Checkpointing: 1000 iterations",
-            "value": 127,
-            "range": "±13.51%",
-            "unit": "ops/sec",
-            "extra": "53 samples"
-          },
-          {
-            "name": "Checkpointing: 5000 iterations",
-            "value": 9.95,
-            "range": "±120.61%",
-            "unit": "ops/sec",
-            "extra": "18 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2610,6 +2523,93 @@ window.BENCHMARK_DATA = {
             "range": "±130.41%",
             "unit": "ops/sec",
             "extra": "24 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "87a98bf75e4425bcd7bf7ff779e68cad5c395ddf",
+          "message": "Merge pull request #1297 from ethereumjs/migrate-config\n\nMigrate config to monorepo",
+          "timestamp": "2021-06-15T10:06:00+02:00",
+          "tree_id": "6746d1ea93e71669f7c708cbccb602540499a923",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/87a98bf75e4425bcd7bf7ff779e68cad5c395ddf"
+        },
+        "date": 1623744701723,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "1k-3-32-ran",
+            "value": 18930,
+            "range": "±13.85%",
+            "unit": "ops/sec",
+            "extra": "68 samples"
+          },
+          {
+            "name": "1k-5-32-ran",
+            "value": 21502,
+            "range": "±1.99%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "1k-9-32-ran",
+            "value": 18102,
+            "range": "±2.85%",
+            "unit": "ops/sec",
+            "extra": "69 samples"
+          },
+          {
+            "name": "1k-1k-32-ran",
+            "value": 9782,
+            "range": "±16.57%",
+            "unit": "ops/sec",
+            "extra": "44 samples"
+          },
+          {
+            "name": "1k-1k-32-mir",
+            "value": 14067,
+            "range": "±24.66%",
+            "unit": "ops/sec",
+            "extra": "73 samples"
+          },
+          {
+            "name": "Checkpointing: 100 iterations",
+            "value": 1251,
+            "range": "±6.72%",
+            "unit": "ops/sec",
+            "extra": "61 samples"
+          },
+          {
+            "name": "Checkpointing: 500 iterations",
+            "value": 119,
+            "range": "±113.37%",
+            "unit": "ops/sec",
+            "extra": "30 samples"
+          },
+          {
+            "name": "Checkpointing: 1000 iterations",
+            "value": 124,
+            "range": "±20.31%",
+            "unit": "ops/sec",
+            "extra": "61 samples"
+          },
+          {
+            "name": "Checkpointing: 5000 iterations",
+            "value": 20.01,
+            "range": "±69.97%",
+            "unit": "ops/sec",
+            "extra": "17 samples"
           }
         ]
       }
