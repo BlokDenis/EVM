@@ -1,95 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1623746198702,
+  "lastUpdate": 1623813911914,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "93e6c009ece47a76159481203d6aaaa4cb61b9a5",
-          "message": "Merge pull request #1238 from hpmaxi/typed-tx-tests\n\nAdd tests for errors in typed tx",
-          "timestamp": "2021-05-04T18:44:12+02:00",
-          "tree_id": "6c7e94a9da712955e64e3bd6d595ba84045faf3c",
-          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/93e6c009ece47a76159481203d6aaaa4cb61b9a5"
-        },
-        "date": 1620146778895,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "1k-3-32-ran",
-            "value": 13544,
-            "range": "±12.70%",
-            "unit": "ops/sec",
-            "extra": "66 samples"
-          },
-          {
-            "name": "1k-5-32-ran",
-            "value": 15402,
-            "range": "±5.31%",
-            "unit": "ops/sec",
-            "extra": "74 samples"
-          },
-          {
-            "name": "1k-9-32-ran",
-            "value": 14922,
-            "range": "±3.14%",
-            "unit": "ops/sec",
-            "extra": "74 samples"
-          },
-          {
-            "name": "1k-1k-32-ran",
-            "value": 14120,
-            "range": "±3.34%",
-            "unit": "ops/sec",
-            "extra": "73 samples"
-          },
-          {
-            "name": "1k-1k-32-mir",
-            "value": 6697,
-            "range": "±33.06%",
-            "unit": "ops/sec",
-            "extra": "21 samples"
-          },
-          {
-            "name": "Checkpointing: 100 iterations",
-            "value": 1165,
-            "range": "±6.54%",
-            "unit": "ops/sec",
-            "extra": "61 samples"
-          },
-          {
-            "name": "Checkpointing: 500 iterations",
-            "value": 135,
-            "range": "±90.15%",
-            "unit": "ops/sec",
-            "extra": "43 samples"
-          },
-          {
-            "name": "Checkpointing: 1000 iterations",
-            "value": 110,
-            "range": "±28.49%",
-            "unit": "ops/sec",
-            "extra": "61 samples"
-          },
-          {
-            "name": "Checkpointing: 5000 iterations",
-            "value": 24.1,
-            "range": "±13.14%",
-            "unit": "ops/sec",
-            "extra": "25 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2610,6 +2523,93 @@ window.BENCHMARK_DATA = {
             "range": "±9.85%",
             "unit": "ops/sec",
             "extra": "43 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "81cbc10ea74b325fd589b30bab8fe49d0871a4fb",
+          "message": "Update ethereum/tests / Reintroduce VM debug logger with safe guard (#1269)\n\n* ethereum-tests: update to v9.0.2 (2021-06-12)\r\n* vm: reintroduce debug logger with safe guard",
+          "timestamp": "2021-06-15T20:22:55-07:00",
+          "tree_id": "71ce45823ca0c2232719f1933198b1f4104163e5",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/81cbc10ea74b325fd589b30bab8fe49d0871a4fb"
+        },
+        "date": 1623813911014,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "1k-3-32-ran",
+            "value": 13831,
+            "range": "±14.87%",
+            "unit": "ops/sec",
+            "extra": "65 samples"
+          },
+          {
+            "name": "1k-5-32-ran",
+            "value": 14491,
+            "range": "±6.51%",
+            "unit": "ops/sec",
+            "extra": "75 samples"
+          },
+          {
+            "name": "1k-9-32-ran",
+            "value": 14464,
+            "range": "±3.08%",
+            "unit": "ops/sec",
+            "extra": "77 samples"
+          },
+          {
+            "name": "1k-1k-32-ran",
+            "value": 13382,
+            "range": "±3.66%",
+            "unit": "ops/sec",
+            "extra": "73 samples"
+          },
+          {
+            "name": "1k-1k-32-mir",
+            "value": 7871,
+            "range": "±19.07%",
+            "unit": "ops/sec",
+            "extra": "39 samples"
+          },
+          {
+            "name": "Checkpointing: 100 iterations",
+            "value": 909,
+            "range": "±31.51%",
+            "unit": "ops/sec",
+            "extra": "62 samples"
+          },
+          {
+            "name": "Checkpointing: 500 iterations",
+            "value": 143,
+            "range": "±82.71%",
+            "unit": "ops/sec",
+            "extra": "49 samples"
+          },
+          {
+            "name": "Checkpointing: 1000 iterations",
+            "value": 115,
+            "range": "±11.13%",
+            "unit": "ops/sec",
+            "extra": "57 samples"
+          },
+          {
+            "name": "Checkpointing: 5000 iterations",
+            "value": 24.84,
+            "range": "±10.87%",
+            "unit": "ops/sec",
+            "extra": "28 samples"
           }
         ]
       }
