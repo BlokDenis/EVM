@@ -1,95 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1624000113792,
+  "lastUpdate": 1624037609370,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "da5919fbf2a50d1dea8040d2250e766dc238dcb8",
-          "message": "Merge pull request #1245 from ethereumjs/eip3554\n\nImplement EIP3554",
-          "timestamp": "2021-05-09T16:32:08+02:00",
-          "tree_id": "b28e0d00a6b76fe00c8b788f0adfebd35dec8f85",
-          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/da5919fbf2a50d1dea8040d2250e766dc238dcb8"
-        },
-        "date": 1620570861718,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "1k-3-32-ran",
-            "value": 13324,
-            "range": "±11.73%",
-            "unit": "ops/sec",
-            "extra": "65 samples"
-          },
-          {
-            "name": "1k-5-32-ran",
-            "value": 10413,
-            "range": "±25.68%",
-            "unit": "ops/sec",
-            "extra": "73 samples"
-          },
-          {
-            "name": "1k-9-32-ran",
-            "value": 13811,
-            "range": "±3.55%",
-            "unit": "ops/sec",
-            "extra": "76 samples"
-          },
-          {
-            "name": "1k-1k-32-ran",
-            "value": 12751,
-            "range": "±3.98%",
-            "unit": "ops/sec",
-            "extra": "73 samples"
-          },
-          {
-            "name": "1k-1k-32-mir",
-            "value": 9356,
-            "range": "±17.72%",
-            "unit": "ops/sec",
-            "extra": "54 samples"
-          },
-          {
-            "name": "Checkpointing: 100 iterations",
-            "value": 649,
-            "range": "±30.31%",
-            "unit": "ops/sec",
-            "extra": "52 samples"
-          },
-          {
-            "name": "Checkpointing: 500 iterations",
-            "value": 228,
-            "range": "±7.73%",
-            "unit": "ops/sec",
-            "extra": "60 samples"
-          },
-          {
-            "name": "Checkpointing: 1000 iterations",
-            "value": 31.89,
-            "range": "±119.11%",
-            "unit": "ops/sec",
-            "extra": "18 samples"
-          },
-          {
-            "name": "Checkpointing: 5000 iterations",
-            "value": 23.91,
-            "range": "±8.01%",
-            "unit": "ops/sec",
-            "extra": "44 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2610,6 +2523,93 @@ window.BENCHMARK_DATA = {
             "range": "±107.41%",
             "unit": "ops/sec",
             "extra": "19 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "samlior@foxmail.com",
+            "name": "Samlior",
+            "username": "samlior"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f8f986e156234fa6e8c0383746ae55cd3862bdd7",
+          "message": "blockchain: fix _putBlockOrHeader and add a test (#1253)\n\n* blockchain: fix _putBlockOrHeader and add a test\r\n* Fix clique reorg logic\r\n* Fix ancient header number",
+          "timestamp": "2021-06-18T10:31:10-07:00",
+          "tree_id": "0dee9352a37fba03e184b6cdac2221382e02a569",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/f8f986e156234fa6e8c0383746ae55cd3862bdd7"
+        },
+        "date": 1624037608412,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "1k-3-32-ran",
+            "value": 14811,
+            "range": "±13.15%",
+            "unit": "ops/sec",
+            "extra": "65 samples"
+          },
+          {
+            "name": "1k-5-32-ran",
+            "value": 15580,
+            "range": "±2.48%",
+            "unit": "ops/sec",
+            "extra": "68 samples"
+          },
+          {
+            "name": "1k-9-32-ran",
+            "value": 15206,
+            "range": "±2.61%",
+            "unit": "ops/sec",
+            "extra": "68 samples"
+          },
+          {
+            "name": "1k-1k-32-ran",
+            "value": 14460,
+            "range": "±3.07%",
+            "unit": "ops/sec",
+            "extra": "68 samples"
+          },
+          {
+            "name": "1k-1k-32-mir",
+            "value": 6463,
+            "range": "±22.24%",
+            "unit": "ops/sec",
+            "extra": "31 samples"
+          },
+          {
+            "name": "Checkpointing: 100 iterations",
+            "value": 1068,
+            "range": "±8.37%",
+            "unit": "ops/sec",
+            "extra": "63 samples"
+          },
+          {
+            "name": "Checkpointing: 500 iterations",
+            "value": 131,
+            "range": "±87.03%",
+            "unit": "ops/sec",
+            "extra": "49 samples"
+          },
+          {
+            "name": "Checkpointing: 1000 iterations",
+            "value": 99.7,
+            "range": "±30.71%",
+            "unit": "ops/sec",
+            "extra": "57 samples"
+          },
+          {
+            "name": "Checkpointing: 5000 iterations",
+            "value": 24.5,
+            "range": "±11.56%",
+            "unit": "ops/sec",
+            "extra": "28 samples"
           }
         ]
       }
