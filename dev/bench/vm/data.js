@@ -1,102 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1624467176213,
+  "lastUpdate": 1624510596562,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "d805b415e2364f02940efc8e8a125e26b7d7adeb",
-          "message": "Merge pull request #1259 from ethereumjs/ci-redundancy-check\n\nci: add redundancy check for temporaryClientFix",
-          "timestamp": "2021-05-20T09:37:06+02:00",
-          "tree_id": "31d7ccd1c5bba49ec02e61c42ad35025fd505927",
-          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/d805b415e2364f02940efc8e8a125e26b7d7adeb"
-        },
-        "date": 1621496424524,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "Block 9422905",
-            "value": 1942,
-            "range": "±5.60%",
-            "unit": "ops/sec",
-            "extra": "89 samples"
-          },
-          {
-            "name": "Block 9422906",
-            "value": 1787,
-            "range": "±9.78%",
-            "unit": "ops/sec",
-            "extra": "88 samples"
-          },
-          {
-            "name": "Block 9422907",
-            "value": 1957,
-            "range": "±0.78%",
-            "unit": "ops/sec",
-            "extra": "93 samples"
-          },
-          {
-            "name": "Block 9422908",
-            "value": 1857,
-            "range": "±5.84%",
-            "unit": "ops/sec",
-            "extra": "92 samples"
-          },
-          {
-            "name": "Block 9422909",
-            "value": 1629,
-            "range": "±15.61%",
-            "unit": "ops/sec",
-            "extra": "85 samples"
-          },
-          {
-            "name": "Block 9422910",
-            "value": 1903,
-            "range": "±0.95%",
-            "unit": "ops/sec",
-            "extra": "95 samples"
-          },
-          {
-            "name": "Block 9422911",
-            "value": 1879,
-            "range": "±0.94%",
-            "unit": "ops/sec",
-            "extra": "94 samples"
-          },
-          {
-            "name": "Block 9422912",
-            "value": 1848,
-            "range": "±1.04%",
-            "unit": "ops/sec",
-            "extra": "92 samples"
-          },
-          {
-            "name": "Block 9422913",
-            "value": 1822,
-            "range": "±1.17%",
-            "unit": "ops/sec",
-            "extra": "92 samples"
-          },
-          {
-            "name": "Block 9422914",
-            "value": 1787,
-            "range": "±1.36%",
-            "unit": "ops/sec",
-            "extra": "93 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2820,6 +2726,100 @@ window.BENCHMARK_DATA = {
             "range": "±16.77%",
             "unit": "ops/sec",
             "extra": "63 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "k06aaa@gmail.com",
+            "name": "Anton Bukov",
+            "username": "k06a"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "6ab249cbce237d0e1d8a912d7e791d2e82f029b5",
+          "message": "Add EIP-2098 support to work with compact 64-byte signatures (#1312)",
+          "timestamp": "2021-06-23T21:53:10-07:00",
+          "tree_id": "4feb4f2c4ac1e2595b64b3ff245b04f46d30d0c5",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/6ab249cbce237d0e1d8a912d7e791d2e82f029b5"
+        },
+        "date": 1624510595790,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "Block 9422905",
+            "value": 1655,
+            "range": "±4.43%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422906",
+            "value": 1600,
+            "range": "±6.18%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
+          },
+          {
+            "name": "Block 9422907",
+            "value": 1650,
+            "range": "±0.85%",
+            "unit": "ops/sec",
+            "extra": "92 samples"
+          },
+          {
+            "name": "Block 9422908",
+            "value": 1640,
+            "range": "±0.96%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422909",
+            "value": 1475,
+            "range": "±6.60%",
+            "unit": "ops/sec",
+            "extra": "82 samples"
+          },
+          {
+            "name": "Block 9422910",
+            "value": 1445,
+            "range": "±7.06%",
+            "unit": "ops/sec",
+            "extra": "81 samples"
+          },
+          {
+            "name": "Block 9422911",
+            "value": 1621,
+            "range": "±1.17%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "Block 9422912",
+            "value": 1578,
+            "range": "±1.09%",
+            "unit": "ops/sec",
+            "extra": "87 samples"
+          },
+          {
+            "name": "Block 9422913",
+            "value": 1589,
+            "range": "±0.99%",
+            "unit": "ops/sec",
+            "extra": "89 samples"
+          },
+          {
+            "name": "Block 9422914",
+            "value": 1530,
+            "range": "±1.30%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
           }
         ]
       }
