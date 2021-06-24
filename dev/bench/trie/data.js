@@ -1,95 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1624510526763,
+  "lastUpdate": 1624559524491,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "cbaccb3ee4f69c8e743423555dd0d8072166f594",
-          "message": "Merge pull request #1255 from ethereumjs/fix-getMessageToSign-return-type\n\ntx: fix getMessageToSign return type for typed txs",
-          "timestamp": "2021-05-20T09:51:56+02:00",
-          "tree_id": "df282d955743d17b4780965474a478ef0633a6d1",
-          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/cbaccb3ee4f69c8e743423555dd0d8072166f594"
-        },
-        "date": 1621497248356,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "1k-3-32-ran",
-            "value": 17432,
-            "range": "±14.08%",
-            "unit": "ops/sec",
-            "extra": "69 samples"
-          },
-          {
-            "name": "1k-5-32-ran",
-            "value": 14879,
-            "range": "±20.54%",
-            "unit": "ops/sec",
-            "extra": "58 samples"
-          },
-          {
-            "name": "1k-9-32-ran",
-            "value": 19102,
-            "range": "±3.53%",
-            "unit": "ops/sec",
-            "extra": "78 samples"
-          },
-          {
-            "name": "1k-1k-32-ran",
-            "value": 9566,
-            "range": "±25.84%",
-            "unit": "ops/sec",
-            "extra": "42 samples"
-          },
-          {
-            "name": "1k-1k-32-mir",
-            "value": 18814,
-            "range": "±1.98%",
-            "unit": "ops/sec",
-            "extra": "77 samples"
-          },
-          {
-            "name": "Checkpointing: 100 iterations",
-            "value": 1332,
-            "range": "±5.24%",
-            "unit": "ops/sec",
-            "extra": "63 samples"
-          },
-          {
-            "name": "Checkpointing: 500 iterations",
-            "value": 115,
-            "range": "±111.48%",
-            "unit": "ops/sec",
-            "extra": "26 samples"
-          },
-          {
-            "name": "Checkpointing: 1000 iterations",
-            "value": 150,
-            "range": "±6.09%",
-            "unit": "ops/sec",
-            "extra": "56 samples"
-          },
-          {
-            "name": "Checkpointing: 5000 iterations",
-            "value": 8.42,
-            "range": "±130.19%",
-            "unit": "ops/sec",
-            "extra": "14 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2610,6 +2523,93 @@ window.BENCHMARK_DATA = {
             "range": "±131.53%",
             "unit": "ops/sec",
             "extra": "24 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f256a4dc326f559380b38ad59889cb61a1d7d315",
+          "message": "Tx: New supports(capability) method (#1315)",
+          "timestamp": "2021-06-24T11:29:56-07:00",
+          "tree_id": "16482938bf2176375e534f080853fa10be089485",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/f256a4dc326f559380b38ad59889cb61a1d7d315"
+        },
+        "date": 1624559523560,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "1k-3-32-ran",
+            "value": 18677,
+            "range": "±13.89%",
+            "unit": "ops/sec",
+            "extra": "68 samples"
+          },
+          {
+            "name": "1k-5-32-ran",
+            "value": 20516,
+            "range": "±2.34%",
+            "unit": "ops/sec",
+            "extra": "80 samples"
+          },
+          {
+            "name": "1k-9-32-ran",
+            "value": 19104,
+            "range": "±2.53%",
+            "unit": "ops/sec",
+            "extra": "76 samples"
+          },
+          {
+            "name": "1k-1k-32-ran",
+            "value": 8632,
+            "range": "±19.44%",
+            "unit": "ops/sec",
+            "extra": "37 samples"
+          },
+          {
+            "name": "1k-1k-32-mir",
+            "value": 17791,
+            "range": "±6.99%",
+            "unit": "ops/sec",
+            "extra": "73 samples"
+          },
+          {
+            "name": "Checkpointing: 100 iterations",
+            "value": 1232,
+            "range": "±6.43%",
+            "unit": "ops/sec",
+            "extra": "62 samples"
+          },
+          {
+            "name": "Checkpointing: 500 iterations",
+            "value": 118,
+            "range": "±113.05%",
+            "unit": "ops/sec",
+            "extra": "31 samples"
+          },
+          {
+            "name": "Checkpointing: 1000 iterations",
+            "value": 121,
+            "range": "±10.47%",
+            "unit": "ops/sec",
+            "extra": "60 samples"
+          },
+          {
+            "name": "Checkpointing: 5000 iterations",
+            "value": 10.08,
+            "range": "±134.35%",
+            "unit": "ops/sec",
+            "extra": "17 samples"
           }
         ]
       }
