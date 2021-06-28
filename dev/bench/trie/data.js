@@ -1,95 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1624869828942,
+  "lastUpdate": 1624915774941,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "e31687a492e2d96abd4781101de75ff8c0a4d4f0",
-          "message": "Merge pull request #1272 from ethereumjs/1559-more-tx-validation\n\n1559: add more constraints to tx validation",
-          "timestamp": "2021-05-31T10:46:36+02:00",
-          "tree_id": "12ea811f840e3570ba92521c541b1cf46270507f",
-          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/e31687a492e2d96abd4781101de75ff8c0a4d4f0"
-        },
-        "date": 1622450950753,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "1k-3-32-ran",
-            "value": 20714,
-            "range": "±13.18%",
-            "unit": "ops/sec",
-            "extra": "71 samples"
-          },
-          {
-            "name": "1k-5-32-ran",
-            "value": 22743,
-            "range": "±2.21%",
-            "unit": "ops/sec",
-            "extra": "85 samples"
-          },
-          {
-            "name": "1k-9-32-ran",
-            "value": 19456,
-            "range": "±9.33%",
-            "unit": "ops/sec",
-            "extra": "81 samples"
-          },
-          {
-            "name": "1k-1k-32-ran",
-            "value": 7807,
-            "range": "±26.84%",
-            "unit": "ops/sec",
-            "extra": "56 samples"
-          },
-          {
-            "name": "1k-1k-32-mir",
-            "value": 19630,
-            "range": "±4.84%",
-            "unit": "ops/sec",
-            "extra": "66 samples"
-          },
-          {
-            "name": "Checkpointing: 100 iterations",
-            "value": 1336,
-            "range": "±5.87%",
-            "unit": "ops/sec",
-            "extra": "65 samples"
-          },
-          {
-            "name": "Checkpointing: 500 iterations",
-            "value": 84.3,
-            "range": "±112.51%",
-            "unit": "ops/sec",
-            "extra": "24 samples"
-          },
-          {
-            "name": "Checkpointing: 1000 iterations",
-            "value": 146,
-            "range": "±6.52%",
-            "unit": "ops/sec",
-            "extra": "60 samples"
-          },
-          {
-            "name": "Checkpointing: 5000 iterations",
-            "value": 6.56,
-            "range": "±123.71%",
-            "unit": "ops/sec",
-            "extra": "13 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2610,6 +2523,93 @@ window.BENCHMARK_DATA = {
             "range": "±120.93%",
             "unit": "ops/sec",
             "extra": "15 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "2357981d89b865361126e2fa3e77f90780a8f3ef",
+          "message": "Common: Reworked Custom Chain Instantiation, Polygon/Arbitrum Supported Chains Integration (#1317)",
+          "timestamp": "2021-06-28T14:27:28-07:00",
+          "tree_id": "dd3f9d6bb675c0e3bcd94624e412372b2e10ba62",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/2357981d89b865361126e2fa3e77f90780a8f3ef"
+        },
+        "date": 1624915774161,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "1k-3-32-ran",
+            "value": 20527,
+            "range": "±13.23%",
+            "unit": "ops/sec",
+            "extra": "70 samples"
+          },
+          {
+            "name": "1k-5-32-ran",
+            "value": 23419,
+            "range": "±2.19%",
+            "unit": "ops/sec",
+            "extra": "90 samples"
+          },
+          {
+            "name": "1k-9-32-ran",
+            "value": 19546,
+            "range": "±8.73%",
+            "unit": "ops/sec",
+            "extra": "74 samples"
+          },
+          {
+            "name": "1k-1k-32-ran",
+            "value": 7718,
+            "range": "±23.39%",
+            "unit": "ops/sec",
+            "extra": "54 samples"
+          },
+          {
+            "name": "1k-1k-32-mir",
+            "value": 21509,
+            "range": "±2.56%",
+            "unit": "ops/sec",
+            "extra": "81 samples"
+          },
+          {
+            "name": "Checkpointing: 100 iterations",
+            "value": 1316,
+            "range": "±6.02%",
+            "unit": "ops/sec",
+            "extra": "65 samples"
+          },
+          {
+            "name": "Checkpointing: 500 iterations",
+            "value": 275,
+            "range": "±12.90%",
+            "unit": "ops/sec",
+            "extra": "26 samples"
+          },
+          {
+            "name": "Checkpointing: 1000 iterations",
+            "value": 130,
+            "range": "±20.50%",
+            "unit": "ops/sec",
+            "extra": "63 samples"
+          },
+          {
+            "name": "Checkpointing: 5000 iterations",
+            "value": 7.75,
+            "range": "±136.96%",
+            "unit": "ops/sec",
+            "extra": "14 samples"
           }
         ]
       }
