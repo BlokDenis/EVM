@@ -1,95 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1625020675617,
+  "lastUpdate": 1625044477086,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "e0724c80115a3abf57f35c69e611a5343dc8c69d",
-          "message": "Merge pull request #1276 from ethereumjs/add-runTx-min-basefee-check\n\nVM: add check to runTx that tx.maxFeePerGas >= block.baseFeePerGas",
-          "timestamp": "2021-06-03T10:59:47+02:00",
-          "tree_id": "d96160d25dc9d4ba93e5308e28979cd732aa0a06",
-          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/e0724c80115a3abf57f35c69e611a5343dc8c69d"
-        },
-        "date": 1622710946202,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "1k-3-32-ran",
-            "value": 17521,
-            "range": "±15.96%",
-            "unit": "ops/sec",
-            "extra": "73 samples"
-          },
-          {
-            "name": "1k-5-32-ran",
-            "value": 19756,
-            "range": "±2.33%",
-            "unit": "ops/sec",
-            "extra": "79 samples"
-          },
-          {
-            "name": "1k-9-32-ran",
-            "value": 17922,
-            "range": "±2.24%",
-            "unit": "ops/sec",
-            "extra": "73 samples"
-          },
-          {
-            "name": "1k-1k-32-ran",
-            "value": 11948,
-            "range": "±14.52%",
-            "unit": "ops/sec",
-            "extra": "52 samples"
-          },
-          {
-            "name": "1k-1k-32-mir",
-            "value": 7526,
-            "range": "±29.97%",
-            "unit": "ops/sec",
-            "extra": "38 samples"
-          },
-          {
-            "name": "Checkpointing: 100 iterations",
-            "value": 1250,
-            "range": "±7.11%",
-            "unit": "ops/sec",
-            "extra": "62 samples"
-          },
-          {
-            "name": "Checkpointing: 500 iterations",
-            "value": 131,
-            "range": "±100.46%",
-            "unit": "ops/sec",
-            "extra": "34 samples"
-          },
-          {
-            "name": "Checkpointing: 1000 iterations",
-            "value": 139,
-            "range": "±7.68%",
-            "unit": "ops/sec",
-            "extra": "60 samples"
-          },
-          {
-            "name": "Checkpointing: 5000 iterations",
-            "value": 9.68,
-            "range": "±119.92%",
-            "unit": "ops/sec",
-            "extra": "17 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2610,6 +2523,93 @@ window.BENCHMARK_DATA = {
             "range": "±116.44%",
             "unit": "ops/sec",
             "extra": "17 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Holger.Drewes@gmail.com",
+            "name": "Holger Drewes",
+            "username": "holgerd77"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "095270c790b05937bf110de0cf9a419fa068c477",
+          "message": "Merge pull request #1326 from ethereumjs/blockbuilder-customizable-basefee\n\nblockbuilder: allow customizable baseFeePerGas",
+          "timestamp": "2021-06-30T11:12:13+02:00",
+          "tree_id": "a8d38e689f2ea96d2698d90c9f7d9164bef7cdc1",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/095270c790b05937bf110de0cf9a419fa068c477"
+        },
+        "date": 1625044476238,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "1k-3-32-ran",
+            "value": 14685,
+            "range": "±16.36%",
+            "unit": "ops/sec",
+            "extra": "64 samples"
+          },
+          {
+            "name": "1k-5-32-ran",
+            "value": 15870,
+            "range": "±2.78%",
+            "unit": "ops/sec",
+            "extra": "72 samples"
+          },
+          {
+            "name": "1k-9-32-ran",
+            "value": 15752,
+            "range": "±2.48%",
+            "unit": "ops/sec",
+            "extra": "72 samples"
+          },
+          {
+            "name": "1k-1k-32-ran",
+            "value": 14507,
+            "range": "±3.18%",
+            "unit": "ops/sec",
+            "extra": "71 samples"
+          },
+          {
+            "name": "1k-1k-32-mir",
+            "value": 6833,
+            "range": "±26.69%",
+            "unit": "ops/sec",
+            "extra": "23 samples"
+          },
+          {
+            "name": "Checkpointing: 100 iterations",
+            "value": 1138,
+            "range": "±6.93%",
+            "unit": "ops/sec",
+            "extra": "62 samples"
+          },
+          {
+            "name": "Checkpointing: 500 iterations",
+            "value": 134,
+            "range": "±90.33%",
+            "unit": "ops/sec",
+            "extra": "43 samples"
+          },
+          {
+            "name": "Checkpointing: 1000 iterations",
+            "value": 107,
+            "range": "±26.92%",
+            "unit": "ops/sec",
+            "extra": "59 samples"
+          },
+          {
+            "name": "Checkpointing: 5000 iterations",
+            "value": 24.46,
+            "range": "±11.24%",
+            "unit": "ops/sec",
+            "extra": "26 samples"
           }
         ]
       }
