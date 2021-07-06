@@ -1,95 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1625045310620,
+  "lastUpdate": 1625610208421,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "f28a87b14d180a86387b2600a7b5c58dbecbc655",
-          "message": "Tx: Improve Code Documentation (#1283)\n\n* tx -> docs: improved getMessageToSign() documentation on all tx types\r\n* tx -> docs: improved tx.type documentation, deprecated tx.transactionType\r\n* tx -> docs: improved tx.hash() code documentation\r\n* tx -> docs: improved raw() and serialize() code docs for legacy txs\r\n* tx -> docs: improved serialize() documentation\r\n* tx -> docs: added format notes on raw(), serialize() methods and respective static constructors\r\n* tx -> docs: improve sign() documentation\r\n* tx -> docs: improved fromTxData() static constructor documentation\r\n* tx -> docs: deprecated senderR, senderS, yParity aliases\r\n* tx -> docs: rebuild documentation\r\n* Apply typo suggestions from code review",
-          "timestamp": "2021-06-04T20:01:45-07:00",
-          "tree_id": "394f9c56057bcb6370967ff46b5fc24c564c15db",
-          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/f28a87b14d180a86387b2600a7b5c58dbecbc655"
-        },
-        "date": 1622862267374,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "1k-3-32-ran",
-            "value": 15395,
-            "range": "±12.44%",
-            "unit": "ops/sec",
-            "extra": "67 samples"
-          },
-          {
-            "name": "1k-5-32-ran",
-            "value": 17058,
-            "range": "±2.56%",
-            "unit": "ops/sec",
-            "extra": "68 samples"
-          },
-          {
-            "name": "1k-9-32-ran",
-            "value": 15882,
-            "range": "±0.95%",
-            "unit": "ops/sec",
-            "extra": "70 samples"
-          },
-          {
-            "name": "1k-1k-32-ran",
-            "value": 14669,
-            "range": "±3.31%",
-            "unit": "ops/sec",
-            "extra": "70 samples"
-          },
-          {
-            "name": "1k-1k-32-mir",
-            "value": 7012,
-            "range": "±23.17%",
-            "unit": "ops/sec",
-            "extra": "18 samples"
-          },
-          {
-            "name": "Checkpointing: 100 iterations",
-            "value": 1106,
-            "range": "±7.58%",
-            "unit": "ops/sec",
-            "extra": "63 samples"
-          },
-          {
-            "name": "Checkpointing: 500 iterations",
-            "value": 130,
-            "range": "±88.65%",
-            "unit": "ops/sec",
-            "extra": "48 samples"
-          },
-          {
-            "name": "Checkpointing: 1000 iterations",
-            "value": 122,
-            "range": "±8.29%",
-            "unit": "ops/sec",
-            "extra": "58 samples"
-          },
-          {
-            "name": "Checkpointing: 5000 iterations",
-            "value": 9.82,
-            "range": "±120.97%",
-            "unit": "ops/sec",
-            "extra": "27 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2610,6 +2523,93 @@ window.BENCHMARK_DATA = {
             "range": "±143.80%",
             "unit": "ops/sec",
             "extra": "16 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "17355484+acolytec3@users.noreply.github.com",
+            "name": "acolytec3",
+            "username": "acolytec3"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "9c5d6ea5b78d3b3166d2e0931112593c630863af",
+          "message": "Merge pull request #1334 from ethereumjs/validate-kovan-genesis\n\nblock: Add fix for kovan nonce",
+          "timestamp": "2021-07-06T18:21:10-04:00",
+          "tree_id": "a0c5875eb230233d7e89ae92faf159f76348a101",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/9c5d6ea5b78d3b3166d2e0931112593c630863af"
+        },
+        "date": 1625610207116,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "1k-3-32-ran",
+            "value": 16542,
+            "range": "±13.70%",
+            "unit": "ops/sec",
+            "extra": "63 samples"
+          },
+          {
+            "name": "1k-5-32-ran",
+            "value": 18470,
+            "range": "±2.17%",
+            "unit": "ops/sec",
+            "extra": "77 samples"
+          },
+          {
+            "name": "1k-9-32-ran",
+            "value": 17990,
+            "range": "±2.49%",
+            "unit": "ops/sec",
+            "extra": "70 samples"
+          },
+          {
+            "name": "1k-1k-32-ran",
+            "value": 13677,
+            "range": "±11.17%",
+            "unit": "ops/sec",
+            "extra": "62 samples"
+          },
+          {
+            "name": "1k-1k-32-mir",
+            "value": 7915,
+            "range": "±20.70%",
+            "unit": "ops/sec",
+            "extra": "46 samples"
+          },
+          {
+            "name": "Checkpointing: 100 iterations",
+            "value": 1193,
+            "range": "±6.90%",
+            "unit": "ops/sec",
+            "extra": "61 samples"
+          },
+          {
+            "name": "Checkpointing: 500 iterations",
+            "value": 125,
+            "range": "±99.13%",
+            "unit": "ops/sec",
+            "extra": "37 samples"
+          },
+          {
+            "name": "Checkpointing: 1000 iterations",
+            "value": 125,
+            "range": "±8.17%",
+            "unit": "ops/sec",
+            "extra": "52 samples"
+          },
+          {
+            "name": "Checkpointing: 5000 iterations",
+            "value": 10.53,
+            "range": "±122.91%",
+            "unit": "ops/sec",
+            "extra": "28 samples"
           }
         ]
       }
