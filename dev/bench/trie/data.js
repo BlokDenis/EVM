@@ -1,95 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1626117726238,
+  "lastUpdate": 1626197934326,
   "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "87a98bf75e4425bcd7bf7ff779e68cad5c395ddf",
-          "message": "Merge pull request #1297 from ethereumjs/migrate-config\n\nMigrate config to monorepo",
-          "timestamp": "2021-06-15T10:06:00+02:00",
-          "tree_id": "6746d1ea93e71669f7c708cbccb602540499a923",
-          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/87a98bf75e4425bcd7bf7ff779e68cad5c395ddf"
-        },
-        "date": 1623744701723,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "1k-3-32-ran",
-            "value": 18930,
-            "range": "±13.85%",
-            "unit": "ops/sec",
-            "extra": "68 samples"
-          },
-          {
-            "name": "1k-5-32-ran",
-            "value": 21502,
-            "range": "±1.99%",
-            "unit": "ops/sec",
-            "extra": "86 samples"
-          },
-          {
-            "name": "1k-9-32-ran",
-            "value": 18102,
-            "range": "±2.85%",
-            "unit": "ops/sec",
-            "extra": "69 samples"
-          },
-          {
-            "name": "1k-1k-32-ran",
-            "value": 9782,
-            "range": "±16.57%",
-            "unit": "ops/sec",
-            "extra": "44 samples"
-          },
-          {
-            "name": "1k-1k-32-mir",
-            "value": 14067,
-            "range": "±24.66%",
-            "unit": "ops/sec",
-            "extra": "73 samples"
-          },
-          {
-            "name": "Checkpointing: 100 iterations",
-            "value": 1251,
-            "range": "±6.72%",
-            "unit": "ops/sec",
-            "extra": "61 samples"
-          },
-          {
-            "name": "Checkpointing: 500 iterations",
-            "value": 119,
-            "range": "±113.37%",
-            "unit": "ops/sec",
-            "extra": "30 samples"
-          },
-          {
-            "name": "Checkpointing: 1000 iterations",
-            "value": 124,
-            "range": "±20.31%",
-            "unit": "ops/sec",
-            "extra": "61 samples"
-          },
-          {
-            "name": "Checkpointing: 5000 iterations",
-            "value": 20.01,
-            "range": "±69.97%",
-            "unit": "ops/sec",
-            "extra": "17 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2610,6 +2523,93 @@ window.BENCHMARK_DATA = {
             "range": "±124.79%",
             "unit": "ops/sec",
             "extra": "13 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ryan@ryanio.com",
+            "name": "Ryan Ghods",
+            "username": "ryanio"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "afd07c26828ab8dd9fd9aa01097ac85f8c554534",
+          "message": "ci: fix failing node 16 (#1346)\n\n* add fail-fast: false\r\n\r\n* update package-lock for client to get new \"multiformats\" dependency from libp2p-crypto (https://github.com/libp2p/js-libp2p-crypto/commit/94966df10f86e3844363780873f03518138cf874)\r\n\r\n* lint: fix new errors from eslint-plugin-implicit-dependencies v1.1.0 release\r\n\r\n* add `multiformats` alias hotfix to karma config",
+          "timestamp": "2021-07-13T13:32:52-04:00",
+          "tree_id": "c85f8b1567cc50a47e78003f6f8a108df924855f",
+          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/afd07c26828ab8dd9fd9aa01097ac85f8c554534"
+        },
+        "date": 1626197933403,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "1k-3-32-ran",
+            "value": 14437,
+            "range": "±14.22%",
+            "unit": "ops/sec",
+            "extra": "65 samples"
+          },
+          {
+            "name": "1k-5-32-ran",
+            "value": 12887,
+            "range": "±31.90%",
+            "unit": "ops/sec",
+            "extra": "62 samples"
+          },
+          {
+            "name": "1k-9-32-ran",
+            "value": 15230,
+            "range": "±2.93%",
+            "unit": "ops/sec",
+            "extra": "75 samples"
+          },
+          {
+            "name": "1k-1k-32-ran",
+            "value": 14250,
+            "range": "±3.20%",
+            "unit": "ops/sec",
+            "extra": "69 samples"
+          },
+          {
+            "name": "1k-1k-32-mir",
+            "value": 6716,
+            "range": "±25.94%",
+            "unit": "ops/sec",
+            "extra": "33 samples"
+          },
+          {
+            "name": "Checkpointing: 100 iterations",
+            "value": 1137,
+            "range": "±7.76%",
+            "unit": "ops/sec",
+            "extra": "62 samples"
+          },
+          {
+            "name": "Checkpointing: 500 iterations",
+            "value": 131,
+            "range": "±92.24%",
+            "unit": "ops/sec",
+            "extra": "37 samples"
+          },
+          {
+            "name": "Checkpointing: 1000 iterations",
+            "value": 115,
+            "range": "±24.44%",
+            "unit": "ops/sec",
+            "extra": "57 samples"
+          },
+          {
+            "name": "Checkpointing: 5000 iterations",
+            "value": 11.18,
+            "range": "±122.40%",
+            "unit": "ops/sec",
+            "extra": "19 samples"
           }
         ]
       }
