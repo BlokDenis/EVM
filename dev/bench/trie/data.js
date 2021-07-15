@@ -1,95 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1626197934326,
-  "repoUrl": "https://github.com/ethereumjs/ethereumjs-monorepo",
+  "lastUpdate": 1626355402739,
+  "repoUrl": "https://github.com/BlokDenis/EVM",
   "entries": {
     "Benchmark": [
-      {
-        "commit": {
-          "author": {
-            "email": "Holger.Drewes@gmail.com",
-            "name": "Holger Drewes",
-            "username": "holgerd77"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "026a54f79f9ac0e6cc20764e406109231a3ea840",
-          "message": "Merge pull request #1296 from emersonmacro/common-dev-network-cleanup\n\nCommon: removed retired dev networks",
-          "timestamp": "2021-06-15T10:33:50+02:00",
-          "tree_id": "00f19bac82c5b144f8b443b1dda02840c9233ece",
-          "url": "https://github.com/ethereumjs/ethereumjs-monorepo/commit/026a54f79f9ac0e6cc20764e406109231a3ea840"
-        },
-        "date": 1623746197751,
-        "tool": "benchmarkjs",
-        "benches": [
-          {
-            "name": "1k-3-32-ran",
-            "value": 14689,
-            "range": "±13.65%",
-            "unit": "ops/sec",
-            "extra": "64 samples"
-          },
-          {
-            "name": "1k-5-32-ran",
-            "value": 12248,
-            "range": "±16.34%",
-            "unit": "ops/sec",
-            "extra": "54 samples"
-          },
-          {
-            "name": "1k-9-32-ran",
-            "value": 14786,
-            "range": "±2.47%",
-            "unit": "ops/sec",
-            "extra": "45 samples"
-          },
-          {
-            "name": "1k-1k-32-ran",
-            "value": 12873,
-            "range": "±3.97%",
-            "unit": "ops/sec",
-            "extra": "64 samples"
-          },
-          {
-            "name": "1k-1k-32-mir",
-            "value": 10042,
-            "range": "±22.30%",
-            "unit": "ops/sec",
-            "extra": "26 samples"
-          },
-          {
-            "name": "Checkpointing: 100 iterations",
-            "value": 707,
-            "range": "±23.89%",
-            "unit": "ops/sec",
-            "extra": "50 samples"
-          },
-          {
-            "name": "Checkpointing: 500 iterations",
-            "value": 221,
-            "range": "±9.23%",
-            "unit": "ops/sec",
-            "extra": "60 samples"
-          },
-          {
-            "name": "Checkpointing: 1000 iterations",
-            "value": 40.56,
-            "range": "±136.25%",
-            "unit": "ops/sec",
-            "extra": "20 samples"
-          },
-          {
-            "name": "Checkpointing: 5000 iterations",
-            "value": 22.94,
-            "range": "±9.85%",
-            "unit": "ops/sec",
-            "extra": "43 samples"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -2610,6 +2523,93 @@ window.BENCHMARK_DATA = {
             "range": "±122.40%",
             "unit": "ops/sec",
             "extra": "19 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ryan@ryanio.com",
+            "name": "Ryan Ghods",
+            "username": "ryanio"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "afd07c26828ab8dd9fd9aa01097ac85f8c554534",
+          "message": "ci: fix failing node 16 (#1346)\n\n* add fail-fast: false\r\n\r\n* update package-lock for client to get new \"multiformats\" dependency from libp2p-crypto (https://github.com/libp2p/js-libp2p-crypto/commit/94966df10f86e3844363780873f03518138cf874)\r\n\r\n* lint: fix new errors from eslint-plugin-implicit-dependencies v1.1.0 release\r\n\r\n* add `multiformats` alias hotfix to karma config",
+          "timestamp": "2021-07-13T13:32:52-04:00",
+          "tree_id": "c85f8b1567cc50a47e78003f6f8a108df924855f",
+          "url": "https://github.com/BlokDenis/EVM/commit/afd07c26828ab8dd9fd9aa01097ac85f8c554534"
+        },
+        "date": 1626355401440,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "1k-3-32-ran",
+            "value": 15818,
+            "range": "±13.68%",
+            "unit": "ops/sec",
+            "extra": "62 samples"
+          },
+          {
+            "name": "1k-5-32-ran",
+            "value": 18934,
+            "range": "±1.47%",
+            "unit": "ops/sec",
+            "extra": "80 samples"
+          },
+          {
+            "name": "1k-9-32-ran",
+            "value": 17093,
+            "range": "±1.70%",
+            "unit": "ops/sec",
+            "extra": "74 samples"
+          },
+          {
+            "name": "1k-1k-32-ran",
+            "value": 15242,
+            "range": "±2.49%",
+            "unit": "ops/sec",
+            "extra": "69 samples"
+          },
+          {
+            "name": "1k-1k-32-mir",
+            "value": 5653,
+            "range": "±22.09%",
+            "unit": "ops/sec",
+            "extra": "29 samples"
+          },
+          {
+            "name": "Checkpointing: 100 iterations",
+            "value": 1117,
+            "range": "±7.79%",
+            "unit": "ops/sec",
+            "extra": "63 samples"
+          },
+          {
+            "name": "Checkpointing: 500 iterations",
+            "value": 127,
+            "range": "±92.79%",
+            "unit": "ops/sec",
+            "extra": "43 samples"
+          },
+          {
+            "name": "Checkpointing: 1000 iterations",
+            "value": 113,
+            "range": "±19.57%",
+            "unit": "ops/sec",
+            "extra": "54 samples"
+          },
+          {
+            "name": "Checkpointing: 5000 iterations",
+            "value": 24.56,
+            "range": "±10.50%",
+            "unit": "ops/sec",
+            "extra": "30 samples"
           }
         ]
       }
